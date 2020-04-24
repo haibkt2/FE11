@@ -1,0 +1,10 @@
+<body>
+	<div id="main"base_color">Studnt materials</h1>
+	<p>Here are the links for the downloads:</p>
+	<ul id="links">
+			<li><a href="exercises.html">Exericises</a></li>
+			<li><a href="solutions.html">Solutions</a></i>
+		</ul>
+	<p id="copyright" class="base_color">Copyright 2012</p>
+	</div>
+<body>
