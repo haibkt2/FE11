@@ -1,14 +1,14 @@
-body{
-    font-family: arial;san-serif;
-}
-#main{
-    width: 300px;
-    padding: 1em;
-}
-#copyright{
-    font-size: 75%;
-    text-align: right;
-}
-.base_coler{
-    color: slateblue;
-}
+    body{
+        font-family: arial;san-serif;
+    }
+    #main{
+        width: 300px;
+        padding: 1em;
+    }
+    #copyright{
+        font-size: 75%;
+        text-align: right;
+    }
+    .base_coler{
+        color: slateblue;
+    }
