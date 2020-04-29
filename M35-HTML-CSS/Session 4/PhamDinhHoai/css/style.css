@@ -3,3 +3,7 @@ body {
     border: 1px solid black;
     width:800px;
 }
+#logo img {
+    width : 90px;
+     height: 90px;
+}
