@@ -1,0 +1,47 @@
+header {
+  background-color: #ffe0cc;
+  border-bottom: 3px solid #660000;
+  padding-top: 3px;
+}
+header img {
+  height: 140px;
+  float: left;
+  margin-right: 2em;
+  margin-left: 2em;
+}
+
+i {
+  text-shadow: 0 2px 2px #660000;
+}
+.t {
+  color: #660000;
+}
+
+article img {
+  height: 80px;
+}
+
+.h2 {
+  color: #660000;
+}
+.divh2 {
+  padding: 0.5em;
+  border-bottom: 3px solid #660000;
+  border-top: 3px solid #660000;
+}
+footer {
+  width: 100%;
+  height: 25px;
+  background-color: #660000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body {
+  border: solid #660000;
+}
+main {
+  margin-left: 2em;
+  margin-right: 2em;
+}
