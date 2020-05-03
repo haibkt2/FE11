@@ -1,42 +1,88 @@
 body{
     font-family: Tahoma, sans-serif;
-    border-style: solid;
-    padding-top: 0.5em;
-    max-width: 600px;
+    border: solid #931420;
+    padding: 3px;
+    width: 600px;
     margin: auto;
-    font-size: 80%;
+    font-size: 100%;
+    background-color: #fffded;
 }
 header{
-    border-bottom: solid;
+    border-bottom: solid  #931420;
+    font-size: 80%;
+    padding-top: 1.5em; ;
+    padding-bottom: 2em;
+    background: linear-gradient(30deg,#f6bb73 0%,#f6bb73 30%,white 50%, #f6bb73 80%,#f6bb73 100%);
+
 }
 header img{
     float: left;
-    margin-right: 2em;
-    margin-left: 2em;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 1em;
 }
-header h1,h3{
+header h1,h2{
     line-height: 0.8em;
+    color: #800000
+}
+header h2{
+    font-style: italic;
+    font-size: 130%;
 }
 main{
     margin-left: 2em;
     margin-right: 2em;
     margin-bottom: 1em;
 }
+main article p{
+    padding-bottom: .5em;
+}
 main li{
     padding-bottom: .5em;
 }
-main article h1{
-    border-top-style: solid; 
-    border-bottom-style: solid;
-    padding-top: .5em;
-    padding-bottom: .5em;
+main h1{
+    border-top: solid  #931420; 
+    border-bottom: solid  #931420;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    font-size: 140%;
+    color: #800000
+    
 }
-main article a{
-    line-height: 3em;
+main h2{
+    font-size: 130%;
+    padding-top: .5em;
+    padding-bottom: .25em;
+    color: #800000
+
+}
+main h4{
+    padding-bottom: 1em;
+}
+main img{
+    padding-bottom: 1em;
+}
+main p{
+        padding-bottom: .5em;
+    
+}
+main blockquote {
+    font-style: italic;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+main ul{
+    padding-bottom: .25em;
+    padding-left: 1.25em;
+}
+main li {
+    padding-bottom: .35em;
 }
 footer{
     display: flex;
     justify-content: center;
-    background-color: brown;
+    background-color: #931420;
     color: white;
+    font-size: 80%;
 }
+
