@@ -1,5 +1,5 @@
 header {
-  background-color: #ffe0cc;
+  background-image: linear-gradient(30deg,#f6bb73 0%,white 30%,white 80%,#f6bb73 100%); 
   border-bottom: 3px solid #660000;
   padding-top: 3px;
 }
