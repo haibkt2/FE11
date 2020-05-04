@@ -1,0 +1,65 @@
+body {
+  border: 3px solid #000;
+  font-family: arial, sans-serif;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  border-bottom: 2px solid #000;
+  padding: 0 25px;
+}
+
+header .title {
+  margin-left: 25px;
+}
+
+header .title h1 {
+  margin-bottom: 0
+}
+
+header .title h3 {
+  margin-top: 0;
+}
+
+main {
+  margin: 25px;
+}
+
+main .our-mission {
+  padding: 0 30px;
+}
+
+main li {
+  line-height: 1.5;
+}
+
+main .guest {
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  padding: 10px 0;
+}
+
+main .month {
+  margin-bottom: 5px;
+}
+
+main .profile {
+  margin-bottom: 5px;
+}
+
+main .avatar {
+  width: 64px;
+}
+
+footer {
+  background-color: rgb(39, 39, 170);
+  color: #FFF;
+}
+
+footer .copyright {
+  text-align: center;
+  margin: 0;
+  padding: 10px 0;
+}
+
