@@ -17,8 +17,9 @@ i {
   color: #660000;
 }
 
-article img {
+nav img {
   height: 90px;
+  margin-top: -18px;
 }
 
 .h2 {
