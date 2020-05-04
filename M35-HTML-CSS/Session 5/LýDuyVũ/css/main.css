@@ -20,6 +20,7 @@ i {
 nav img {
   height: 90px;
   margin-top: -18px;
+  border: solid 1px;
 }
 
 .h2 {
@@ -35,6 +36,7 @@ footer {
   color: #fff;
   display: flex;
   justify-content: center;
+  margin-top: 15px;
  
 }
 body {
