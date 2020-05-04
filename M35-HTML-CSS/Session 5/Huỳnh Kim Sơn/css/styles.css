@@ -32,13 +32,18 @@ header h2{
 main{
     margin-left: 2em;
     margin-right: 2em;
-    margin-bottom: 1em;
 }
 main article p{
     padding-bottom: .5em;
 }
 main li{
     padding-bottom: .5em;
+}
+main h2{
+    font-size: 130%;
+    padding-top: .5em;
+    padding-bottom: .25em;
+    color: #800000
 }
 main h1{
     border-top: solid  #931420; 
@@ -47,24 +52,15 @@ main h1{
     padding-bottom: .3em;
     font-size: 140%;
     color: #800000
-    
-}
-main h2{
-    font-size: 130%;
-    padding-top: .5em;
-    padding-bottom: .25em;
-    color: #800000
-
 }
 main h4{
-    padding-bottom: 1em;
+    padding-bottom: .5em;
 }
 main img{
-    padding-bottom: 1em;
+    padding-top: 10px;
 }
 main p{
         padding-bottom: .5em;
-    
 }
 main blockquote {
     font-style: italic;
