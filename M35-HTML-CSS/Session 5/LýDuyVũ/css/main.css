@@ -1,5 +1,5 @@
 header {
-  background-color: #ffe0cc;
+  background-image: linear-gradient(30deg,#f6bb73 0%,white 30%,white 80%,#f6bb73 100%); 
   border-bottom: 3px solid #660000;
   padding-top: 3px;
 }
@@ -17,8 +17,10 @@ i {
   color: #660000;
 }
 
-article img {
+nav img {
   height: 90px;
+  margin-top: -18px;
+  border: solid 1px;
 }
 
 .h2 {
@@ -34,6 +36,7 @@ footer {
   color: #fff;
   display: flex;
   justify-content: center;
+  margin-top: 15px;
  
 }
 body {
@@ -44,4 +47,8 @@ body {
 main {
   margin-left: 2em;
   margin-right: 2em;
+}
+#trai2{
+  height: 103px;
+  width: 70px;
 }
