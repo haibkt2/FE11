@@ -15,6 +15,9 @@ header{
     background: linear-gradient(30deg,#f6bb73 0%,#f6bb73 30%,white 50%, #f6bb73 80%,#f6bb73 100%);
 
 }
+.th{ 
+    text-shadow: 3px 2px 2px #931420;
+}
 header img{
     float: left;
     padding-right: 30px;
@@ -22,7 +25,7 @@ header img{
     padding-top: .5em;
 }
 header h1,h2{
-    line-height: .65em;
+    line-height: .6em;
     color: #800000
 }
 header h2{
