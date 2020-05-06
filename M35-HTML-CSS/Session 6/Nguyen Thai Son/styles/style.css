@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    width: 800px;
+    border: 5px solid firebrick;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 100px;
+    padding: 10px 30px;
+    background-image: linear-gradient(30deg,sandybrown 0%, white 30%, white 50%, white 70%, sandybrown 100%);
+    border-bottom: 5px solid firebrick;
+}
+
+.logo {
+    float:left;
+    margin-right: 100px;
+}
+
+header h1 {
+    color: firebrick;
+}
+
+header h3 {
+    font-style: italic;
+}
+
+.shadow {
+    text-shadow: 2px 2px 2px firebrick;
+}
+
+main {
+    clear: right;
+    padding: 10px 40px;
+    background-color: lightyellow;
+}
+
+.mission h3 {
+    color: firebrick;
+    margin-bottom: 10px;
+}
+
+.mission blockquote {
+    padding: 1em 2em;
+    font-style: italic;
+}
+
+.ticket h3 {
+    color: firebrick;
+    margin-bottom: 10px;
+}
+
+.ticket ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.ticket ul li {
+    line-height: 1.5em;
+}
+
+.speaker h3 {
+    border-top: 5px solid firebrick;
+    border-bottom: 5px solid firebrick;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.speaker h4 {
+    margin-bottom: 5px;
+}
+
+.speaker img {
+    margin-bottom: 10px;
+}
+
+footer {
+    padding: 1em 0;
+    background-color: firebrick;
+    text-align: center;
+    color: white;
+}
