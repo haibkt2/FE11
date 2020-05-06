@@ -11,7 +11,7 @@ header{
     font-size: 85%;
     padding-top: .3em; 
     padding-bottom: .5em;
-    background: -webkit-linear-gradient(45deg,#f6bb73 10%,#f6bb73 10%,white 35%, #f6bb73 90%,#f6bb73 90%);
+    background: linear-gradient(30deg,#f6bb73 0%,#f6bb73 30%,white 50%, #f6bb73 80%,#f6bb73 100%);
 
 }
 .shaw{ 
@@ -62,18 +62,18 @@ main img{
     padding-top: 10px;
 }
 main p{
-        padding-bottom: 0px;
         margin-top: 0px;
         margin-bottom: 0px;
 }
 main blockquote {
     font-style: italic;
     width: 500px;
+    margin-top: 10px;
 }
 main ul{
     padding-bottom: 0px;
     margin-top: 10px;
-    margin-bottom: ;
+    margin-bottom:0px ;
 }
 main li {
     padding-bottom: .35em;
