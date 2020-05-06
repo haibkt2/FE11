@@ -1,0 +1,99 @@
+body {
+  width: 600px;
+  /* margin: 0 auto; */
+  border: 3px solid #93b8c9;
+  font-family: arial, sans-serif;
+  background-color: #ebf5fa;
+  box-shadow: 5px 5px 5px #777;
+}
+
+header {
+  display: flex;
+  border-bottom: 3px solid #93b8c9;
+  background-image: linear-gradient(30deg, #93b8c9 0%, #93b8c9 30%, white 50%, #93b8c9 80%, #93b8c9 100%);
+}
+
+header .logo {
+  width: 80px;
+  padding: 0 30px;
+}
+
+header h2 {
+  font-size: 170%;
+  color: blue;
+  margin-bottom: 0;
+}
+
+header h3 {
+  font-size: 130%;
+  font-style: italic;
+  margin-top: 0;
+}
+
+header .shadow {
+  text-shadow: 1px 1px 1px blue;
+}
+
+main {
+  padding: 0 30px;
+}
+
+main h2 {
+  color: blue;
+}
+
+main .quote {
+  padding: 0 2em;
+}
+
+main .guest {
+  font-size: 150%;
+  border: double #93b8c9;
+  border-radius: 7px;
+  box-shadow: 5px 5px #000;
+  padding: .5em 0;
+  text-align: center;
+}
+
+main ul {
+  padding: 0 0 .25em 1.25em;
+}
+
+main li {
+  padding-bottom: .35em
+}
+
+main .month {
+  font-size: 100%;
+  color: blue;
+  margin: .25em 0;
+}
+
+main .avatar {
+  width: 75px;
+  padding-bottom: 1em;
+}
+
+main .profile {
+  font-size: 105%;
+  padding-bottom: 1em;
+}
+
+main .profile:hover {
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  background-color: #93b8c9;
+  color: #FFF;
+  padding: 1em 0;
+}
+
+footer .copyright {
+  margin: 0;
+}
+
+
+
+
