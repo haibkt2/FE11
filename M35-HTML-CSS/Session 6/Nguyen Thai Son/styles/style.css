@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
@@ -12,7 +11,7 @@ body {
 }
 
 header {
-    height: 100px;
+    height: 80px;
     padding: 10px 30px;
     background-image: linear-gradient(30deg,sandybrown 0%, white 30%, white 50%, white 70%, sandybrown 100%);
     border-bottom: 5px solid firebrick;
@@ -20,7 +19,7 @@ header {
 
 .logo {
     float:left;
-    margin-right: 100px;
+    margin-right: 70px;
 }
 
 header h1 {
@@ -81,7 +80,7 @@ main {
 }
 
 footer {
-    padding: 1em 0;
+    padding: 15px 0;
     background-color: firebrick;
     text-align: center;
     color: white;
