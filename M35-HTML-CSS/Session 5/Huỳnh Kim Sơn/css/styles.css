@@ -11,23 +11,23 @@ header{
     font-size: 85%;
     padding-top: .3em; 
     padding-bottom: .5em;
-    background: -webkit-linear-gradient(30deg,#f6bb73 0%,#f6bb73 30%,white 50%, #f6bb73 80%,#f6bb73 100%);
+    background: -webkit-linear-gradient(45deg,#f6bb73 10%,#f6bb73 10%,white 35%, #f6bb73 90%,#f6bb73 90%);
 
 }
-.th{ 
+.shaw{ 
     text-shadow: 3px 2px 2px #931420;
 }
 header img{
     float: left;
     padding-right: 30px;
     padding-left: 30px;
-    padding-top: .5em;
+    padding-top: .2em;
 }
-header h1,h2{
-    line-height: .6em;
+header h1,h3{
+    line-height: .4em;
     color: #800000
 }
-header h2{
+header h3{
     font-style: italic;
     font-size: 130%;
     color: black;
@@ -41,8 +41,6 @@ main article p{
 }
 main h2{
     font-size: 130%;
-    padding-top: .5em;
-    padding-bottom: .25em;
     color: #800000
 }
 main h1{
@@ -64,8 +62,7 @@ main p{
 }
 main blockquote {
     font-style: italic;
-    padding-right: 1em;
-    padding-left: 1em;
+    width: 500px;
 }
 main ul{
     padding-bottom: .25em;
