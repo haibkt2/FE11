@@ -12,7 +12,7 @@ header {
     border-bottom: 3px solid #931420;
     padding-top: 1.5em;
     padding-bottom: 2em;
-    background: linear-gradient(30deg,#f6bb73 0%,#f6bb73 30%,white 50%, #f6bb73 80%,#f6bb73 100%);
+    background-image: linear-gradient(30deg, #f6bb73 0%,#f6bb73 30%,white 50%, #f6bb73 80%, #f6bb73 100%);
 }
 header img {
     float: left;
@@ -29,7 +29,6 @@ header h2 {
     padding: 0em;
     font-size: 130%;
     font-style: italic;
-    color: #800000;
 }
 main {
     clear: both;
@@ -40,7 +39,6 @@ main h1 {
     border-bottom: 3px solid #931420;
     border-top: 3px solid #931420;
     font-size: 150%;
-    color: #931420;
 }
 main h2 {
     font-size: 130%;
@@ -49,7 +47,6 @@ main h2 {
 main h3 {
     font-size: 105%;
     padding-bottom: .25em;
-    padding-top: .5em;
 }
 h1 {
     padding-top: .3em;
@@ -62,8 +59,11 @@ h2 {
 h3 {
     padding-bottom: .25em;
 }
-img {
-    padding-bottom: 1em;
+nav {
+    padding-top: 1em;
+}
+nav img {
+    padding-bottom: 1em ;
 }
 p {
     padding-bottom: .5em;
@@ -91,5 +91,5 @@ footer p {
     padding-bottom: 1em;
 }
 .shadow strong{
-    text-shadow: 1px 1px #800000;
+    text-shadow: 3px 2px 3px #800000;
 }
