@@ -6,13 +6,12 @@ body{
 }
 /* the styles for the header */
 header{
-    background-image: -webkit-linear-gradient(45deg, #ff8566 0%, white 50%, #ff8566 100%);
+    background: linear-gradient(45deg, #ff8566 0%, white 30%, white 50%, white 75%, #ff8566  100%);
     border-bottom: 3px solid #990000;
     border-top: 1px solid #990000;
 }
 header img{
-
-    float: left;    
+    float: left;
     padding-top : 1em;
     padding-left: 2em;
 }
@@ -26,6 +25,9 @@ header h2{
     font-size: 150%;
     font-style: italic; 
     text-align: center;
+}
+.shadow{
+    text-shadow: 2px 2px 3px #990000;
 }
 /* the styles for the main content */
 main{
@@ -42,6 +44,9 @@ main h1{
     border-bottom: solid #990000;
     padding-top: 8px;
     padding-bottom: 8px;
+}
+main h4{
+    margin-top: 1px;
 }
 /* the styles for the footer */
 footer{
