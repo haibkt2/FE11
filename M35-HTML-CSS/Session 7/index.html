@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!--external-->
+	<!-- <link rel="stylesheet" href="../css/style.css"> -->
+	<!--internal(in tag > in style) > external -->
+	<!--important  id > class > type > default-->
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		li {
+			display: inline-block;
+			width: 70px;
+			background-color: red;
+			height: 30px;
+		}
+		a {
+			text-decoration: none;
+			color: #ffffff;
+			display: block;
+			width: 70px;
+			text-align: center;
+		}
+		.sup{
+			position: relative;
+		}
+		.sup ul{
+			position: absolute;
+			top:30px;
+			display: none;
+		}
+		.sup:hover>ul{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<!-- 1 id chỉ implement cho 1 block/element -->
+	<!-- 1 class ... cho nhiều block/element-->
+	<!-- 1 elements/block cho nhiều class -->
+	<header>
+		<nav>
+			<ul>
+				<li><a href="">menu1</a></li>
+				<li><a href="">menu2</a></li>
+				<li class="sup">
+					<a href="">menu3</a>
+					<ul>
+						<li><a href="">sup1</a></li>
+						<li><a href="">sup2</a></li>
+						<li><a href="">sup3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		
+		
+	</main>
+</body> 
+</html>
