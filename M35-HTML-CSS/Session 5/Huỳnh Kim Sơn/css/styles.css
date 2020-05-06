@@ -72,6 +72,7 @@ main blockquote {
 }
 main ul{
     padding-bottom: 0px;
+    padding-left: 17px;
     margin-top: 10px;
     margin-bottom:0px ;
 }
