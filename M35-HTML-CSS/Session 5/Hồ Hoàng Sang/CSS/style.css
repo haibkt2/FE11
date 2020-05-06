@@ -1,0 +1,56 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    border: solid #990000;
+    background-color: white;
+    margin: 0 300px;
+}
+/* the styles for the header */
+header{
+    background-image: -webkit-linear-gradient(45deg, #ff8566 0%, white 50%, #ff8566 100%);
+    border-bottom: 3px solid #990000;
+    border-top: 1px solid #990000;
+}
+header img{
+
+    float: left;    
+    padding-top : 1em;
+    padding-left: 2em;
+}
+header h1 {
+    color:  #990000;
+    font-size : 200%;
+    text-align: center;
+    margin-bottom: .25em;
+}
+header h2{
+    font-size: 150%;
+    font-style: italic; 
+    text-align: center;
+}
+/* the styles for the main content */
+main{
+    clear: left;
+    margin-left: 2em;
+    margin-right: 3em;
+}
+main h2 {
+    color: #990000;
+}
+main h1{
+    font-size: 160%;
+    border-top: solid #990000;
+    border-bottom: solid #990000;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+/* the styles for the footer */
+footer{
+    background-color: darkred;
+    color: white;
+    padding-bottom: 1px;
+    padding-top: 1px;
+}
+footer p{
+    text-align: center;
+    font-size: 100%;
+}
