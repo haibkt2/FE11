@@ -1,0 +1,148 @@
+/* styles body */
+body{
+    font-family: Tahoma, sans-serif;
+    border: 3px solid #931420;
+    max-width: 800px;
+    margin: auto;
+    font-size: 100%;
+    background-color: #fffded;
+}
+/* styles header */
+header{
+    font-size: 85%;
+    padding-top: .3em; 
+    background: linear-gradient(30deg,#f6bb73 0%,#f6bb73 30%,white 50%, #f6bb73 80%,#f6bb73 100%);
+
+}
+.shaw{ 
+    text-shadow: 3px 2px 2px #931420;
+}
+header img{
+    float: left;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 1em;
+}
+header h1,h3{
+    padding-top: .3em;
+    line-height: .4em;
+    color: #800000
+}
+header h3{
+    font-style: italic;
+    font-size: 130%;
+    color: black;
+}
+/* styles nav_menu */
+#nav_menu ul{
+    list-style-type: none;
+    background-color:#800000; 
+}
+#nav_menu ul li{
+    display: inline-block;
+    width: 140px;  
+    height: 50px;
+}
+#nav_menu ul li a{
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    color:white;
+    padding-top: 15px;
+    font-weight: bold;
+}
+#nav_menu ul li a.current{
+    color: yellow;
+}
+#nav_menu ul li:hover, #nav_menu ul li:focus {
+    background-color:gray;
+
+}
+#nav_menu ul ul li a{
+    padding: 10px 0px;
+}
+/* styles nav_menu About Us */
+.about{
+    position: relative;
+}
+.about ul{
+    position: absolute;
+    top:50px;
+    left: 43px;
+    display: none;
+    padding-left: 0px;
+}
+.about:hover>ul{
+    display: block;
+}
+/* styles nav_menu Past Speakrtes*/
+.pastspeakres{
+    position: relative;
+}
+.pastspeakres ul{
+    position: absolute;
+    left: -100%;
+    top: 0px;
+   
+}
+.pastspeakres:hover>ul{
+    display: block;
+    width: 140px;
+}
+/* styles main */
+main{
+    margin-left: 2em;
+    margin-right: 2em;
+}
+main article p{
+    padding-bottom: .5em;
+}
+main h1{
+    border-top: solid  #931420; 
+    border-bottom: solid  #931420;
+    padding-top: .3em;
+    padding-bottom: .3em;
+    font-size: 140%;
+    color: black;
+}
+main h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 130%;
+    color: #800000
+}
+main h4{
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 0px;
+}
+main img{
+    padding-top: 10px;
+}
+main p{
+        margin-top: 0px;
+        margin-bottom: 0px;
+}
+main blockquote {
+    font-style: italic;
+    width: 490px;
+    margin-top: 10px;
+}
+main ul{
+    padding-bottom: 0px;
+    padding-left: 17px;
+    margin-top: 10px;
+    margin-bottom:0px ;
+}
+main li {
+    padding-bottom: .35em;
+}
+/* styles footer */
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: #931420;
+    color: white;
+    font-size: 80%;
+}
+
