@@ -155,6 +155,9 @@ div p{
 .nav_list1 ul{
     padding-left: 20px;
 }
+.nav_list1 ul li{
+    list-style-type:circle ;
+}
 /* styles footer */
 footer{
     display: flex;
