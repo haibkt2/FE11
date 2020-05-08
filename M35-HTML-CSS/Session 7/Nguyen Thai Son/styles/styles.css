@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto;
+    width: 800px;
+    border: 5px solid firebrick;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    height: 100px;
+    padding-top: 15px;
+    background-image: linear-gradient(30deg,sandybrown 0%, white 25%, white 50%, white 75%, sandybrown 100%);
+
+}
+
+.logo {
+    float:left;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+header h1 {
+    color: firebrick;
+}
+
+header h3 {
+    font-style: italic;
+}
+
+.shadow {
+    text-shadow: 2px 2px 2px firebrick;
+}
+
+.main-nav {
+    background-color: firebrick;
+    clear: both;
+}
+
+.main-nav ul {
+    width: 100%;
+}
+
+.main-nav ul li {
+    float: left;
+    display: block;
+    width: 20%;
+    position: relative;
+}
+
+.main-nav ul li a {
+    background-color: firebrick;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.main-nav ul li a:hover {
+    font-style: oblique;
+    background-color: gray;
+}
+
+.sub {
+    display: none;
+}
+
+.main-nav ul ul li {
+    float: none;
+    width: 100%;
+}
+
+.main-nav ul ul li a {
+    float: none;
+    display: block;
+}
+
+.main-nav ul li:hover > ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+}
+main {
+    clear: both;
+    padding: 15px 40px;
+}
+
+.mission h3 {
+    color: firebrick;
+    margin-bottom: 10px;
+}
+
+blockquote {
+    padding: 1em 2em;
+}
+
+.ticket h3 {
+    color: firebrick;
+    margin-bottom: 10px;
+}
+
+.ticket ul {
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.ticket ul li {
+    line-height: 1.5em;
+}
+
+.speaker h3 {
+    border-top: 5px solid firebrick;
+    border-bottom: 5px solid firebrick;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+.speaker h4 {
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: firebrick;
+    text-align: center;
+    color: white;
+    padding: 1em 0;
+}
