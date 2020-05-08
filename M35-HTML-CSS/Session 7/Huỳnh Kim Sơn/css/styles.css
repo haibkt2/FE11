@@ -105,6 +105,9 @@ main aside h3{
     margin-top: 0px;
     margin-bottom: 0px;
 }
+main aside h4{
+    margin-top: 15px;
+}
 main img{
     padding-top: 10px;
 }
@@ -123,6 +126,9 @@ main section article h2{
 .ar_2 h3{
     padding-top: 0px;
 }
+.ar_2 h4{
+    margin-top: 15px;
+}
 .ar_2{
     border-bottom: 2px solid black; 
 }
@@ -134,7 +140,7 @@ main section article h2{
     
 }
 div p{
-    width: 280px;
+    width: 260px;
     position: relative;
     bottom: 15px;
     margin-bottom: 0px;
