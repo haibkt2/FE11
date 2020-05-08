@@ -89,53 +89,65 @@ header h3{
     display: block;
     width: 140px;
 }
-/* styles main */
-main{
-    margin-left: 2em;
-    margin-right: 2em;
+/* styles layout */
+#OurMission{
+    width: 550px;
+    float: right;
+    margin-right: 10px;
 }
-main article p{
-    padding-bottom: .5em;
+#Guest{
+    width: 215px;
+    float: left;
+    padding-left: 20px;
 }
-main h1{
-    border-top: solid  #931420; 
-    border-bottom: solid  #931420;
-    padding-top: .3em;
-    padding-bottom: .3em;
-    font-size: 140%;
-    color: black;
-}
-main h2{
-    margin-top: 10px;
-    margin-bottom: 10px;
-    font-size: 130%;
-    color: #800000
-}
-main h4{
-    margin-top: 15px;
-    margin-bottom: 15px;
-    padding-bottom: 0px;
+/* styles layout aside */
+main aside h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 main img{
     padding-top: 10px;
 }
-main p{
-        margin-top: 0px;
-        margin-bottom: 0px;
+/* styles layout section*/
+/* styles layout section ar_1*/
+main section article h3{
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
-main blockquote {
-    font-style: italic;
-    width: 490px;
-    margin-top: 10px;
+/* styles layout section ar_2*/
+main section article h2{
+    font-size: 130%;
+    border-bottom: 2px solid black;
+    padding-bottom: 8px;
 }
-main ul{
-    padding-bottom: 0px;
-    padding-left: 17px;
-    margin-top: 10px;
-    margin-bottom:0px ;
+.ar_2 h3{
+    padding-top: 0px;
 }
-main li {
-    padding-bottom: .35em;
+.ar_2{
+    border-bottom: 2px solid black; 
+}
+.aside_imgsoctt{
+    float: right;
+    width: 240px;
+    position: relative;
+    bottom:65px ;
+    
+}
+div p{
+    width: 280px;
+    position: relative;
+    bottom: 15px;
+    margin-bottom: 0px;
+}
+.nav_1{
+    margin-bottom: 15px;
+}
+/* styles layout section ar_3 */
+.ar_3{
+    margin-top: 15px;
+}
+.nav_list1 ul{
+    padding-left: 20px;
 }
 /* styles footer */
 footer{
@@ -144,5 +156,6 @@ footer{
     background-color: #931420;
     color: white;
     font-size: 80%;
+    clear: both;
 }
 
