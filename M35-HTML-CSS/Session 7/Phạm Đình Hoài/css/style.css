@@ -78,6 +78,7 @@ article h2 {
 }
 a:hover {
     font-style: italic;
+
 }
 #nav-menu ul>li:hover ul.submenu {
     display: block;
@@ -100,13 +101,14 @@ a:hover {
 .submenu {
     display: none;
     position: absolute;
-}
 
+}
 .submenu2 {
+	margin:0;
     display: none;
     position: absolute;
-    right: 167px;
-    top: 167px;
+    right: 160px;
+    top: 150px;
 }
 #nav_menu ul ul li {
     float: none;
@@ -114,10 +116,9 @@ a:hover {
 }
 #nav_menu ul li:hover>ul {
     display: block;
-    padding: 0;
-    margin: 0;
+    
 }
- li a {
+li a {
     display: block;
     width: 160px;
     text-align: center;
@@ -135,11 +136,12 @@ main {
     clear: both;
     
 }
-main h1 {
+.h1{
    padding-top: .5em;
    padding-bottom: .25em;
    margin: 0;
     font-size: 150%;
+    color: black;
 }
 main h2 {
     font-size: 130%;
@@ -149,10 +151,7 @@ main article h3 {
     font-size: 105%;
     padding-bottom: .25em;
 }
-h1 {
-    padding-top: .3em;
-    padding-bottom: .3em;
-}
+
 h2 {
     padding-top: .5em;
     padding-bottom: .25em;
@@ -181,7 +180,7 @@ ul {
 ul.circle {
     list-style-type: circle;
 }
-li {
+.circle li {
     padding-bottom: .35em;
 }
 
