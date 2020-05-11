@@ -1,0 +1,17 @@
+Type
+body{
+    font-family : Arial, sans-serif;    
+}
+ID
+#main{
+    width:300px;
+    padding: 1em;
+}
+#copyright{
+    font-size: 75%;
+    text-align: right;
+}
+Class
+.base_color{
+    color: blue;
+}
