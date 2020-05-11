@@ -166,39 +166,26 @@ footer{
 }
 /* Responsive */
 @media only screen and (max-width: 768px) {
-    header{
-        width: 100%;
-        display: block;
+    body{
+    width: 95%;
     }
     #Guest{
         width: 100%;
-        width: 780px;
-        display: block;
     }
     #OurMission{ 
         width: 100%;
-        display: block;
         
     }
     .nav_guset{
         display: flex;
+        text-align: center;
 
     }
     .ava2, .ava3, .ava4{
-        padding-left: 5.9em;
+        padding-left: 1.5em;
     }
     .ar_1,.ar_2,.ar_3 {
-        padding-left: 35px;
-    }
-    .aside_imgsoctt img{
-        height: 156px;
-    }
-    div p{
-        width: 450px;
-        height: 140px;
-    }
-    footer{
-        width: 100%;
+        margin-left: 2.2em;
     }
 }
 
