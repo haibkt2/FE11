@@ -130,9 +130,12 @@ main {
     list-style-type: none;
 }
 
+.speaker ul li {
+    margin-bottom: 30px;
+}
+
 .speaker h3 {
     color: firebrick;
-    padding-bottom: 10px;
     margin-bottom: 10px;
 }
 
@@ -142,10 +145,6 @@ main {
 
 .speaker a:hover {
     font-style: italic;
-}
-
-.speaker img {
-    margin-bottom: 30px;
 }
 
 /*-----MAIN-CONTENTS------------------------------------------------------------------*/
