@@ -293,7 +293,7 @@ footer p {
 @media screen and (max-width: 720px)  {
     body {
         font-size: xx-large;
-        height: 4100px;
+        height: 4400px;
         
     }
     #s1 {
@@ -345,7 +345,7 @@ footer p {
         flex-direction: column;
         float: left;
         left: 50px;
-        top: 500px;
+        top: 400px;
     }
     .content2 {
         width: 100vw;
@@ -368,7 +368,7 @@ footer p {
      
     }
     #nav_menu {
-       width: 60%;
+       width: 60vw;
        margin: 0 auto;
        
     }
