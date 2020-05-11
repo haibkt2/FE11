@@ -164,8 +164,8 @@ footer{
     font-size: 80%;
     clear: both;
 }
-/* Responsive*/
-@media only screen and (max-width: 767px) {
+/* Responsive */
+@media only screen and (max-width: 768px) {
     header{
         width: 100%;
         display: block;
@@ -201,3 +201,4 @@ footer{
         width: 100%;
     }
 }
+
