@@ -90,12 +90,12 @@ header h3{
 }
 /* styles layout */
 #OurMission{
-    width: 550px;
+    width: 70%;
     float: right;
     margin-right: 15px;
 }
 #Guest{
-    width: 215px;
+    width: 25%;
     float: left;
     padding-left: 20px;
 }
@@ -164,18 +164,40 @@ footer{
     font-size: 80%;
     clear: both;
 }
-/* Responsive
-@media all and (max width: 800px) {
+/* Responsive*/
+@media only screen and (max-width: 767px) {
     header{
-
+        width: 100%;
+        display: block;
     }
     #Guest{
-
+        width: 100%;
+        width: 780px;
+        display: block;
     }
-    #OurMission{
-
-    }
-    footer{
+    #OurMission{ 
+        width: 100%;
+        display: block;
         
     }
-}*/
+    .nav_guset{
+        display: flex;
+
+    }
+    .ava2, .ava3, .ava4{
+        padding-left: 5.9em;
+    }
+    .ar_1,.ar_2,.ar_3 {
+        padding-left: 35px;
+    }
+    .aside_imgsoctt img{
+        height: 156px;
+    }
+    div p{
+        width: 450px;
+        height: 140px;
+    }
+    footer{
+        width: 100%;
+    }
+}
