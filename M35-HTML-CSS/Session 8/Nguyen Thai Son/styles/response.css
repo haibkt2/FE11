@@ -1,0 +1,21 @@
+@media screen and (max-width: 480px) {
+    .speaker {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .speaker ul {
+        text-align: center;
+    }
+
+    .speaker li {
+        display: inline-block;
+        width: 24%;
+    }
+
+    .main-contents {
+        float: none;
+        width: 100%;
+    }
+}
