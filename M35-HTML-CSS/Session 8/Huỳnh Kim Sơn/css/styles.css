@@ -164,6 +164,9 @@ footer{
     font-size: 80%;
     clear: both;
 }
+.slicknav_menu {
+	display:none;
+}
 /* Responsive */
 @media only screen and (max-width: 768px) {
     body{
@@ -187,5 +190,15 @@ footer{
     .ar_1,.ar_2,.ar_3 {
         margin-left: 2.2em;
     }
+    .js #menu {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
 }
+/* Responsive menu slicknav*/
+
+
 
