@@ -203,19 +203,22 @@ footer p {
 
 @media screen and (max-width: 950px)  {
     body {
-        font-size: x-large;
-        height: 1830px ;
+        width: 90%;
+        max-width: 1500px;
+        height: 1680px ;
         
+    }
+    main {
+        font-size: x-large;
     }
     #s1 {
         width: 90%;
         padding: 0 20px;
-        height: 200%;
+        height: 100%;
     }
     aside {
         display: inline-block;
         width: 95%;
-        padding: auto 10px;
         margin: 20px;
         top: 250px;
         position: relative;
@@ -234,12 +237,12 @@ footer p {
         
     }
     .mission {
-        display: flex;
+        display: block;
         width: 80%;
         height: 150px;
         display: block;
         margin: auto;
-       top: 80px;
+       top: 50px;
        position: relative;
        
     }
@@ -268,11 +271,7 @@ footer p {
         height: 30%;
      
     }
-    #nav_menu {
-       width: 60%;
-       margin: 0 auto;
-       
-    }
+ 
     .h1 {
         text-align: center;
     }
@@ -285,28 +284,30 @@ footer p {
         margin: auto;
    }
     footer {
-        top: 300px;
         display: block;
         position: relative;
+        top: 250px;
     }
+   
 }
 @media screen and (max-width: 720px)  {
     body {
-        font-size: xx-large;
-        height: 4400px;
-        
+       width: 100%;
+       height: 3200px;
+    }
+    main {
+        font-size: x-large;
     }
     #s1 {
         width: 100%;
         padding: 0 20px;
-        height: 200%;
+        height: 100%;
     }
     aside {
         display: inline-block;
-        width: 95%;
-        padding: auto 10px;
+        width: 90%;
         margin: auto;
-        top: 490px;
+        top: 350px;
         position: relative;
     }
     aside .h1 {
@@ -319,9 +320,7 @@ footer p {
     }
     aside .picture .guest {
         width: 50%;
-
         margin: 0 auto;
-        
     }
 
     .mission {
@@ -332,8 +331,7 @@ footer p {
         float: left;
         margin: auto;
         left: 50px;
-       top: 80px;
-       position: relative;
+       top: 50px;
        
     }
     .mission h2 {
@@ -342,15 +340,15 @@ footer p {
     .content {
         width: 100vw;
         position: relative;
-        flex-direction: column;
         float: left;
         left: 50px;
-        top: 400px;
+        top: 350px;
+        text-align: left;
     }
     .content2 {
         width: 100vw;
         position: relative;
-        top: 500px;
+        top: 350px;
         left: 50px;
         text-align: left;
         float: left;
@@ -367,11 +365,6 @@ footer p {
         height: 30%;
      
     }
-    #nav_menu {
-       width: 60vw;
-       margin: 0 auto;
-       
-    }
     .h1 {
         text-align: left;
         top: 300px;
@@ -387,9 +380,27 @@ footer p {
    }
     footer {
         width: 40vw;
-        top: 500px;
+        top: 400px;
         left: 150px;
         display: block;
         position: relative;
     }
+   
+}
+
+.slicknav_menu {
+    display:none;
+    left: 200px;
+}
+
+@media screen and (max-width: 950px) {
+	.js #menu {
+        display:none;
+        
+	}
+	
+	.js .slicknav_menu {
+        display:block;
+        
+	}
 }
