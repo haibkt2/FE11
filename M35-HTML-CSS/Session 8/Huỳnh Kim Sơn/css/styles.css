@@ -172,23 +172,24 @@ footer{
     body{
     width: 95%;
     }
-    #Guest{
-        width: 100%;
-    }
     #OurMission{ 
         width: 100%;
-        
+    }
+    #Guest{
+        width: 100%;
     }
     .nav_guset{
         display: flex;
         text-align: center;
-
     }
     .ava2, .ava3, .ava4{
         padding-left: 1.5em;
     }
     .ar_1,.ar_2,.ar_3 {
         margin-left: 2.2em;
+    }
+    .slicknav_menu {
+        display:none;
     }
     .js #menu {
 		display:none;
@@ -199,6 +200,5 @@ footer{
 	}
 }
 /* Responsive menu slicknav*/
-
 
 
