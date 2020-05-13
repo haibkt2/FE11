@@ -6,6 +6,10 @@
     <title>San Joanquin Valley Town Hall</title>
     <link rel="shortcut icon" href="../image/logo.png">
     <link rel="stylesheet" href="../css/styles.css"> 
+    <link rel="stylesheet" href="../css/slicknav.min.css">
+    <link rel="stylesheet" href="../css/slicknav.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    
 </head>
 <body>
  <header>
@@ -13,10 +17,10 @@
     <div>
         <h1>San Joanquin Valley Town Hall</h1>
         <h3>Celebrating our <i class="shaw">75<sup>th</sup></i> Year</h3>
-    </div> <br>
+    </div>
 </header>
 <nav id="nav_menu">
-    <ul id="menu">
+    <ul>
         <li><a href="" class="current">Home</a></li>
         <li><a href="">Speakers</a></li>
         <li><a href="">Luncheons</a></li>
@@ -118,5 +122,14 @@
 <footer>
     <p id="copyright">&copy;2015, San Joanquin Valley Town Hall, Fresno, CA93755</p>
 </footer>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script src="../js/jquery.slicknav.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$('#nav_menu').slicknav();
+});
+</script>
+
 </body>
 </html>

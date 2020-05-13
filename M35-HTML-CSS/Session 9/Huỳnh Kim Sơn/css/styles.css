@@ -159,6 +159,9 @@ footer{
     clear: both;
     
 }
+.slicknav_menu {
+    display:none;
+}
 /* Responsive */
 @media only screen and (max-width: 768px) {
     body{
@@ -186,4 +189,14 @@ footer{
         text-align: center;
         padding: 10px 0;
     }
+
+    /* slicknav*/
+    .js #nav_menu {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
+
 }
