@@ -1,7 +1,7 @@
 body {
   width: 800px;
-  /* margin: 0;
-  padding: 0; */
+  margin: 0 auto;
+  /* padding: 0; */
   border: 3px solid blue;
   font-family: arial, sans-serif;
   background-color: #ebf5fa;
