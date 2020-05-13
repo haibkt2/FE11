@@ -6,8 +6,8 @@
 }
 
 body {
-    margin: auto;
-    width: 800px;
+    width: 100%;
+    min-width: 480px;
     border: 5px solid firebrick;
     font-family: 'Roboto Slab', sans-serif;
 }
@@ -32,14 +32,20 @@ header {
 
 header h1 {
     color: firebrick;
+    float: right;
 }
 
 header h3 {
     font-style: italic;
+    float: right;
 }
 
 .shadow {
     text-shadow: 2px 2px 2px firebrick;
+}
+
+.slicknav_menu {
+    display:none;
 }
 
 /*-----NAV------------------------------------------------------------------*/
@@ -209,10 +215,13 @@ blockquote {
 
 .dinosaur2 {
     width: 50%;
+    padding: auto;
     float: right;
 }
 
 .dinosaur2 img {
+    max-width: 100%;
+    height: auto;
     display: block;
     margin: auto;
     border: 1px solid black;

@@ -1,0 +1,283 @@
+/*-----BASIC------------------------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Roboto Slab', sans-serif;
+    line-height: 1.6rem;
+    background-color: #b2bec3;
+    color: #34495e;
+}
+
+body {
+    width: 100%;
+    min-width: 480px;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 5px solid #c0392b;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h4, p, blockquote, a {
+    font-size: 1.6rem;
+}
+
+.clear-right {
+    clear: right;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*-----HEADER-------------------------------------------------------------------*/
+header {
+    padding: 1em 0;
+    background-image: linear-gradient(30deg,sandybrown 0%, white 30%, white 50%, white 80%, sandybrown 100%);
+}
+
+.logo {
+    float:left;
+    display: block;
+    margin: 0 50px;
+}
+
+header h1 {
+    color: #c0392b;
+    margin-bottom: 0.5rem;
+}
+
+header h3 {
+    font-style: italic;
+}
+
+.shadow {
+    text-shadow: 2px 2px 2px #c0392b;
+}
+
+.slicknav_menu {
+    display:none;
+}
+
+/*-----NAV------------------------------------------------------------------*/
+.main-nav {
+    background-color: #c0392b;
+}
+
+.main-nav ul {
+    width: 100%;
+}
+
+.main-nav ul li {
+    float: left;
+    display: block;
+    width: 20%;
+    position: relative;
+}
+
+.main-nav ul li a {
+    background-color: #c0392b;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: none;
+    color: white;
+}
+
+.main-nav ul li a:hover {
+    font-style: italic;
+    background-color: #e74c3c;
+}
+
+.sub {
+    display: none;
+}
+
+.main-nav ul ul li {
+    float: none;
+    width: 100%;
+}
+
+.main-nav ul ul li a {
+    float: none;
+    display: block;
+}
+
+.main-nav ul li:hover > ul {
+    display: block;
+    position: absolute;
+    top: 100%;
+}
+
+.sub-right {
+    display: none;
+}
+
+.main-nav ul ul ul li {
+    float: none;
+    width: 100%;
+}
+
+.main-nav ul ul ul li a {
+    float: none;
+    display: block;
+}
+
+.main-nav ul ul li:hover > ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+/*-----MAIN------------------------------------------------------------------*/
+main {
+    padding: 15px 15px;
+    background-color: #ecf0f1;
+}
+
+/*-----SPEAKER------------------------------------------------------------------*/
+.speaker {
+    width: 30%;
+    float: left;
+    padding-right: 10px;
+}
+
+.speaker ul {
+    list-style-type: none;
+}
+
+.speaker ul li {
+    margin-bottom: 30px;
+}
+
+.speaker h3 {
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+.speaker h4 {
+    margin-bottom: 5px;
+}
+
+.speaker a:hover {
+    font-style: italic;
+}
+
+/*-----MAIN-CONTENTS------------------------------------------------------------------*/
+.main-contents {
+    width: 70%;
+    float: right;
+}
+
+/*-----MISSION------------------------------------------------------------------*/
+.mission h3 {
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+.mission p {
+    text-align: justify;
+}
+
+blockquote {
+    padding: 1em 2em;
+    font-style: italic;
+}
+
+/*-----MONTH-SPEAKER------------------------------------------------------------------*/
+.month-speaker h3 {
+    margin-bottom: 10px;
+}
+
+.dinosaur {
+    border-top: 3px solid #c0392b;
+    border-bottom: 3px solid #c0392b;
+    padding: 1em 0;
+    width: 100%;
+}
+
+.dinosaur h3 {
+    color: #c0392b;
+}
+
+.dinosaur h4 {
+    margin-bottom: 5px;
+}
+
+.dinosaur1 {
+    width: 50%;
+    float: left;
+    padding-right: 20px;
+}
+
+.dinosaur1 p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.dinosaur1 a:first-of-type {
+    margin-right: 10px;
+}
+
+.dinosaur1 a:hover {
+    font-style: italic;
+}
+
+.dinosaur2 {
+    width: 50%;
+    padding: auto;
+    float: right;
+}
+
+.dinosaur2 img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+    border: 1px solid black;
+}
+
+/*-----TICKET------------------------------------------------------------------*/
+.ticket {
+    margin-top: 10px;
+}
+
+.ticket h3 {
+    color: #c0392b;
+    margin-bottom: 10px;
+}
+
+.ticket ul {
+    padding-left: 20px;
+    list-style: circle;
+}
+
+.ticket ul li {
+    font-size: 1.6rem;
+}
+
+/*-----FOOTER------------------------------------------------------------------*/
+footer {
+    background-color: #c0392b;
+    text-align: center;
+    color: white;
+    padding: 1rem 0;
+}
+
+footer h3 {
+    font-weight: normal;
+}

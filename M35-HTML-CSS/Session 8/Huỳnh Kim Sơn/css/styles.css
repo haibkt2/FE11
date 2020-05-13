@@ -133,7 +133,6 @@ main section article h2{
 }
 .aside_imgsoctt{
     float: right;
-    width: 240px;
 }
 .aside_imgsoctt img{
     padding-top: 0px;
@@ -187,9 +186,6 @@ footer{
     }
     .ar_1,.ar_2,.ar_3 {
         margin-left: 2.2em;
-    }
-    .slicknav_menu {
-        display:none;
     }
     .js #menu {
 		display:none;

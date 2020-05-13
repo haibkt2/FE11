@@ -1,0 +1,95 @@
+@media screen and (max-width: 719px) {
+    .js .main-nav {
+        display:none;
+	}
+	
+	.js .slicknav_menu {
+        display:block;
+    }
+    
+    header {
+        border-bottom: 0.5em solid firebrick;
+    }
+
+    .speaker {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .speaker ul {
+        text-align: center;
+    }
+
+    .speaker li {
+        display: inline-block;
+        width: 24%;
+    }
+
+    .main-contents {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 685px) {
+    .speaker h4 {
+        margin: 0;
+    }
+
+    .speaker a {
+        margin-bottom: 0;
+        font-size: 0.625em;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .logo {
+        margin: 0 2.5em;
+    }
+
+    header h1,
+    header h3 {
+        float: right;
+    }
+
+    header h1 {
+        padding-right: 0.3125em;
+    }
+
+    header h3 {
+        padding-right: 0.5555555555555556em;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    header h1 {
+        font-size: 2.4em;
+    }
+
+    header h3 {
+        font-size: 1.6em;
+    }
+    
+    footer h3 {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .logo {
+        margin: 0 1em;
+    }
+
+    .dinosaur1 {
+        float: none;
+        width: 100%;
+        padding-right: 0;
+    }
+
+    .dinosaur2 {
+        float: none;
+        width: 100%;
+        margin-top: 1em;
+    }
+}
