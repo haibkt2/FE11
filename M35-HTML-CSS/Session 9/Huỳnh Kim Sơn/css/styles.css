@@ -24,8 +24,8 @@ header{
 header img{
     margin: 0 30px;
 }
-header h1{
-    color: red;
+header h1, main h3{
+    color:#931420;
 }
 header h3{
     font-style: italic;
@@ -97,9 +97,6 @@ main{
     float: left;
 }
 /* styles layout aside */
-main aside h3,h4 {
-    width: 200px;
-}
 main aside h4{
     margin-top: 15px;
 }
@@ -161,4 +158,32 @@ footer{
     font-size: 90%;
     clear: both;
     
+}
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    body{
+    width: 95%;
+    }
+    /* OurMission*/
+    #OurMission{ 
+        width: 100%;
+        text-align: center;
+    }
+    .aside_imgsoctt{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .nav_list1 ul li{
+        list-style-type:none;
+    }
+    .nav_list1 ul{
+        margin:0 0;
+    }
+    /* Guest*/
+    #Guest{
+        border-top: 2px solid black;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
 }
