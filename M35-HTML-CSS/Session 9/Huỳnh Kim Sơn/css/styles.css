@@ -50,7 +50,7 @@ header h3{
 #nav_menu ul li a.current{
     color: yellow;
 }
-#menu li a:hover, #nav_menu ul li:focus {
+#nav_menu li a:hover, #nav_menu ul li:focus {
     font-style: italic;
     color:yellow;
 }
@@ -171,6 +171,7 @@ footer{
     #OurMission{ 
         width: 100%;
         text-align: center;
+        zoom: 1.5;
     }
     .aside_imgsoctt{
         width: 100%;
@@ -188,8 +189,9 @@ footer{
         width: 100%;
         text-align: center;
         padding: 10px 0;
+        zoom: 1.5;
     }
-
+    
     /* slicknav*/
     .js #nav_menu {
 		display:none;
