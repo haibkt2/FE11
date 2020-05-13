@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Tahoma, sans-serif;
+    border: 3px solid #931420;
+    width: 800px;
+    margin: auto;
+    font-size: 100%;
+    background-color: #fffded;
+}
+/* styles header */
+header{
+    display:flex;
+    font-size: 85%;
+    padding-top: .5em; 
+    background: linear-gradient(30deg,#f6bb73 0%,#f6bb73 30%,white 50%, #f6bb73 80%,#f6bb73 100%);
+
+}
+.shaw{ 
+    text-shadow: 3px 2px 2px #931420;
+}
+header img{
+    margin: 0 30px;
+}
+header h1{
+    color: red;
+}
+header h3{
+    font-style: italic;
+    color: black;
+}
+/* styles nav_menu */
+#nav_menu ul{
+    list-style-type: none;
+    background-color:#800000; 
+}
+#nav_menu ul li{
+    width: 156px;  
+    text-align: center;
+    margin: 1em 0;
+    display: inline-block;
+}
+#nav_menu ul li a{
+    text-decoration: none;
+    color:white;
+    font-weight: bold;
+}
+#nav_menu ul li a.current{
+    color: yellow;
+}
+#menu li a:hover, #nav_menu ul li:focus {
+    font-style: italic;
+    color:yellow;
+}
+/* styles nav_menu About Us */
+.about{
+    position: relative;
+}
+.about ul{
+    position: absolute;
+    display: none;
+    top: 20px;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.about:hover>ul{
+    display: block;
+}
+/* styles nav_menu Past Speakrtes*/
+
+.pastspeakres{
+    position: relative;
+}
+.pastspeakres ul{
+    position: absolute;
+    top: -15px;
+    right: 155px;
+   
+}
+.pastspeakres:hover>ul{
+    display: block;
+}
+/* styles layout */
+main{
+    padding: 0 1em;
+    margin-top: .5em;
+}
+#OurMission{
+    width: 72%;
+    float: right;
+}
+#Guest{
+    width: 28%;
+    float: left;
+}
+/* styles layout aside */
+main aside h3,h4 {
+    width: 200px;
+}
+main aside h4{
+    margin-top: 15px;
+}
+div h4 img{
+    padding-top: 10px;
+}
+/* styles layout section*/
+/* styles layout section ar_1*/
+#OurMission p{
+    margin-top: 15px;
+}
+#OurMission blockquote{
+    margin: 15px 40px;
+}
+#OurMission h2{
+    margin-bottom: 15px;
+}
+/* styles layout section ar_2*/
+.ar_2{
+    display: block;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.aside_imgsoctt{
+    float: right;
+    display: block;
+    margin-top: 20px;
+}
+.ar_2 h3{
+    margin: .5em 0;
+}
+.ar_2 div p{
+    margin-bottom: 15px;
+}
+.nav_1{
+    margin-bottom: 15px;
+}
+/* styles layout section ar_3 */
+.ar_3{
+    margin: 15px 0;
+}
+.nav_list1 ul{
+    margin-left: 20px;
+}
+.nav_list1 ul li{
+    list-style-type:circle ;
+    line-height: 2em;
+}
+.nav_list1 ul li a{
+    line-height: 30px;
+}
+/* styles footer */
+footer{
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+    background-color: #931420;
+    color: white;
+    font-size: 90%;
+    clear: both;
+    
+}
