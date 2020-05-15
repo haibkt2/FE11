@@ -32,84 +32,51 @@ header h3{
     color: black;
 }
 /* styles nav_menu */
-#nav_menu{
-    display: flex;
-	align-items: center;
-	align-content: stretch;
-	justify-items: stretch;
-	height: 100%;
+.current{
+    color: yellow;
 }
 #nav_menu a{
+    display: inline-block;  
+    width: 160px;
+    text-align: center;
+    background-color: #931420;
+    line-height: 50px;
+    font-weight: bold;
     text-decoration: none;
-	background-color:#931420;
-	flex-basis: 30%;
-	height: 100%;
-}
-#nav_menu>ul{
-    background-color:#931420;
-	flex-basis: 100%;
-	display: flex;
-	list-style-type: none;
-	justify-content: flex-end;
-	align-items: center;
-	height: 100%;
-}
-#nav_menu li{
-    flex-basis: 30%;
-    height: 100%;
-    line-height: 3em;
-}
-#nav_menu li a{
-    display: block;
-	text-align: center;
-	height: 100%;
-    box-sizing: border-box;
     color: white;
 }
-#nav_menu li {
-	position: relative;
-}
-/* styles nav_menu sup/sub  */
-.sup1 ul{
-	position: absolute;
-	list-style-type: none;
-	top: 100%;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: auto;
-	display: none;
-}
-.sup1 ul li{
-	flex-basis: 100%;
-	height: 40px;
-}
-.sup2 ul{
-	position: absolute;
-	list-style-type: none;
-	top:0;
-	right: 100%;
-	display: flex;
-	flex-direction: column;
-	width: 100%;
-	height: auto;
-	display: none;
-}
-.sup1:hover>ul{
-    display: block;
-}
-.sup2:hover>ul{
-    display: block;
+#nav_menu li{
+    float: left;  
+    list-style-type: none;
 }
 #nav_menu a:hover{
     color: yellow;
-    zoom: 1.2;
+    font-style: italic;
 }
-.slicknav_menu {
-        display:none;
+/* Sup 1 */
+#sup1{
+    position: relative;
 }
-.current{
-    color: yellow;
+#sup1 ul{
+    display: none;
+    position: absolute;
+    top:100%; 
+}
+#sup1:hover>ul{
+    display: block;
+}
+/* Sup 2 */
+#sup2{
+    position: relative;
+}
+#sup2 ul{
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 10%;
+}
+#sup2:hover>ul{
+    display: block;
 }
 /* styles layout */
 main{
