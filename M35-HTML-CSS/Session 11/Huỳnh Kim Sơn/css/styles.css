@@ -1,0 +1,21 @@
+header{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 30vw 70vw;
+}
+header ul {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-items: center;
+    align-items: center;
+    list-style-type: none;
+}
+.s1{
+    display: grid;
+}
+.s2{
+    display: grid;
+}
+.s3{
+    display: grid;
+}
