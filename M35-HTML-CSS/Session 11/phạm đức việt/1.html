@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      
+        *{
+            padding: 0;
+            margin: 0;
+            grid-gap: 10px;
+            
+            
+        }
+        body {
+            width: 60%;
+            border: solid red;
+            display: grid;
+        }
+        p,a, ul{
+            background-color: #d5cfcfc7;
+        }
+      
+        nav {
+           
+            
+            display: grid;
+            grid-template: 1fr / 1fr 1fr 2fr;
+        }
+        header ul{
+          grid-gap: 10px;
+           grid-column: 3/4;
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            justify-items: center;
+            align-items: center;
+            
+        }
+        li{
+            
+        }
+
+        main{
+           
+            display: grid;
+            grid-template: 90px 1fr/1fr 1fr;
+           
+            
+        }
+        #s1{
+            grid-column: 1/3;
+           
+        }
+        #s2{
+            grid-row: 2/3;
+            grid-column: 1/2;
+            display: grid;
+            grid-template: 20px 80px 80px/1fr 1fr;
+           
+        }
+       
+        .c2 {
+            grid-row: 2/3;
+            grid-column: 1/3;
+        }
+        .c2~p{
+            grid-row: 3/4;
+            grid-column: 1/3;
+        }
+        #s3{
+            display: grid;
+            grid-template: 20px 80px 80px/1fr 1fr;
+            
+        }
+       
+        .c31{
+            grid-row: 2/3;
+            grid-column: 1/2
+            ;
+        }
+       
+        
+        .c32{
+            grid-row: 2/3;
+            grid-column: 2/3;
+        } 
+        .c33{
+            grid-row: 3/4;
+            grid-column: 1/2;
+        } 
+        .c34{
+            grid-row: 3/4;
+            grid-column: 2/3;
+        } 
+    
+       
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+        <a href="ggg">a1</a>
+
+        <ul>
+            <li>l1</li>
+            <li>l2</li>
+            <li>l3</li>
+            <li>l4</li>
+        </ul>
+      
+        </nav>
+    </header>
+    <main>
+       
+        <section id="s1">
+            
+         <p> Thỉnh thỏang chúng ta đọc sách, báo,... và bất chợt 
+            tìm thấy những đọan văn hay, ngắn, súc tích, giàu tính tưởng tượng,ý nghĩa phong phú......... Tớ đề nghị chúng ta lập topic này cùng nhau góp thành một bộ sưu tập,
+             biết đâu sau này cần đến.:D - Để về sau tiện việc tìm kiếm, tra cứu, tớ cũng xin đề nghị chúng ta 
+             không thảo luận gì nhiều trong này:), cũng không copy vào những bài "quá dài ":)&gt;-:)&gt;-:)&gt;-  - </p>
+        </section>
+
+        <section id="s2">
+            <p >t1</p>
+            
+                <p class="  c2">b1</p>
+                <p  >b2</p>
+            
+            
+        </section>
+        <section id="s3">   
+            <p >t2</p>
+            <p class=" c31">f1</p>
+            <p class=" c32">f2</p>
+            <p class=" c33">f3</p>
+            <p class=" c34">f4</p>
+    </section>
+    </main>
+    <footer>
+        <p>copy</p>
+    </footer>
+</body>
+</html>
