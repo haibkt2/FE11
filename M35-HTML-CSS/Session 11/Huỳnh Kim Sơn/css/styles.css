@@ -1,7 +1,9 @@
+
 header{
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 30vw 70vw;
+    background-color: red;
 }
 header ul {
     display: grid;
@@ -10,12 +12,22 @@ header ul {
     align-items: center;
     list-style-type: none;
 }
-.s1{
+
+main{
     display: grid;
+    grid-template-rows: 30vh 10vh 20vh 20vh;
+    grid-template-columns: 50vw 25vw 25vw;
 }
-.s2{
+main.ss1{
     display: grid;
+    grid-template-columns: 100vw;
 }
-.s3{
+
+footer{
     display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 100vw;
+    text-align: center;
+    background-color: yellow;
 }
+
