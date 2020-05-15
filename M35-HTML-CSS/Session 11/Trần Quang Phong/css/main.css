@@ -1,0 +1,232 @@
+body {
+  max-width: 800px;
+  border: 3px solid blue;
+  font-family: arial, sans-serif;
+  background-color: #ebf5fa;
+  box-shadow: 5px 5px 5px #777;
+}
+
+header {
+  display: flex;
+  background-image: linear-gradient(30deg, #93b8c9 0%, #93b8c9 30%, white 50%, #93b8c9 80%, #93b8c9 100%);
+}
+
+header .logo {
+  width: 80px;
+  padding: 0 30px;
+}
+
+header h2 {
+  font-size: 170%;
+  color: blue;
+  margin-bottom: 0;
+}
+
+header h3 {
+  font-size: 130%;
+  font-style: italic;
+  margin-top: 0;
+}
+
+header .shadow {
+  text-shadow: 1px 1px 1px blue;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+nav ul li.last_item {
+  position: relative;
+}
+
+nav ul li:hover > ul {
+  display: block;
+}
+
+nav ul li:hover > a {
+  background-color: grey;
+}
+
+nav ul li a {
+  text-decoration: none;
+  background-color: blue;
+  color: white;
+  display: block;
+  width: 160px; 
+  padding: 1em 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+nav ul li a.current {
+  color: yellow;
+}
+
+nav ul ul {
+  display: none;
+  position: absolute;
+  top: 100%
+}
+
+nav ul ul .contact {
+  position: relative;
+}
+
+nav ul ul ul {
+  position: absolute;
+  top: 0;
+  right: 100%
+}
+
+section {
+  width: 65%;
+  float: right;
+  padding: 0 20px 20px;
+}
+
+section h2 {
+  color: blue;
+  font-size: 120%;
+}
+
+section .quote {
+  padding: 0 2em;
+}
+
+section .speaker .title {
+  color: #000;
+  font-size: 150%;
+  margin-bottom: 5px;
+}
+
+section .speaker .content {
+  border-top: 2px solid blue;
+  border-bottom: 2px solid blue;
+  padding-bottom: 1em;
+}
+
+section .speaker .content .left_content {
+  width: 250px;
+  display: inline-block;
+}
+
+section .speaker .content h3 {
+  color: blue;
+  font-size: 120%;
+  margin: 10px 0;
+}
+
+section .speaker .content h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+section .speaker .content p {
+  margin: 5px 0;
+}
+
+section .speaker .content img {
+  float: right;
+  width: 250px;
+}
+
+section ul {
+  padding: 0 0 .25em 1.25em;
+}
+
+section ul li {
+  padding-bottom: .35em
+}
+
+aside {
+  padding: 0 0 20px 20px;
+  width: 35%;
+}
+
+aside .title {
+  font-size: 120%;
+  color: blue;
+}
+
+aside .month {
+  font-size: 100%;
+  color: black;
+  margin: .25em 0;
+}
+
+aside .avatar {
+  width: 75px;
+  padding: .5em 0 1em 0;
+}
+
+aside .profile {
+  font-size: 105%;
+}
+
+aside .profile:hover {
+  font-style: italic;
+}
+
+footer {
+  text-align: center;
+  background-color: blue;
+  color: #FFF;
+  padding: 1em 0;
+  clear: both;
+}
+
+footer .copyright {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    width: 100%;
+    padding: 0 20px;
+  }
+  
+  section .speaker .content .left_content {
+    width: 50%;
+    display: inline-block;
+  }
+  
+  section .speaker .content img {
+    float: right;
+    width: 370px;
+  }
+
+  aside {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  aside .title {
+    margin-top: 0;
+  }
+  
+  aside .nav {
+    display: flex;
+  }
+
+  aside .nav .guest {
+    width: 25%;
+  }
+
+  .slicknav_menu {
+    display:none;
+  }
+  
+  .js #nav_menu {
+    display:none;
+  }
+  
+  .js .slicknav_menu {
+    display:block;
+  }
+}
+
+
