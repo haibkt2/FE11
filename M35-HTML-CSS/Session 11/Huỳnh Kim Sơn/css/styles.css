@@ -1,4 +1,3 @@
-
 header{
     display: grid;
     grid-template-rows: 1fr;
@@ -12,17 +11,18 @@ header ul {
     align-items: center;
     list-style-type: none;
 }
-
+.ss1{
+    display: grid;
+    grid-template-rows: 30vh;
+    background-color: royalblue;
+    justify-content: center;
+    
+}
 main{
     display: grid;
-    grid-template-rows: 30vh 10vh 20vh 20vh;
+    grid-template-rows: 10vh 20vh 20vh;
     grid-template-columns: 50vw 25vw 25vw;
 }
-main.ss1{
-    display: grid;
-    grid-template-columns: 100vw;
-}
-
 footer{
     display: grid;
     grid-template-rows: 1fr;
