@@ -2,32 +2,17 @@
     padding: 0;
     margin: 0;
 }
+/* --------------------------- BODY MAIN ----------------------------------*/
 body {
     width: 800px;
     margin: 0 auto 0 auto;
     border: 3px solid #931420;
     background-color: #fffded;
 }
-#s1  {
-    width: 525px;
-    float: right;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
+main {
+    clear: both;
 }
-aside {
-    width: 215px;
-    float: right;
-    padding-left: 20px;
-    padding-bottom: 20px;
-}
-aside h3 {
-    font-size: 105%;
-    padding-bottom: .25em;
-} 
-aside img {
-    padding-bottom: 1em;
-}
+/* --------------------------- HEADER ----------------------------------*/
 header {
     border-bottom: 3px solid #931420;
     padding-top: 1.5em;
@@ -50,6 +35,39 @@ header h2 {
     font-size: 130%;
     font-style: italic;
 }
+.shadow strong{
+    text-shadow: 3px 2px 3px   #800000;
+}
+/* --------------------------- MAIN ARTICLE ----------------------------------*/
+main h2 {
+    font-size: 130%;
+    color: #800000;
+}
+main article h3 {
+    font-size: 105%;
+    padding-bottom: .25em;
+}
+.h1{
+    padding-top: .5em;
+    padding-bottom: .25em;
+    margin: 0;
+     font-size: 150%;
+     color: black;
+ }
+h2 {
+    padding-top: .5em;
+    padding-bottom: .25em;
+}
+h3 {
+    padding-bottom: .25em;
+}
+#s1  {
+    width: 525px;
+    float: right;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
 #s2 {
     padding-top: .5em;
     padding-bottom: .5em;
@@ -64,6 +82,49 @@ header h2 {
 #s2 h2 {
     padding-top: 0;
 }
+.class1 img {
+    max-width: 100%;
+    height:  auto;
+}
+p {
+    padding-bottom: .5em;
+}
+blockquote {
+    font-style: italic;
+    padding-right: 2em;
+    padding-left: 2em;
+}
+ul {
+    padding-bottom: .25em;
+    padding-left: 1.25em;
+    padding-top: .25em;
+}
+ul.circle {
+    list-style-type: circle;
+}
+.circle li {
+    padding-bottom: .35em;
+}
+ nav img {
+     padding-bottom: 1em ;
+     width: 80px;
+     height: 80px;
+ }
+/* --------------------------- ASIDE ----------------------------------*/
+aside {
+    width: 215px;
+    float: right;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+aside h3 {
+    font-size: 105%;
+    padding-bottom: .25em;
+} 
+aside img {
+    padding-bottom: 1em;
+}
+/* --------------------------- NAV MENU ----------------------------------*/
 #nav_menu {
     border-top: 2px solid #800000;
     border-bottom:  2px solid #800000;
@@ -98,17 +159,31 @@ a:hover {
     position: absolute;
     
 }
-.submenu {
+#submenu{
     display: none;
     position: absolute;
-
+}
+#submenu ul{
+    display: none;
+    position: absolute;
+    top:100%; 
+}
+#submenu:hover>ul{
+    display: block;
 }
 .submenu2 {
-	margin:0;
     display: none;
-    position: absolute;
     right: 160px;
     top: 150px;
+}
+#submenu2 ul{
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 10%;
+}
+#submenu2:hover>ul{
+    display: block;
 }
 #nav_menu ul ul li {
     float: none;
@@ -118,7 +193,7 @@ a:hover {
     display: block;
     
 }
-li a {
+#nav_menu ul li a {
     display: block;
     width: 160px;
     text-align: center;
@@ -129,64 +204,11 @@ li a {
     color: white;
     font-weight: bold;
 }
-.current {
-    color: yellow;
+.slicknav_menu {
+    display:none;
+  
 }
-main {
-    clear: both;
-}
-.h1{
-   padding-top: .5em;
-   padding-bottom: .25em;
-   margin: 0;
-    font-size: 150%;
-    color: black;
-}
-main h2 {
-    font-size: 130%;
-    color: #800000;
-}
-main article h3 {
-    font-size: 105%;
-    padding-bottom: .25em;
-}
-
-h2 {
-    padding-top: .5em;
-    padding-bottom: .25em;
-}
-h3 {
-    padding-bottom: .25em;
-}
-.class1 img {
-    max-width: 100%;
-    height:  auto;
-}
-nav img {
-    padding-bottom: 1em ;
-    width: 80px;
-    height: 80px;
-}
-p {
-    padding-bottom: .5em;
-}
-blockquote {
-    font-style: italic;
-    padding-right: 2em;
-    padding-left: 2em;
-}
-ul {
-    padding-bottom: .25em;
-    padding-left: 1.25em;
-    padding-top: .25em;
-}
-ul.circle {
-    list-style-type: circle;
-}
-.circle li {
-    padding-bottom: .35em;
-}
-
+/* --------------------------- FOOTER ----------------------------------*/
 footer {
     clear: both;
     background-color: #931420;
@@ -197,210 +219,81 @@ footer p {
     padding-top: 1em;
     padding-bottom: 1em;
 }
-.shadow strong{
-    text-shadow: 3px 2px 3px   #800000;
-}
 
-@media screen and (max-width: 950px)  {
+/* --------------------------- RESPONSE ----------------------------------*/
+
+@media screen and (max-width: 950px) {
     body {
-        width: 90%;
-        max-width: 1500px;
-        height: 1680px ;
-        
+        width: 100%;
+       
     }
     main {
         font-size: x-large;
     }
-    #s1 {
-        width: 90%;
-        padding: 0 20px;
-        height: 100%;
-    }
-    aside {
-        display: inline-block;
-        width: 95%;
-        margin: 20px;
-        top: 250px;
-        position: relative;
-    }
-    aside .h1 {
-        text-align: center;
-       
-    }
-    aside .picture {
+    header {
+        width: 100%;
         display: flex;
-        
-    }
-    aside .picture .guest {
-        width: 20%;
-        margin: 0 auto;
-        
-    }
-    .mission {
-        display: block;
-        width: 80%;
-        height: 150px;
-        display: block;
-        margin: auto;
-       top: 50px;
-       position: relative;
-       
-    }
-    .mission h2 {
         text-align: center;
-    }
-    .content {
-        position: relative;
         flex-direction: column;
-        top: 250px;
-    }
-    .content2 {
-        position: relative;
-        top: 250px;
-        width: 100%;
-        text-align: center;
-        
-    }
-    .class1 {
-        width: 80%;
-    }
-    .class1 img {
-        display: block;
-        margin: 0 2em;
-        width: 20%;
-        height: 30%;
-     
-    }
- 
-    .h1 {
-        text-align: center;
-    }
-    .picture {
-        display: table;
-        margin: 0 auto;
-    }
-   .circle {
-        display: table;
-        margin: auto;
-   }
-    footer {
-        display: block;
-        position: relative;
-        top: 250px;
-    }
-   
-}
-@media screen and (max-width: 720px)  {
-    body {
-       width: 100%;
-       height: 3200px;
-    }
-    main {
-        font-size: x-large;
-    }
-    #s1 {
-        width: 100%;
-        padding: 0 20px;
-        height: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        align-self: center;
+        flex-wrap: wrap;
+      
     }
     aside {
-        display: inline-block;
+        width: 100%;
+        display: flex;
+        padding: 0;
+        margin: 0 auto;
+    }
+   aside .guest {
+       flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        flex-wrap: wrap;
+        padding: 20px;
+        margin: 0 auto;
+    }
+    #s1 {
         width: 90%;
-        margin: auto;
-        top: 350px;
-        position: relative;
-    }
-    aside .h1 {
-        text-align: left;
+        padding: 0 20px;
+        height: 100%;
        
-    }
-    aside .picture {
-        display: inline-block;
-        
     }
     aside .picture .guest {
         width: 50%;
         margin: 0 auto;
     }
-
-    .mission {
-        display: block;
-        text-align: left;
-        width: 90vw;
-        height: 300px;
-        float: left;
-        margin: auto;
-        left: 50px;
-       top: 50px;
-       
-    }
-    .mission h2 {
-        text-align: left;
-    }
-    .content {
-        width: 100vw;
-        position: relative;
-        float: left;
-        left: 50px;
-        top: 350px;
-        text-align: left;
-    }
-    .content2 {
-        width: 100vw;
-        position: relative;
-        top: 350px;
-        left: 50px;
-        text-align: left;
-        float: left;
+    aside .picture {
+        display: inline-block;
         
     }
-    .class1 {
-        width: 80%;
+   
+    .mission {  
+        width: 100%;
+        display: inline-block;
+        position: relative;
+
+    }
+    .content {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
     }
     .class1 img {
-        float: left;
-        display: block;
+        display: flex;
         margin: 0 2em;
         width: 40%;
         height: 30%;
      
     }
-    .h1 {
-        text-align: left;
-        top: 300px;
-    }
-    .picture {
-        left: 50px;
-        display: block;
-        margin: 0 auto;
-    }
-   .circle {
-        display: block;
-        margin: auto;
-   }
-    footer {
-        width: 40vw;
-        top: 400px;
-        left: 150px;
-        display: block;
-        position: relative;
-    }
-   
-}
-
-.slicknav_menu {
-    display:none;
-    left: 200px;
-}
-
-@media screen and (max-width: 950px) {
-	.js #menu {
+    .js #nav_menu {
         display:none;
-        
 	}
-	
 	.js .slicknav_menu {
-        display:block;
-        
-	}
+        display: block;
+    }
 }

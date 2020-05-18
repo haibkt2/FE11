@@ -6,7 +6,9 @@
     <link rel="shortcut icon" href="../image/logo.gif">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../dict/slicknav.css">
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>	
+    <link rel="stylesheet" href="../dict/slicknav.min.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body> 
@@ -16,18 +18,18 @@
         <h2 class="shadow">Celebrating our <strong>75<sup>(th)</sup> </strong> Year </h2>
     </header>
     <nav id="nav_menu">
-    <ul >
-        <li><a class="current" href="../html/index.html">Home</a></li>
+    <ul id="menu">
+        <li><a href="../html/index.html" style="color: yellow;">Home</a></li>
         <li><a href="../html/index.html">Speakers</a></li>
         <li><a href="../html/index.html">Luncheons</a></li>
         <li><a href="../html/index.html">Tickets</a></li>
         <li ><a href="../html/index.html">About Us</a>
-            <ul class="submenu2" >
+            <ul class="submenu" >
                 <li><a href="../html/index.html">Our History</a></li>
                 <li><a href="../html/index.html">Board of Directors</a></li>
                 <li><a href="../html/index.html">Past Speakers</a></li>
                 <li><a href="../html/index.html">Contact Information</a>
-                    <ul class="submenu">
+                    <ul class="submenu2">
                         <li><a href="../html/index.html">Facebook</a>
                         <li><a href="../html/index.html">Mail</a>
                     </ul>
@@ -107,12 +109,12 @@
     <footer>
         <p>&copy;2018, San Joaquin Valley Town Hall, Fresno, CA 93775</p>
     </footer>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-        <script src="../dict/jquery.slicknav.js"></script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-	        $('#nav_menu').slicknav();
-            });
-        </script>
+    <script src="../dict/jquery.slicknav.js"></script>
+    <script src="../dict/jquery.slicknav.min.js"></script>
+    <script>
+    $(document).ready(function(){
+        $('#menu').slicknav();
+    });
+    </script>   
 </body>
 </html>
