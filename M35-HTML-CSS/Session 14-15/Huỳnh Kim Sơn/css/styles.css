@@ -153,13 +153,18 @@ thead{
     border-top: 2px solid #800000;
     border-bottom: 2px solid #800000;
 }
-.row11,.row2,.row31,.row6,.row71,.row8,.row9{    border-bottom: 2px solid #800000;
+.row11,.row2,.row31,.row6,.row7,.row8,.row9{    border-bottom: 2px solid #800000;
 }
-td,th{
+td,.header th{
     text-align: left;
-    padding: 4px;
+    padding: 5px 20px;
 }
-
+.row7,.row8,.row9,.cost{
+    text-align: right;
+}
+.row9 td{
+    font-weight: bold;
+}
 /* styles footer */
 footer{
     display: flex;
@@ -194,7 +199,7 @@ footer{
     }
     .nav_list1 ul{
         margin:0 0;
-    }
+    }                                                                                                                                                                                                 
     /* Guest*/
     #Guest{
         border-top: 2px solid black;
