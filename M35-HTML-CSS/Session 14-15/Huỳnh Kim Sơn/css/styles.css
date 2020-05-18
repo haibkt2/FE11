@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: Tahoma, sans-serif;
+    border: 3px solid #931420;
+    width: 800px;
+    margin: auto;
+    font-size: 100%;
+    background-color: #fffded;
+}
+/* styles header */
+header{
+    display:flex;
+    font-size: 85%;
+    padding-top: .5em; 
+    background: linear-gradient(30deg,#f6bb73 0%,#f6bb73 30%,white 50%, #f6bb73 80%,#f6bb73 100%);
+
+}
+.shaw{ 
+    text-shadow: 3px 2px 2px #931420;
+}
+header img{
+    margin: 0 30px;
+}
+header h1, main h3{
+    color:#931420;
+}
+header h3{
+    font-style: italic;
+    color: black;
+}
+/* styles nav_menu */
+.current{
+    color: yellow;
+}
+#nav_menu a{
+    display: inline-block;  
+    width: 160px;
+    text-align: center;
+    background-color: #931420;
+    line-height: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+#nav_menu li{
+    float: left;  
+    list-style-type: none;
+}
+#nav_menu a:hover{
+    color: yellow;
+    font-style: italic;
+}
+/* Sup 1 */
+#sup1{
+    position: relative;
+}
+#sup1 ul{
+    display: none;
+    position: absolute;
+    top:100%; 
+}
+#sup1:hover>ul{
+    display: block;
+}
+/* Sup 2 */
+#sup2{
+    position: relative;
+}
+#sup2 ul{
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 10%;
+}
+#sup2:hover>ul{
+    display: block;
+}
+/* styles layout */
+main{
+    padding: 0 1em;
+    margin-top: 4em;
+}
+#OurMission{
+    width: 72%;
+    float: right;
+}
+#Guest{
+    width: 28%;
+    float: left;
+}
+/* styles layout aside */
+main aside h4{
+    margin-top: 15px;
+}
+div h4 img{
+    padding-top: 10px;
+}
+/* styles layout section*/
+/* styles layout section ar_1*/
+#OurMission p{
+    margin-top: 15px;
+}
+#OurMission blockquote{
+    margin: 15px 40px;
+}
+#OurMission h2{
+    margin-bottom: 15px;
+}
+/* styles layout section ar_2*/
+.ar_2{
+    display: block;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+}
+.aside_imgsoctt{
+    float: right;
+    display: block;
+    margin-top: 20px;
+}
+.ar_2 h3{
+    margin: .5em 0;
+}
+.ar_2 div p{
+    margin-bottom: 15px;
+}
+.nav_1{
+    margin-bottom: 15px;
+}
+/* styles layout section ar_3 */
+.ar_3{
+    margin: 15px 0;
+}
+.nav_list1 ul{
+    margin-left: 20px;
+}
+.nav_list1 ul li{
+    list-style-type:circle ;
+    line-height: 2em;
+}
+.nav_list1 ul li a{
+    line-height: 30px;
+}
+/* styles table */
+table{
+    border-collapse: collapse;
+    margin-top: .5em;
+    margin-bottom: 2em;
+}
+thead{
+    border-top: 2px solid #800000;
+    border-bottom: 2px solid #800000;
+}
+.row11,.row2,.row31,.row6,.row71,.row8,.row9{    border-bottom: 2px solid #800000;
+}
+td,th{
+    text-align: left;
+    padding: 4px;
+}
+
+/* styles footer */
+footer{
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+    background-color: #931420;
+    color: white;
+    font-size: 90%;
+    clear: both;
+    
+}
+.slicknav_menu {
+    display:none;
+}
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    body{
+    width: 95%;
+    }
+    /* OurMission*/
+    #OurMission{ 
+        width: 100%;
+        text-align: center;
+        zoom: 1.5;
+    }
+    .aside_imgsoctt{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    .nav_list1 ul li{
+        list-style-type:none;
+    }
+    .nav_list1 ul{
+        margin:0 0;
+    }
+    /* Guest*/
+    #Guest{
+        border-top: 2px solid black;
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        zoom: 1.5;
+    }
+    /* slicknav*/
+    .js #nav_menu {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+		display:block;
+	}
+
+}
