@@ -4,59 +4,64 @@
 	<meta charset="UTF-8">
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="../css/slicknav.css">
-	<link rel="stylesheet" href="../css/style.css">
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <style>
+  	main{
+  		background-color: yellow;
+  	}
+  	
+  	table{
+  		min-width: 700px;
+  	}
+  </style>
 </head>
 <body>
-	<header>
-		<nav id="menu">
-			<a href="">logo</a>
-			<ul>
-				<li><a href="">Menu1</a></li>
-				<li><a href="">Menu2</a></li>
-				<li><a href="">Menu3</a></li>
-				<li class="sup">
-					<a href="">Menu4</a>
-					<ul>
-						<li><a href="">Sup1</a></li>
-						<li><a href="">Sup2</a></li>
-						<li><a href="">Sup3</a></li>
-						<li><a href="">Sup4</a></li>
-						<li class="sub">
-							<a href="">Sup5</a>
-							<ul>
-								<li><a href="">Sub1</a></li>
-								<li><a href="">Sub2</a></li>
-								<li><a href="">Sub3</a></li>
-							</ul>
-						</li>
-					</ul>
-				</li>
-			</ul>
-		</nav>
-	</header>
-<main>lornSan Joaquin Valley Town Hall is a non-profit organization that is run by an all-volunteer board of directors. Our mission is to bring nationally and internationally renowned, thought-provoking speakers who inform, educate, and entertain our audience! As one or our members told us:
+	
+<main class="container">
+	<div class="row">
+		<h1>Title of table </h1>
+		<div class="table_text">
+		  <table class="table">
+		    <thead>
+		      <tr>
+		        <th>#</th>
+		        <th class="th-lg">Lorem ipsum dolor</th>
+		        <th class="th-lg">Lorem ipsum dolor</th>
+		        <th class="th-lg">Lorem ipsum dolor</th>
+		      </tr>
+		    </thead>
+		    <!--Table head-->
 
-“Each year i give a ticket package to each of our family members. I think of it as the gift of knowledge...and that is priceless.”
-Speaker of the Month
-Fossil Threads in the Web of Life
-February
+		    <!--Table body-->
+		    <tbody>
+		      <tr>
+		        <th scope="row">1</th>
+		        <td>Lorem ipsum dolor</td>
+		        <td>Lorem ipsum dolor</td>
+		        <td>Lorem ipsum dolor</td>
+		      </tr>
+		      <tr>
+		        <th scope="row">2</th>
+		        <td>Lorem ipsum dolor</td>
+		        <td>Lorem ipsum dolor</td>
+		        <td>Lorem ipsum dolor</td>
+		      </tr>
+		      <tr>
+		        <th scope="row">3</th>
+		        <td>Lorem ipsum dolor</td>
+		        <td>Lorem ipsum dolor</td>
+		        <td>Lorem ipsum dolor</td>
+		      </tr>
+		    </tbody>
+		    <!--Table body-->
 
-Scoot Sampson
+		  </table>
+  <!--Table-->
 
-man
-What's 75 million years old and brand spanking new? A teenage Utahceratops! Come to the Saroyan, armed with your best dinosaur roar, when Scott Sampson, Research Curator at the Utah Museum of Natural History, steps to the podium. Sampson's research has focused on the ecology and evolution of late Cretaceous dinosaurs and he has conducted fieldwork in a number of countries in Africa.
-
-Read more Or play video</main>
-	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js">
-	  </script>
-    <script src="../js/jquery.slicknav.js"></script>
-    <script type="text/javascript">
-    $(document).ready(function(){
-			$('#menu').slicknav();
-    });
-  </script>
+</div>
+		
+	</div>
+</main>
+	 
 </body> 
 </html>
