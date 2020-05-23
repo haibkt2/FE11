@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/slicknav.css">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <title>Home</title>
+</head>
+<body>
+    <header>
+        <img class="logo" alt="Logo" src="../img/logo.png">
+        <div>
+        <h1>San Joaquin Valley Town Hall</h1>
+        <h3>Celebrating our <span class="text_shadow">75<sup>th</sup></span> Year</h3>
+        </div>
+    </header>
+    <nav id="nav_menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Speaker</a>
+                <ul class="sup">
+                    <li><a href="#">Jeffrey Toobin</a></li>
+                    <li><a href="#">Andrew Ross Sorkin</a></li>
+                    <li><a href="#">Amy Chua</a>
+                         <ul   class="sup2">
+                            <li><a href="#">7/5/2020</a></li>
+                            <li><a href="#">8/5/2020</a></li>
+                            <li><a href="#">9/5/2020</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">Luncheons</a></li>
+            <li><a href="#">Tickets</a></li>
+            <li><a href="#">About Us</a>
+                <ul  class="sup">
+                    <li><a href="#">Our History</a></li>
+                    <li><a href="#">Boards Directors</a></li>
+                    <li><a href="#">Past Speaker</a></li>
+                    <li><a href="#">Contact Information</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <nav class="main_left">
+            <h3>Guest Speaker</h3>
+            <ul>
+                <li>
+                    <h4>October</h4>
+                    <h4><a href="#">Jeffrey Toobin</a></h4>
+                    <img src="../img/toobin.jpg" alt="Jeffrey Toobin">
+                </li>
+                <li><h4>November</h4>
+                    <h4><a href="#">Andrew Ross Sorkin</a></h4>
+                    <img src="../img/sorkin.jpg" alt="Andrew Ross Sorkin">
+                </li>
+                <li><h4>January</h4>
+                    <h4><a href="#">Amy Chua</a></h4>
+                    <img src="../img/chua.jpg" alt="Amy Chua">
+                </li>
+                <li><h4>February</h4>
+                    <h4><a href="#">Scott Sampson</a></h4>
+                    <img src="../img/sampson.jpg" alt="Scott Sampson">
+                </li>
+            </ul>
+        </nav>
+        <nav class="main_right">
+            <section class="section_right">
+                <h1>About Our Luncheons</h1>
+                <p>Make reservtion for in the lower of the William Saroyan Theater after each lecture. There informal sessions provide an excellent opportunity to talk with speaker </p>
+            </section>
+            <section class="section_right">
+                <h3>Season Luncheon ticket: $120</h3>
+                <p>These tickets can be ordered at the same time as the season lecture ticket</p>
+            </section>
+            <section class="section_right">
+                <h3>Individual Luncheon ticket: $25</h3>
+                <p>A limited number of these tickets are available and can be purchased by calling 559 555 1212. These tickets must be purchased by the Friday prior to the lecture.
+            </section>
+            <section>
+                <h3>The Luncheon schedule</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Year</th>
+                            <th>Date</th>
+                            <th>Speaker</th>
+                            <th>Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="top">
+                            <td rowspan="2">2015</td>
+                            <td>October 19</td>
+                            <td>Jeffrey Toobin</td>
+                            <td>$25</td>
+                        </tr>
+                        <tr>
+                            <td>November 16</td>
+                            <td>Andress Ross Sorkin</td>
+                            <td>$25</td>
+                        </tr>
+                        <tr class="top">
+                            <td rowspan="4">2016</td>
+                            <td>January 18</td>
+                            <td>Amy Chua</td>
+                            <td>$25</td>
+                        </tr>
+                        <tr>
+                            <td>Febnuary 16</td>
+                            <td>Scott Sampson</td>
+                            <td>$25</td>
+                        </tr>
+                        <tr>
+                            <td>March 21</td>
+                            <td>Carlos Eire</td>
+                            <td>$25</td>
+                        </tr>
+                        <tr>
+                            <td>April 18</td>
+                            <td>Ronan Tynan</td>
+                            <td>$25</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="top">
+                            <th colspan="3">Cost of 6 individual luncheon tickets</th>
+                            <td>$150</td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">Cost of 6 individual luncheon tickets</th>
+                            <td>$150</td>
+                        </tr>
+                        <tr class="top">
+                            <th colspan="3">Savings</th>
+                            <td>$30</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </section>
+        </nav>
+    </main>
+    <footer>
+        <h3>&copy; 2015, Nguyen Thi Bich Ni, Fresno, CA 93755</h3>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="../js/jquery.slicknav.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+	    $('#nav_menu').slicknav();
+        });
+    </script>
+</body>
+</html>
