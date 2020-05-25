@@ -18,11 +18,12 @@ li.nav-item {
 .slide img{
     position: relative;
     width: 100%;
+    margin-top: 62px;
 }
 .slide h1{
     position: absolute;
-    top: 47%;
-    right:38% ;
+    top: 50%;
+    right:37% ;
     color:yellow;
     font-size: 400%;
 }
