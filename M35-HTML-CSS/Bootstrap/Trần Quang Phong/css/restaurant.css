@@ -1,0 +1,364 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #00243f;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  right: 0;
+  left: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  padding: 0 1em;
+  background-color: #264b77;
+}
+
+header .logo {
+  width: 50px;
+  margin-right: 1em;
+}
+
+header .content {
+  text-decoration: none;
+  color: #FFF;
+}
+
+header ul {
+  display: flex;
+  margin-left: auto;
+}
+
+header ul li {
+  list-style-type: none;
+}
+
+header ul li i {
+  color: #b67929;
+  margin: 0 .5em 0 1em;
+}
+
+header ul li a {
+  text-decoration: none;
+  color: #FFF;
+  transition: all .3s;
+}
+
+header ul li a:hover {
+  border-bottom: 2px solid #FFF;
+  padding-bottom: 5px;
+}
+
+main .welcome {
+  position: relative;
+}
+
+main .welcome .welcome-img {
+  width: 100%;
+}
+
+main .welcome .welcome-title {
+  color: #FFF;
+  font-size: 3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Courgette', cursive;
+}
+
+.main {
+  width: 80%;
+  margin: 5em auto 0;
+}
+
+.main .restaurant .title {
+  text-align: center;
+  font-size: 2em;
+  margin: 3em 0 2em;
+  font-family: 'Courgette', cursive;
+}
+
+.main .restaurant .location,
+.main .restaurant .cuisine {
+  display: flex;
+}
+
+.main .restaurant .location {
+  margin-bottom: 4em;
+}
+
+.main .restaurant .location .content,
+.main .restaurant .cuisine .content {
+  width: 45%;
+}
+
+.main .restaurant .location .content {
+  margin-right: 10%;
+}
+
+.main .restaurant .cuisine .content {
+  order: 1;
+  margin-left: 10%;
+}
+
+.main .restaurant .location img,
+.main .restaurant .cuisine img {
+  width: 45%;
+}
+
+.main .menu > .title {
+  text-align: center;
+  font-size: 2em;
+  margin: 3em 0 2em;
+  font-family: 'Courgette', cursive;
+}
+
+.main .menu .container-menu {
+  display: flex;
+  text-align: center;
+}
+
+.main .menu .meat,
+.main .menu .sandwiches,
+.main .menu .sweets {
+  width: 30%;
+  box-shadow: 5px 5px 5px #b67929;
+  transition: all .3s;
+}
+
+.main .menu .meat:hover,
+.main .menu .sandwiches:hover,
+.main .menu .sweets:hover {
+  background-color: #3c5b74;
+  color: #FFF;
+}
+
+.main .menu .meat,
+.main .menu .sandwiches {
+  margin-right: 5%;
+}
+
+.main .menu .meat img,
+.main .menu .sandwiches img,
+.main .menu .sweets img {
+  width: 100%;
+  height: 30%;
+}
+
+.main .reservation > .title {
+  text-align: center;
+  font-size: 2em;
+  margin: 3em 0 2em;
+  font-family: 'Courgette', cursive;
+}
+
+.main .reservation .reservation-img {
+  width: 100%;
+}
+
+.main .reservation .container-reservation {
+  position: relative;
+}
+
+.main .reservation .container-reservation .timetable {
+  position: absolute;
+  top: 60%;
+  left: 60%;
+  color: #b67929;
+  font-size: 2em;
+}
+
+.main .reservation .container-reservation .lunch {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  color: #b67929;
+  font-size: 1.5em;
+}
+
+.main .reservation .container-reservation .dinner {
+  position: absolute;
+  top: 70%;
+  left: 70%;
+  color: #b67929;
+  font-size: 1.5em;
+}
+
+.main .reservation form {
+  background-color: #3c5b74;
+  padding: 0 5em;
+}
+
+.main .reservation .form-reserve {
+  display: flex;
+}
+
+.main .reservation .form-reserve .title {
+  text-align: center;
+}
+
+.main .reservation .form-reserve input {
+  width: 80%;
+  margin: .5em 0 1em;
+  height: 2em;
+}
+
+.main .reservation .request .label {
+  color: #FFF;
+}
+
+.main .reservation .request .textarea {
+  display: block;
+  width: 90%;
+  margin-top: .5em;
+}
+
+.main .reservation .form-reserve .reserve,
+.main .reservation .form-reserve .details {
+  width: 50%;
+  color: #FFF;
+}
+
+.main .reservation .btn {
+  background-color: #b67929;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 8px 16px;
+  color: #FFF;
+  margin: 1em 0;
+}
+
+.main .reservation .btn:hover {
+  background-color: #8f5913;
+}
+
+.main .reservation .btn {
+  transition: all .3s;
+}
+
+.main .location .title {
+  text-align: center;
+  font-size: 2em;
+  margin: 3em 0 2em;
+  font-family: 'Courgette', cursive;
+}
+
+.main .location .container-location {
+  display: flex;
+}
+
+.main .location .container-location .map {
+  margin-right: 2em;
+}
+
+footer {
+  width: 76%;
+  margin: 1em auto;
+  padding: 0 2%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #264b77;
+  color: #FFF;
+}
+
+footer .follow-us {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+footer .follow-us i {
+  margin-left: .5em;
+  color: #b67929;
+}
+
+footer .follow-us i:hover {
+  color: #8f5913;
+}
+
+footer .follow-us i {
+  transition: all .3s;
+}
+
+@media screen and (max-width: 800px) {
+  .main .restaurant .location,
+  .main .restaurant .cuisine {
+    display: block;
+  }
+
+  .main .restaurant .location .content,
+  .main .restaurant .cuisine .content {
+    width: 100%;
+  }
+
+  .main .restaurant .cuisine .content {
+    margin-left: 0;
+  }
+
+  .main .restaurant .location img,
+  .main .restaurant .cuisine img {
+    width: 100%;
+  }
+
+  .main .menu .container-menu {
+    display: block;
+  }
+
+  .main .menu .meat,
+  .main .menu .sandwiches,
+  .main .menu .sweets {
+    width: 100%;
+    margin-bottom: 3em;
+  }
+
+  .main .reservation .container-reservation .timetable {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .main .reservation .container-reservation .lunch {
+    top: 70%;
+    left: 10%;
+  }
+  
+  .main .reservation .container-reservation .dinner {
+    top: 70%;
+    left: 60%;
+  }
+
+  .main .reservation .form-reserve {
+    display: block;
+  }
+
+  .main .reservation .form-reserve .reserve,
+  .main .reservation .form-reserve .details {
+    width: 100%;
+  }
+
+  .main .reservation .form-reserve input {
+    width: 100%;
+  }
+
+  .main .reservation .request .textarea {
+    width: 100%;
+  }
+
+  .main .location .container-location {
+    display: block;
+  }
+}
+
+
+
+
+
+
+
+
+
