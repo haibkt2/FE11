@@ -3,18 +3,20 @@
   box-sizing: border-box;
 
 }
+body {
+  margin: 0;
+}
 header{
   position: fixed;
-  width: 98.8%;
+  width: 100%;
   top: 0;
   z-index: 1;
-  padding: 0 20px;
 }
 .navhead {
   display: flex;
   background-color: #ffe8d7;
   justify-content: space-between;
-  padding: 0 6px;
+  padding: 0 16px;
 }
 .nav1 {
   display: flex;
@@ -40,6 +42,7 @@ header{
 .nav2__link {
   text-decoration: none;
   margin-left: 30px;
+  font-size: 18px;
 }
 .nav2__link:hover {
   text-decoration: underline;
@@ -212,6 +215,9 @@ header{
   display: flex;
   flex-direction: column;
 }
+.form__input input {
+  outline: none;
+}
 .trai{
   flex-basis: 50%;
   padding: 0 20px;
@@ -244,6 +250,7 @@ input{
   border-radius: 31px;
   border: none;
   margin-top: 10px;
+  outline: none;
 }
 .comment__tilte {
   margin-bottom: 10px;
@@ -279,12 +286,10 @@ input{
 }
 /* footer ---------- */
 .footer {
-  max-width: 1200px;
-  margin: 0 45px;
   padding: 20px 20px;
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 2px;
   background-color: #ffe8d7;
 }
 .footer__start {
