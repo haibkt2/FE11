@@ -1,0 +1,134 @@
+@media screen and (max-width: 1200px) {
+        .row {
+            padding: 0 2em;
+        }
+
+        .footer {
+            padding: 2em 2em;
+        }
+}
+
+@media screen and (max-width: 1023px) {
+    .main-nav a:link, 
+    .main-nav a:visited,
+    .main-nav a:active,
+    .main-nav a:hover {
+        font-size: 1.6em;
+        /*padding: 2.5em 0.5em;*/
+    }
+
+    .main-nav a:first-of-type {
+        padding: 0;
+    }
+    
+    .row {
+        padding: 0 2em;
+    }
+    
+    .article-location,
+    .article-cuisine {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .article-location figure,
+    .article-location div,
+    .article-cuisine figure,
+    .article-cuisine div {
+        width: 100%;
+    }
+
+    .article-location div {
+        margin-left: 0;
+    }
+
+    .article-cuisine div {
+        margin-right: 0;
+    }
+
+    .map {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .map div {
+        width: 100%;
+        margin: 2em 0;
+    }
+
+    .map iframe {
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .footer {
+        padding: 2em 2em;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .js .main-nav {
+        display:none;
+    }
+
+    .js .slicknav_menu {
+        display:block;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 999;
+    }
+
+    .slogan {
+        font-size: 4em;
+    }
+
+    .three-menu {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu1,
+    .menu2,
+    .menu3 {
+        width: 100%;
+        margin-bottom: 3em;
+    }
+
+    .reg-form {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .reg-form div {
+        width: 100%;
+        margin-bottom: 3em;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer div:first-of-type {
+        margin-bottom: 1em;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .lunch-dinner {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer p {
+        font-size: 1.6em;
+    }
+}
