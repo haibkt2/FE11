@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 20px;
+}
+body{
+    width: 100%;
+    margin: 0 auto;
+}
+main{
+    width: 90%;
+    margin: 0 auto;
+}
+header{
+    background-color: silver;
+    padding: .2rem;
+    background-attachment: fixed;
+    
+}
+#logo{
+    width: 4rem;
+    height: 4rem;
+}
+#name{
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 1rem;
+}
+.items{
+    text-align: center;
+    margin: 1rem 0;
+    color: #800000;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+/* ------------------------- */
+header nav{
+    display: flex;
+	align-items: center;
+	align-content: stretch;
+    justify-items: stretch;
+    padding-left: 10px;
+}
+header nav ul{
+	flex-basis: 80%;
+	display: flex;
+	list-style-type: none;
+	justify-content:flex-end;
+	align-items: center;
+
+}
+header nav ul li{
+    width: 15%;
+    align-items: center;
+}
+header nav ul li a{
+    font-size:1.1rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color:black;
+    font-weight: 700;
+    font-style: italic;
+}
+header nav ul li a:hover{
+    color: white;
+}
+.slicknav_menu {
+    display:none;
+}
+/* header{
+    position: fixed; //giữ nguyên menu khi kéo chuột
+    right: 0;
+    left: 0;
+    top:0;
+    z-index: 1;
+} */
+/* ----------------WELCOME------------------- */
+#Welcome{
+    width: 100%;
+    height: 30rem;
+}
+#Welcome img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#Welcome h2{
+    position: absolute;
+    color: white;
+    font-style: italic;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 6rem;
+    top: 30%;
+    right: 37%;
+}
+/* ------------------------------- */
+#Restaurant{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 18rem 18rem;
+    background-color: #f5f5f0;
+    grid-gap: 1.5rem;
+}
+#sec1{
+    grid-column: 1/2;
+    grid-row: 1/2;
+    box-sizing: border-box;
+}
+#sec2{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    box-sizing: border-box;
+}
+#sec3{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#sec4{
+    grid-column: 2/3;
+    grid-row: 2/3;
+    box-sizing: border-box;
+}
+/* ---------RESERVATION----------- */
+#Reservation{
+    width: 100%;
+    height:35rem;
+    background-image: url(../img/reservation3.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Reservation section{
+    color: brown;
+    font-size: 3rem;
+    margin: 2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* --------form----------- */
+form{
+    background-color: #f5f5f0;
+}
+main table{
+    width: 100%;
+}
+main table tr td{
+    padding: .2rem .7rem;
+}
+main table tr td label{
+    font-style: italic;
+}
+main table tr th h4{
+    text-align: start;
+}
+/* --------form----------- */
+#Location{
+    width: 100%;
+    display: flex;
+}
+#Location div article{
+    margin-left: 1rem;
+    margin-top: 30%;
+}
+
+/* ----------------Menu-------------------- */
+#menu{
+    display: flex;
+    justify-content: center;
+    
+}
+#menu .div_menu{
+    height: 500px;
+    width: 32%;
+    border: 2px solid #AA0000;
+    margin: 1rem;
+    box-sizing: border-box;
+    
+}
+#menu .div_menu:hover{
+    background-color: #CD853F;
+}
+#menu .div_menu img{
+    width: 100%;
+    height: 50%;
+}
+#menu .div_menu p{
+    padding-left: .2rem;
+    line-height: 1.8rem
+}
+#menu .div_menu h4{
+    text-align: center;
+}
+#menu .div_menu hr{
+    width: 90%;
+    margin: 0 auto;
+}
+/* ------------------Footer------------------ */
+footer{
+    background-color: #f5f5f0;
+    width: 90%;
+    margin: 1rem auto;
+    height: 2rem;
+}
+footer ul{
+    padding-bottom: 1px;
+    list-style-type: none;
+    width: 100%;
+    
+}
+footer ul li{
+    font-style: italic;
+    width: 32%;
+    float: left;
+    display: block;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+
+}
+/* ------------------Footer------------------ */
+footer{
+    display: flex;
+    align-items: center;
+    background-color: silver;
+    width: 100%;
+    margin: 1rem auto;
+    height: 2.5rem;
+}
+footer ul{
+    padding-bottom: 1px;
+    list-style-type: none;
+    width: 100%;
+    
+}
+footer ul li{
+    font-style: italic;
+    width: 32%;
+    float: left;
+    display: block;
+    text-align: center;
+    font-family: 'Tahoma', Geneva, Verdana, sans-serif; 
+
+}
+/*-----------------------------------------------*/
+@media screen and (max-width: 600px){
+    #menu{
+        float:none;
+        display: block;
+    }
+    #menu .div_menu{
+        height: 400px;
+        width: 90%;
+        border: 1px solid silver;
+        margin-top: 1rem;
+        box-sizing: border-box;
+        overflow: hidden;
+    
+        
+    }
+    #menu .div_menu img{
+        width: 100%;
+        height: 50%;
+    }
+    #menu .div_menu p{
+        padding-left: .2rem;
+        line-height: 1.5rem
+    }
+    #menu .div_menu h4{
+        text-align: center;
+    }
+    #menu .div_menu hr{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+@media screen and (max-width: 600px){
+    #nav_menu>ul {
+        display:none;
+    }
+    .slicknav_menu {
+        display:block;
+    }
+    nav>a{
+    	height: 44px;
+    	width: 100px;
+    	position: absolute;
+    	top: 0;
+    }
+    *{
+    	margin: 0;
+    	padding: 0;
+    }
+    .slicknav_nav>a{
+    	display: none;
+    }
+   .slicknav_nav ul{
+    	height: auto;
+    	margin: 0;
+    	flex-basis: 100%;
+
+    } 
+    .slicknav_nav ul li{
+    	height: 40px;
+    }
+    .slicknav_nav ul li a{
+    	margin: 0;
+    	height: 40px;
+    	padding: 1em;
+		box-sizing: border-box;
+    }
+    .slicknav_nav .slicknav_row{
+    	padding: 0;
+    	margin: 0;
+    }
+    .slicknav_nav .slicknav_row a{
+    	display: block;
+    	padding-top: 1em;
+    }
+    .slicknav_arrow{
+    	display: none;
+    }
+    .slicknav_nav ul{
+    	overflow: unset;
+    }
+}

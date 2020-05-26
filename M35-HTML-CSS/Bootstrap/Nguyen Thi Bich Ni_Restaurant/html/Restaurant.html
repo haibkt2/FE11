@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+    <link rel="stylesheet" href="../css/Restaurant.css">
+    <link rel="stylesheet" href="../css/slicknav.css">
+</head>
+<body>
+    <!-- ------------------Header-------------------- -->
+    <header>
+        <nav id="nav_menu">
+                <img alt="logo" id="logo" src="../img/logo.jpeg">
+                <h4 id="name">Italian Restaurant</h4>
+            <ul>
+                <li><a href="#Welcome"><i class="fas fa-home"></i>Welcome</a></li>
+                <li><a href="#Restaurant"><i class="fas fa-utensils"></i>Restaurant</a></li>
+                <li><a href="#menu"><i class="far fa-list-alt"></i>Menu</a></li>
+                <li><a href="#Reservation"><i class="far fa-heart"></i></i>Reservation</a></li>
+                <li><a href="#Location"><i class="fas fa-map-marker-alt"></i>Our Location</a></li>
+                <li><img src="../img/itali.jpg" alt="itali" width="50px" height="30px">
+                    <img src="../img/anh.png" alt="England" width="50px" height="30px">
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ------------------Banner Welcome-------------------- -->
+    <div id="Welcome">
+        <img src="../img/banner.jpg" alt="Banner">
+        <h2>Welcome</h2>
+    </div>
+    <main>
+        <!-- ------------------Restaurant-------------------- -->
+        <h3 class="items">--Restaurant--</h3>
+        <article id="Restaurant">
+            <section id="sec1">
+                <h3>Location</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining ...
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining ...
+                </p>
+            </section>
+            <section id="sec2">
+                <img src="../img/location.jpg" alt="Location" width="100%" height="100%">
+            </section>
+            <section id="sec3">
+                <img src="../img/cuisine.jpg" alt="Location" width="100%" height="100%">
+            </section>
+            <section id="sec4">
+                <h2>Cuisine</h3>
+                <p>In publishing and graphic design, Lorem ipsum is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used before final copy is available</p>
+        </article>
+        <!-- ------------------Menu-------------------- -->
+        <h3 class="items">--Menu--</h3>
+        <div id="menu">
+            <div class="div_menu">
+                        <img alt="Food1" src="../img/food1.jpg">
+                        <h4>Meat Menu</h4>
+                        <hr>
+                        <p>Bocconcini di carne in nido di sfoglica</p>
+                        <p>Bruschette con maiale al cury</p>
+                        <p>Uova al prosciutto</p>
+                        <p>Vitello tomato</p>
+                        <p>Fesa tacchino marinata con olive</p>
+            </div>
+             <div class="div_menu">
+                <img alt="Food1" src="../img/food2.jpg">
+                <h4>Fish Menu</h4>
+                <hr>
+                <p>Bocconcini di carne in nido di sfoglica</p>
+                <p>Bruschette con maiale al cury</p>
+                <p>Uova al prosciutto</p>
+                <p>Vitello tomato</p>
+                <p>Fesa tacchino marinata con olive</p>
+            </div>
+            <div class="div_menu">
+                <img alt="Food1" src="../img/food3.jpg">
+                <h4>Vegetarian Menu</h4>
+                <hr>
+                <p>Bocconcini di carne in nido di sfoglica</p>
+                <p>Bruschette con maiale al cury</p>
+                <p>Uova al prosciutto</p>
+                <p>Vitello tomato</p>
+                <p>Fesa tacchino marinata con olive</p>
+            </div>
+        </div>
+        <!-- ------------------Reservation-------------------- -->
+        <h3 class="items">--Reservation--</h3>
+        <div id="Reservation">
+            <section>
+                <h4 id="lunch">Lunch</h4>
+                <p>12:00 - 15:00</p>
+            </section>
+            <h3 style="font-size: 3rem;">Timetables</h3>
+            <section>
+                <h4 id="lunch">Dinner</h4>
+                <p>19:30 - 23:30</p>
+            </section>
+        </div>
+        
+        <form action="#">
+          <table>
+              <tr>
+                  <th><h4>Reserve</h4></th>
+                  <th><h4>Details</h4></th>
+              </tr>
+              <tr>
+                  <td><label>Date<label></td>
+                  <td><label>Name<label></td>
+              </tr>
+              <tr>
+                  <td><input type="datetime-local" style="width: 100%; line-height: 1.2rem;"></td>
+                  <td><input type="text" autofocus placeholder="Name" required style="width: 100%; line-height: 1.2rem;"></td>
+              </tr>
+              <tr>
+                  <td><label>Timetables</label></td>
+                  <td><label>Email</label></td>
+              </tr>
+              <tr>
+                  <td><input type="time" style="width: 100%; line-height: 1.2rem;"></td>
+                  <td><input type="email" autofocus placeholder="Email"style="width: 100%; line-height: 1.2rem;"></td>
+              </tr>
+              <tr>
+                  <td><label>Number of Guests</label></td>
+                  <td><label>Phone</label></td>
+              </tr>
+              <tr>
+                  <td><input type="text" required style="width: 100%; line-height: 1.2rem;"></td>
+                  <td><input type="tel" autofocus placeholder="Phone" required style="width: 100%; line-height: 1.2rem;"></td>
+              </tr>
+              <tr>
+                <td><label>Further request</label></td>
+              </tr>
+              <tr>
+                  <td colspan="2"><textarea name="" id=""style="width: 100%; line-height: 3rem;" autofocus placeholder="Further request" class="form-control"></textarea></td>
+              </tr>
+              <tr>
+                <td><button type="submit" style="width: 30%; background-color: brown; color: white; font-weight: bold; border-radius: .5em;line-height: 1.5rem; ">Reserve</button></td>
+              </tr>
+          </table>   
+        </form>
+        <!-- ------------------Location-------------------- -->
+        <h3 class="items">--Our Location--</h3>
+        <div id="Location">
+            <div id="google_map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3837.4426568634362!2d108.18129781407708!3d15.885863948547284!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314204561a82fb2f%3A0xa1c47c5341f7533c!2zQsOhbmggWMOobyBCw6AgVOG7qQ!5e0!3m2!1svi!2s!4v1589805914246!5m2!1svi!2s" width="700" height="400" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div>
+                <article>
+                    <h3>Address</h3>
+                    <p>Viale Enrico Ferni 20159 Milan, Mailand (Lombardia)</p>
+                    <h3>Email</h3>
+                    <p>Bichninguyen@gmail.com</p>
+                </article>
+            </div>
+        </div>
+    </main>
+    <!-- ------------------Footer-------------------- -->
+    <footer>
+        <ul>
+            <li>Follow us: <img src="../img/facebook.png" width="9%" height="20px"><img src="../img/insta.png" width="9%" height="20px"></li>
+            <li>Copyright &copy; 2020</li>
+            <li>Design by: Ni Nguyen</li>
+        </ul>
+    </footer>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="../js/jquery.slicknav.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+	    $('#nav_menu').slicknav();
+        });
+    </script>
+</body>
+</html>
