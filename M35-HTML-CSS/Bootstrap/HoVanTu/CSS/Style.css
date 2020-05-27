@@ -1,0 +1,392 @@
+*{
+    padding: 0;
+    margin: 0;
+
+}
+
+body{
+    width: 100%;
+    height: 100%;     
+    font-family: 'Siena', sans-serif;
+}
+
+/*header*/
+header{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color:aliceblue;
+    color: rgba(67, 136, 155, 0.95);
+    top: 0;
+    position: fixed;
+}
+
+.fa-utensils{
+    font-size: 40px;
+}
+
+/*header h3*/
+header h3{
+    display: flex;
+    font-style: italic;
+    width: 20%;
+    padding: 20px;
+    flex: 30%;
+}
+/*header nav*/
+header nav{
+    
+    display: flex;
+    width: 70%;
+    flex: 20%;
+    
+}
+/*header ul*/
+header nav ul{
+    display: flex;
+    text-decoration: none;
+}
+/*header li*/
+header nav ul li{
+    display: flex;
+    list-style-type: none;
+    
+}
+header nav ul li a{
+    text-decoration: none;
+    padding: 20px;
+    color:rgba(67, 136, 155, 0.95);
+}
+header nav ul li a i{
+    display: flex;
+    
+}
+header nav ul li a:hover{
+    color: orange;
+    
+}
+header nav ul li a i:hover{
+    background-color:whitesmoke;
+
+}
+header img{
+    display: flex;    
+    width: 40px;
+    height: 40px;
+    padding-left: 1em;
+    padding-right: 0.5em;
+    
+}
+/*main*/
+main{
+    width: 100%;
+    height: 90%;
+    
+}
+
+
+main #wel h3{
+    position: absolute;
+    color: aliceblue;
+    font-style: italic;
+    left: 50%;
+    top: 50%;
+    font-size: xx-large;
+}
+main #wel img{
+    width: 100%;
+    height: 1000px;
+}
+main #rest{
+    width: 80%;
+    height: auto;
+    padding-left: 10%;
+
+}
+main #rest h3{
+    text-align: center;
+    padding: 20px;
+}
+main #rest article{
+    background-color:#f6f5f7 ;
+    width: 50%;
+}
+.lo1{
+    float: left;
+    width: 50%;
+    height: auto;
+    
+}
+.lo2{
+    float: right;
+    width: 50%;
+    height: auto;
+}
+main #rest article h4, p{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+main #rest article img{
+    width: 100%;
+    height: 350px;
+    
+}
+main #menu {
+    width: 80%;
+    padding-left: 10%;
+    height: auto;    
+    clear: both;
+}
+main #menu h3{
+    text-align: center;
+    padding: 20px;
+    
+}
+main #menu div{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+main #menu nav{
+    width: 30%;    
+    background-color:#f6f5f7 ;
+    border: 0.1em solid  #847b8d;
+}
+
+.menu2 h4,.menu2 p{
+    padding-top: 20px;
+    padding-left: 10px;
+    border-bottom: 1px solid  #847b8d;
+    
+}
+main #menu nav img{
+    width: 100%;
+    height: 250px;
+}
+.menu2 p:last-of-type{
+    padding-bottom: 20px;
+}
+
+main #rese {
+    width: 80%;
+    padding-left: 10%;
+    height: auto;    
+}
+
+
+main #rese h3{
+    text-align: center;
+    padding: 20px;
+}
+main #rese img{
+    width: 100%;
+    height: 800px;
+}
+
+main #rese h4{
+    position: absolute;
+    font-style: italic;
+    font-size: x-large;
+    padding-left: 35.5%;
+    padding-top: 200px;
+}
+main #rese p:nth-last-of-type(4){
+    position: absolute;
+    font-family: cursive;
+    padding-left: 22%;
+    padding-top: 270px;
+}
+main #rese p:nth-last-of-type(3){
+    position: absolute;
+    font-family: cursive;  
+    padding-left: 20%;
+    padding-top: 300px;  
+}
+main #rese p:nth-last-of-type(2){
+    position: absolute;
+    font-family: cursive;
+    padding-left: 52%;
+    padding-top: 270px;
+}
+main #rese p:nth-last-of-type(1){
+    position: absolute;
+    font-family: cursive;  
+    padding-left: 50%;
+    padding-top: 300px;  
+}
+
+main #formRe{
+    width:80%;
+    padding-left: 10%;
+    
+    margin-top: 20px;
+    
+}
+main #form1{
+    background-color:#f6f5f7 ;
+}
+
+main #formRe #reform{
+    width: 50%;
+    float: left;
+}
+main #reform h4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: cursive;
+    font-size: 20px;
+}
+main #reform p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: cursive;
+}
+main #formRe #deform{
+    width: 50%;
+    float: right;
+}
+main #deform h4{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: cursive;
+    font-size: 20px;
+}
+main #deform p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family: cursive;
+}
+main #fuform textarea{
+    width: 98%;
+    clear: both;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+main #fuform{
+    width: 100%;
+    clear: both;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+main #formRe input{
+    width: 95%;
+    height: 20px;
+    padding-left: 10px;
+}
+main #formRe #sub{
+    width: 15%;
+    background-color:rgb(29, 23, 29) ;
+    color:white;
+    height: 30px;
+    border: 1px solid #847b8d;
+}
+main #formRe #sub:hover{
+    background-color: rgb(16, 8, 41);
+}
+#loca h3{
+    text-align: center;
+    padding: 20px;
+}
+main #loca{
+    width: 80%;
+    padding-left: 10%;
+    height: 450px;
+}
+main #map{
+    width: 60%;
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+main #map iframe{
+    width: 100%;
+    height: 350px;
+}
+main #add{
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+main #add p{
+    padding-bottom: 10px;
+}
+footer{
+    width: 100%;    
+    height: 60px;
+    clear: both;
+    display: flex;
+    align-items: center;
+    background-color:#f5f6f7 ;
+    justify-content: space-around;
+    margin-left: 10px;
+}
+footer #fol{
+    display: flex;
+}
+footer .fa-facebook-square{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 30px;
+    color: rgb(12, 123, 226);
+}
+footer .fa-instagram{
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 30px;
+    color: #db1313;
+}
+.slicknav_menu {
+	display:none;
+}
+@media only screen and (max-width: 760px){
+    body{
+        width: 100%;
+    }
+    header{
+        width: 100%;
+        height: 60px;
+    }
+    main{
+        width: 100%;
+        height: auto;
+    }
+    section{
+        width: 100%;
+        height: auto;
+    }
+    main #rest article img{
+        width: 100%;
+        height: auto;
+    }
+    main section #map{
+        float: left;
+        width: 100%;
+        height: 250px;
+    }
+    main #map iframe{
+        width: 100%;
+        height: 250px;
+        float: left;
+    }
+    main section #add{
+        float: right;
+        width: 100%;
+    }
+    .js #nav {
+		display:none;
+	}
+	
+	.js .slicknav_menu {
+        display:block;
+        
+    }
+    header img:nth-last-child(1),header img:nth-last-child(2){
+        display: none;
+    }
+
+    
+    
+}
