@@ -1,0 +1,305 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Comic Sans MS",Arial,sans-serif;
+}
+body {
+    overflow-x: hidden;
+    clear: both;
+}
+/* ------------------------------------------------ HEADER -------------------------------------*/
+header {
+    display: flex;
+    flex-direction: row;
+    padding-top: 1em ;
+    margin: auto;
+    position: fixed;
+    z-index: 1;
+    border: 1px solid #f2f2f2;
+    background-color: white;
+}
+header img {
+   float: left;
+    height: 60px;
+    
+}
+header h2 {
+    color: green;
+    margin-right: auto;
+    padding: .3em;
+    font-weight: bold;
+}
+#nav_menu {
+    padding-top: .5em;
+}
+.vegetarian {
+    background-color: red;
+}
+.fish {
+    background-color: green;
+}
+/* ------------------------------------------------ HEADER MENU -------------------------------------*/
+a {
+    text-decoration: none;
+}
+li a:hover {
+    color: red;
+    font-style: italic;
+}
+#nav_menu {
+    float: right;
+    padding-left: 20px;
+}
+#nav_menu ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    text-align: center;
+    justify-content: flex-start;
+    align-items: center;
+}
+#nav_menu li {
+    font-size: 120%;
+    width: 180px;
+    height: 50px;
+    align-items: center;
+    justify-items: center;
+    padding-top: .5em;
+    font-style: italic;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-left: 1px solid black;
+}
+.slicknav_menu {
+    display:none;
+    font-size: 16px;
+    box-sizing: border-box;
+    background: #ecf0f1;
+    padding: 0px 20px;
+}
+.flag img{
+    width: 30%;
+    height: 80%;
+    right: 0;
+    margin: 0 10px;
+}
+.material-icons {
+   vertical-align: middle;
+}
+/*********************WELCOME**********************/
+#welcome {
+    position: relative;
+}
+.welcome img{
+    width: 100%;
+}
+.welcome h2{
+    font-weight: bold;
+    position: absolute;
+    top: 40%;
+    right:40% ;
+    color: white;
+    font-size: 400%;
+}
+/*********************RESTAURANT**********************/
+h2.restaurant {
+    font-weight: bold;
+    margin: auto;
+    padding: 1em;
+    text-align: center;
+}
+#restaurant .container {
+    background-color: #f2f2f2;
+    
+}
+.about {
+    padding-top: 20px;
+    float: left;
+    line-height: 50px;
+   
+}
+.about img {
+    float: right;
+    width: 50%;
+    height: 40vh;
+}
+.cuisine {
+    padding-top: 1em;
+    float: right;
+    line-height: 50px;
+    padding-bottom: 2em;
+}
+.cuisine img {
+    padding-right: 10px;
+    float: left;
+    width: 50%;
+    height: 75vh;
+}
+/*********************MENU**********************/
+#menu {
+    clear: both;
+    text-align: center;
+}
+#menu h3 {
+    padding: .5em 0;
+}
+#menu img {
+    width: 100%;
+    height: 20vh;
+    border: 1px solid;
+}
+#menu p {
+    padding: 1em;
+    border-bottom: 1px solid black;
+}
+h2.menu {
+    font-weight: bold;
+    padding: 1em 0;
+    margin: auto;
+}
+
+/*********************RESERVATION**********************/
+#reservation {
+    padding: 2em;
+    width: 100%;
+    margin: auto;
+    right: 0%; 
+}
+#reservation h2 {
+    font-weight: bold;
+}
+#reservation .container {
+    background-color: #f2f2f2;
+}
+#reservation img {
+    padding-top: 20px;
+    width: 100%;
+}
+.reservation {
+    padding-bottom: 20px;
+    text-align: center;
+}
+.form p{
+    padding-top: .5em;
+}
+.submit1 {
+    width: 20%;
+    height: 50px;
+}
+.submit1:hover {
+    color: blue;
+}
+.submit2:hover {
+    color: red;
+}
+.submit2 {
+    margin: 2em;
+    width: 20%;
+    height: 50px;
+}
+textarea {
+    height: 150px;
+    width: 100%;
+}
+/*********************LOCATION**********************/
+#location {
+    padding-bottom: 2em;
+}
+#location .container {
+    background-color: #f2f2f2;
+}
+h2.location {
+    font-weight: bold;
+    padding-bottom: 1em;
+    text-align: center;
+}
+.address {
+   padding: 1em 2em;
+}
+iframe {
+   float: left;
+   padding: 1em 2em;
+}
+/*********************FOOTER**********************/
+footer {
+    clear: both;
+    background-color: #f2f2f2;
+    text-align: center;
+}
+footer h2 {
+    font-weight: bold;
+    padding: .25em 0;
+}
+
+/*********************RESPONSIVE**********************/
+@media screen and (max-width: 950px) {
+    header {
+        width: 100%;
+        position: static;
+        text-align: center;
+        align-items: center;
+        align-self: center;
+        flex-wrap: wrap;
+    }
+    body{
+        width: 100%;
+    }
+    article h2 {
+        text-align: center;
+    }
+    .flag img {
+        width: 10vw;
+    }
+    #welcome img{
+        width: 100%;
+        background-position: center;
+    }
+    #welcome h2{
+        font-size: 200%;
+    }
+    #restaurant img {
+        display: block;
+        margin: 2em;
+    }
+    .about img {
+        width: 50%;
+        height: 70%;
+    }
+    .cuisine img {
+        padding: .5em;
+        width: 80%;
+        height: 60vh;
+    }
+    #menu {
+        text-align: center;
+    }
+    #menu img {
+        width: 70%;
+        height: 50vh;
+        border: 1px solid;
+    }
+    .js #nav_menu {
+        display:none;
+	}
+	.js .slicknav_menu {
+        display: inline-block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .nav{ 
+        display: none;
+    }
+    .nav li{
+        text-align: center;
+        margin: 15px auto;
+    }
+   iframe {
+       width: 100%;
+   }
+   .address h2{
+       text-align: left;
+   }
+   
+}
