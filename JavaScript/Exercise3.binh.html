@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <script>
+         var std1 = prompt("Student 1: ");
+         var std2 = prompt("Student 2: ");
+         var std3 = prompt("Student 3: ");
+         var std4 = prompt("Student 4: ");
+         var std5 = prompt("Student 5: ");
+         
+         var arr = [];
+         arr[0] = std1;
+         arr[1] = std2;
+         arr[2] = std3;
+         arr[3] = std4;
+         arr[4] = std5;
+
+         document.write("<h3>Enter student's score to the array and then print the array elements to a web page.</h3>")
+         var index = 0;
+         for(var i = 0; i < arr.length; i++){
+            document.write("Student " + (i + 1) + ": " + arr[i]+ "<br>");
+            if(arr[i]>=5){
+               index++;
+            }
+         }
+         document.write("<hr>");
+
+         document.write("<h3>Counts the number of students have score greater than or equal to 5 and then print result to a web page.</h3> " + index + "<hr>");
+
+         document.write("<h3>Add score to an array (8.5, 9.0, 7.0), then arrange the array in descending order and then print the result to a web page.</h3>");
+         var arr1 = arr.concat(8.5,9.0,7.0);
+         for(var i=0; i<(arr1.length-1);i++){
+            for(var j=i+1;j<arr1.length;j++){
+               if(arr1[i]<arr1[j]){
+                  var temp = arr1[i];
+                  arr1[i]=arr1[j];
+                  arr1[j]=temp;
+               }
+            }
+         }
+         for(var i=0; i<arr1.length;i++){
+            document.write(arr1[i] + "</br>");
+         }
+         document.write("<hr>");
+
+      </script>
+   </body>
+</html>
