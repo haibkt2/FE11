@@ -3,7 +3,7 @@ var enterPrompt = prompt("Vui lòng nhập số học sinh", 5);
 
 //Write a JavaScript to enter student's score to the array and then print the array elements to a web page.
 var arr=[];
-for (var i =0; i<=enterPrompt; i++){
+for (var i =1; i<=enterPrompt; i++){
     arr[i]= prompt("Nhập điểm học sinh " + i);
     document.write("Điểm học sinh "+i +": "+arr[i]+"<br>"); 
 }
