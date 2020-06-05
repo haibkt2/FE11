@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+      alert("Xin chào. Bạn muốn nhập bao nhiêu học sinh"); 
+      var n = parseFloat( prompt("Số học sinh:",n));
+        var arr=new Array(n);
+       
+       for(var i=0;i<arr.length;i++){
+        var a= parseFloat( prompt("HS: "+i,a));
+            arr[i]=a;         
+    }
+    // xuất mảng
+        for(var i=0;i<arr.length;i++ ){
+            document.write("<br>Điểm của HS "+i+": "+arr[i]+"  ");
+        }
+        // đếm số học sinh có điểm lớn hơn 5
+     var c=0;
+     for(var i=0;i<arr.length;i++ ){
+         if(arr[i]>=5){
+             document.write("<br>Điểm lớn hơn 5 là: "+arr[i] +'\n');
+             c++;
+         }
+     }
+     document.write("tổng "+c +"<br>");
+     // câu 3d
+     var arr1= [];
+     var index=0; 
+     var d;
+     for(var i=0;i<arr.length;i++){
+         if(arr[i]==8.5 || arr[i]==9.0 || arr[i]==7.0){
+             arr1[index]=arr[i];
+             index++;
+         }
+     }
+     for(var j=0;j<arr1.length-1;j++ ){
+         for(var i=j+1;i<arr1.length;i++){
+                if(arr1[i]<arr1[j]){
+                    d=arr1[i];
+                    arr1[i]=arr1[j];
+                    arr1[j]=d;
+                }
+         }
+           
+            }
+            for(var i=0;i<arr1.length;i++){
+                document.write("   "+arr1[i]);
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
