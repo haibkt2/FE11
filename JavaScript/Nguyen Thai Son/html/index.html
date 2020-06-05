@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai tap 3</title>
+</head>
+<body>
+    <script>
+        var numberOfStudents;
+        var gradeOfTable = [];
+        var counter;
+
+        numberOfStudents = prompt("Hãy nhập số học sinh: ", 5);
+        numberOfStudents = parseInt(numberOfStudents);
+                for (var i = 1; i <= numberOfStudents; i++) {
+            gradeOfTable[i] = prompt("Hãy nhập điểm của học sinh thứ " + i +": ");
+            document.write("Điểm của học sinh thứ " + i +" là:" + gradeOfTable[i] + "<br>");
+        }
+        document.write("<br>");
+        counter = 0;
+        document.write("Những học sinh có điểm >=5 là:" + "<br>");
+        for (var z = 0; z <= gradeOfTable.length; z++) {
+            if (gradeOfTable[z] >= 5) {
+                document.write("Học sinh thứ " + z + " có điểm là: " + gradeOfTable[z] + "<br>");
+                counter++;
+            }
+        }
+        document.write("<br>");
+        document.write("Số học sinh có điểm >=5 là: " + counter + "<br>");
+        document.write("<br>");
+        gradeOfTable = gradeOfTable.concat(8.5, 9.0, 7.0);
+        document.write("Điểm sắp xếp theo thứ tự giảm dần: " + gradeOfTable.sort(function(a, b){return(b-a)}));
+    </script>
+</body>
+</html>
