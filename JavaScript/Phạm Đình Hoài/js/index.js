@@ -11,8 +11,6 @@
          for (var i = 1; i<=n; i++) {
             arr[i] = prompt("Nhập điểm học sinh " +i +" : "); 
             arr[i] = parseFloat(arr[i]);
-
-      
          while (isNaN(arr[i]) || arr[i]<0 || arr[i]>10) {  //Kiểm tra điểm hợp lệ
                 alert("Điểm không hợp lệ vui lòng nhập điểm >0 và <10");
                 arr[i] = prompt("Nhập điểm học sinh " +i +" : "); 
@@ -44,9 +42,10 @@
 
        //Thêm (8.5,9.0,7.0) vào mảng và sắp xếp theo thứ tự giảm dần
       document.write("<h3>Add score to an array (8.5, 9.0, 7.0), then arrange the array in descending order and then print the result to a web page.</h3>");
-      arr[n++] = 9.0;
-      arr[n++] = 8.5;
-      arr[n++] = 7.0;
+      l = arr.length;
+      arr[l++] = 9.0;
+      arr[l++] = 8.5;
+      arr[l++] = 7.0;
       var temp;
          for(var i=0; i<(arr.length-1);i++){
             for(var j=i+1;j<arr.length;j++){
