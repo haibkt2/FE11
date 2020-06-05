@@ -52,7 +52,8 @@ number = parseInt(number);
     }
     document.write("Number of students scoring 5 or more : " + count + "<br> " + "<hr>")
     
-       //Tạo array 2 (mới) add 3 điểm (8.5,9.0,7.0) vào array 1 và sắp xếp điểm số tăng dần or giảm dần.  [ DOING ]
+       //Tạo array 2 (mới) add 3 điểm (8.5,9.0,7.0) vào array 1 và sắp xếp điểm số tăng dần or giảm dần. 
         var arr1 = [8.5,9.0,7.0];
-        arr1.sort(function(a, b){return a - b});
-        document.write("Tăng dần :" + arr1 +"<br>")
+        var arrtong = arr.concat(arr1);
+        arrtong.sort(function(a, b){return a - b});
+        document.write("Tăng dần :" + arrtong +"<br>")
