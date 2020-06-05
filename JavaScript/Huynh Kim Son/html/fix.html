@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var arr=[];
+        var count = 0;
+        // input scorse default là 6
+        var n = prompt("Input n :",6);
+       
+        while(isNaN(n)|| n<0)// nếu nhập khác kiểu number và < 0 thì sẽ input n lại
+        {
+            n = prompt("Input lại n :",6);
+        }
+        
+        for( var i=0; i<parseInt(n);i++)
+        {
+            var  scorse = prompt("Input scorse " + i +":",0);
+            while(isNaN(scorse)|| scorse<0 || scorse >10 ) // // nếu nhập khác kiểu number và < 0 or > 10 thì sẽ input scorse lại
+            {
+                 scorse =prompt("Input lại scorse "+ i +":" ,0);
+
+            }
+            arr[i]=scorse;
+            if(arr[i]>6) count++;
+        }
+// vòng lặp for in ra kết quả trong mảng
+        for( var i = 0; i < arr.length ; i++) 
+         {
+            document.write("Students "+ i + ":" + "&nbsp" + arr[i] + " <br> " + "<hr>")
+        
+         }
+        document.write("Number of students scoring 5 or more : " + count + "<br> " + "<hr>")
+
+//Tạo array 2 (mới) add 3 điểm (8.5,9.0,7.0) vào array 1 và sắp xếp điểm số tăng dần or giảm dần. 
+       arr[n++]=9;
+       arr[n++]=8;
+       arr[n++]=7;
+       for(var i = 0;i<arr.length;i++)
+       {
+        arr.sort(function(a, b){return a - b});
+
+       }
+        document.write(" Scorse tăng dần :" + arr +"<br>")
+    </script>
+</body>
+</html>
