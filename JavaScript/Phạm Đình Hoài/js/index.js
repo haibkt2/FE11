@@ -5,7 +5,7 @@
         n = prompt("Nhập vào số học sinh : ",5);
 
       //n là number và n > 0
-      while (isNaN(n) || n < 0) { 
+      while (isNaN(n) || n <= 0) { 
          n = prompt("Nhập vào số học sinh : ",5);
       }
          for (var i = 1; i<=n; i++) {
