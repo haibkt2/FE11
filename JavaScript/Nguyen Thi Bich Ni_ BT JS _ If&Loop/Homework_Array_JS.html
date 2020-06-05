@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework Array - JS</title>
+</head>
+<body>
+    <script>
+        //Câu 1: nhập số SV và điểm cho từng sv
+        var a = parseInt(prompt("Nhập số sinh viên: ",a))
+        var arr = new Array(a);
+        for(var i = 0 ; i < arr.length ; i++){
+             var b = parseFloat(prompt("Điểm sinh viên thứ: "+ i, b))
+             arr[i]=b;
+        }
+        //Xuất mảng
+        document.writeln("<br>Điểm sinh viên đã nhập là: ")
+        for(i = 0 ; i<arr.length;i++){
+          document.writeln(+arr[i]);
+        }
+        //Đếm số sinh viên có điểm lớn hơn 5
+        count=0;
+        for( i = 0 ; i<arr.length; i++){
+            if(arr[i]>=5)
+            count++;
+        }
+        document.writeln("<br>Số sinh viên có điểm lớn hơn hoặc bằng 5 là:", count + "<br>")
+
+        //Tạo mảng mới và sắp xếp giảm dần--------------------------------
+    
+        var arr_b = [];
+        var index =0;
+        for(i=0 ; i< arr.length; i++){
+            if(arr[i] == 8.5 || arr[i] == 9.0 || arr[i] == 7.0 ){
+            arr_b[index]=arr[i];
+            index++;
+        }
+        }
+        tam=0;
+        document.writeln("<br>Mảng sau khi đã sắp xếp là:")
+        for ( i = 0; i< arr_b.length - 1 ; i++){
+            for( j = i + 1 ; j < arr.length ; j++){
+                if(arr_b[i]<arr_b[j]){
+                    tam=arr_b[i];
+                    arr_b[i] = arr_b[j];
+                    arr_b[j] = tam;
+                }
+            }
+        }
+        for ( i = 0; i< arr_b.length ; i++){
+            document.writeln(arr_b[i])
+        }
+    </script>
+</body>
+</html>

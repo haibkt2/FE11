@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var numOfStudents = prompt('Enter the number of students', '5');
+    var scoreOfStudents = [];
+    var index = 0;
+    var numOfStudentsGreater5 = 0;
+
+    var arr = [8.5, 9.0, 7.0];
+    var arrSorted = arr.sort(function(a, b) {
+      return a - b;
+    });
+
+
+    while (isNaN(numOfStudents)) {
+      alert('You have to enter a number!');
+      numOfStudents = prompt('Enter the number of students', '5');
+    }
+
+    for (var i = 1; i <= numOfStudents; i++) {
+      var score = prompt('The score of student ' + i, 'score');
+
+      while (isNaN(score)) {
+        alert('The score must be a number!');
+        score = prompt('The score of student ' + i, 'score');
+      }
+
+      scoreOfStudents[index] = score;
+      index ++;
+
+      if (score >= 5) {
+        numOfStudentsGreater5 ++;
+      }
+    }
+
+    document.write('Score of students: ' + scoreOfStudents  + '<br>');
+    document.write('Number of students have score >= 5: ' + numOfStudentsGreater5 + '<br>');
+    document.write('Array sorted: ' + arrSorted); 
+  </script>
+</body>
+</html>
