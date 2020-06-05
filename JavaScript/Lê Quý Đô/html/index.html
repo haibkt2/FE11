@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // nhắc người dùng khai báo điểm của phần tử
+      var number1 = prompt("input score 1st","");
+      var number2 = prompt("input score 2nd","");
+      var number3 = prompt("input score 3rd","");
+      var number4 = prompt("input score 4th","");
+      var number5 = prompt("input score 5th","");
+
+      intNumber1 = parseFloat(number1);
+      intNumber2 = parseFloat(number2);
+      intNumber3 = parseFloat(number3);
+      intNumber4 = parseFloat(number4);
+      intNumber5 = parseFloat(number5);
+
+      //nhập điểm của học sinh vào mảng 
+      var arr_number  = [];
+      arr_number.push(number1);
+      arr_number.push(number2);
+      arr_number.push(number3);
+      arr_number.push(number4);
+      arr_number.push(number5);
+      var index = 0;
+      for(var i = 0; i<arr_number.length;i++){
+          document.write("<br>" + arr_number[i]);
+          if(arr_number[i] >=5){
+              index ++;
+          }
+      }   
+    </script>
+</body>
+</html>
