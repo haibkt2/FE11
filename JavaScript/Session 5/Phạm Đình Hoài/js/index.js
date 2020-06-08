@@ -23,7 +23,7 @@
 	   document.write("<h3>Danh sách điểm học sinh </h3>");
         for (var x in arr) {
                 j++;
-                document.write("Điểm học sinh "+j+ " : " +arr[x] +"<br>");
+                document.write("Điểm học sinh "+j+ " : " +arr[x].toFixed(1) +"<br>");
         }
 
 
@@ -36,7 +36,7 @@
         document.write("<h3>The number of students have score greater than or equal to 5 is : "+count +"</h3>");
         for (i = 0;i<=n;i++) {
             if (arr[i]>=5){
-               document.write("Học sinh " +i+ " : " +arr[i] + "<br>")
+               document.write("Học sinh " +i+ " : " +arr[i].toFixed(1) + "<br>")
         }
         }
 
@@ -57,5 +57,5 @@
             }
          }
          for(x in arr){
-            document.write(arr[x] + "</br>");
+            document.write(arr[x].toFixed(1) + "</br>");
          }
