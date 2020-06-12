@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body{
+            margin-left: auto;
+            margin-right: auto;
+            background-image: url(img/1.jpg);
+                   }
+    </style>
+</head>
+<body>
+    <form action="" class="form-group" id="fom">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>Join with us</h1>
+                <h3>You can eat everything in the world</h3>
+            </div>
+        </div>
+        <div class="col-md-6">
+           <div id="t">
+        <label for="">Email </label> <i class="fa fa-plus-circle" aria-hidden="true" id="m"></i>
+       <br>
+        <input type="text" name="" id="ipn" placeholder="Enter your email"> <i class="fa fa-minus-circle" aria-hidden="true" id="del"></i>
+    </div>
+    <div class="s">
+        <label for="">Phone Number</label> <i class="fa fa-plus-circle" aria-hidden="true" id="n"></i>
+        <br>
+        <label for="">+</label> <input type="text" placeholder="84" class="col-md-1" id="r"> <label for="">-</label> <input type="text" placeholder="Your phone" pattern="[0-9]{9}">  <i class="fa fa-minus-circle" aria-hidden="true"></i>
+    </div>
+        <input type="button" id="bt" name="submit" value="submit" class="btn btn-primary mt-2">
+    </div>
+    </form>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+          var el; var ic;
+        $("m").onclick=function(){
+          
+            el=document.createElement("input");
+            ic=document.createElement("i");
+
+            el.id="new_mail";
+            ic.id="icon_n";
+
+            el.setAttribute("type","email");
+            ic.setAttribute("class","fa fa-minus-circle");
+            $("t").appendChild(el);
+            $("t").appendChild(ic);
+        }
+        $("del").onclick=function(){
+            el.remove();
+            ic.remove();
+        }
+
+        $("n").onclick=function(){
+            var pn=document.createElement("input");
+            var po=document.createElement("input");
+            po.setAttribute("type","text");
+            pn.setAttribute("type","text");
+            pn.id="phone";
+            $("s").appendChild(pn);
+            $("s").appendChild(po);
+        }
+    </script>
+</body>
+</html>
