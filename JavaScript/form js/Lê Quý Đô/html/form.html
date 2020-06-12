@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.1/css/all.css" />
+       
+</head>
+<body>
+    <div class="container col-7 ">
+        <h1>Join with us</h1>
+        <p>You can eat everything in the world</p>
+        <form action="" class="form-group "  >    
+            <label for="email">Email :</label>
+            <i class="fas fa-arrow-alt-circle-down" id="icon_email"></i>
+            <div id="add_email">
+                <div class="form-inline ">
+                    <input type="text" name="email" placeholder="Enter mail" class="form-control"  >
+                    <i class="fas fa-arrow-alt-circle-right mx-2"></i>
+                </div>
+            </div>
+            <label for="phone">Phone number :</label>
+            <i class="fas fa-arrow-alt-circle-down"id="icon_tel"></i>
+            <div id="add_tel">
+                <div class="form-inline">
+                    <span>+</span>
+                    <input type="number" name="number" placeholder="84" class="form-control w-25">
+                   
+                    <span class="mx-2">-</span>
+                    <input type="tel" name="number" placeholder="123456789" class="form-control">
+                    <i class="fas fa-arrow-alt-circle-right mx-2"></i>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary mt-3">Submit</button>
+        </form>
+    </div>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        function add_email(){
+            var div=document.createElement("div");
+            var input=document.createElement("input");
+            var icon=document.createElement("i");
+            div.className="form-inline";
+            input.setAttribute("placeholder", "Enter mail");
+            input.className="form-control";
+            icon.className="fas fa-arrow-alt-circle-right";
+            div.appendChild(input);
+            div.appendChild(icon);
+
+            $("add_email").appendChild(div);
+
+        }
+        function addd_tel(){
+            var div=document.createElement("div");
+
+            var lqdoo=document.createElement("span");
+            var daucong=document.createTextNode("+");
+
+           
+            var num=document.createElement("input");
+            var so=document.createElement("span" );
+            var dautru=document.createTextNode("-");
+            var tel=document.createElement("input");
+            var doc=document.createElement("i");
+            lqdoo.appendChild(daucong);
+            div.appendChild(lqdoo);
+            so.appendChild(dautru);
+            div.appendChild(num);
+            div.appendChild(so);
+            div.appendChild(tel);
+            div.appendChild(doc);
+            div.className="form-inline my-2";
+            num.setAttribute("placeholder","84");
+            tel.setAttribute("placeholder","123456789");
+            num.className="form-control";   
+            tel.className="form-control";
+            doc.className="fas fa-arrow-alt-circle-right";
+            so.className=("mx-2");
+
+            $("add_tel").appendChild(div);
+
+        }
+
+        $("icon_email").onclick= function(){
+            add_email();
+        } 
+        $("icon_tel").onclick=function(){
+            addd_tel();
+        }
+    </script>
+</body>
+</html>
