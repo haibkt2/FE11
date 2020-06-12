@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Form Javascript</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(TRANG.jpg);
+        }
+        .input{
+            border: darkslategray solid;
+        }
+        .input1{
+            border: red solid;
+        }
+        #error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6" style="background-color: white">
+                <h1>Join with us</h1>
+                <h4>You can eat everything in the worlds</h4>
+                <form class="form-group" action="" id="form1" method="POST">
+                        <label>Email</label>
+                        <i class="fas fa-plus-circle add" id="add_email" ></i>
+               
+                    
+                    <div id="div_email" class=" row div_email ml-1 align-items-center">
+                            <input type="email" class="form-control col-md-6 d-inline input"  id="email" placeholder="Enter email">
+                            <i class="fas fa-minus-circle remove " id="remove"></i>
+                            <span id="error"></span>
+                    </div>
+                 
+                    
+
+                        <label>Phone Number</label>
+                        <i class="fas fa-plus-circle add" id="add_phone" ></i>
+
+                    <div class="row  ml-1 align-items-center ">
+                        +<input type="text" class="form-control col-md-2 input mr-1" id="phone" placeholder="84" ><span>-</span>
+                        <input type="text" class="form-control col-md-6 input ml-1" id="ph_number" placeholder="1234543523">
+                        <i class="fas fa-minus-circle remove"  id="remove"></i>
+                    </div>
+
+                    <button type="button" onclick="test() ; return false" class="btn btn-primary mt-4" id="submit">Primary</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+               
+            </div>
+        </div>
+    </div>
+    <script>
+        function $(id){
+                return document.getElementById(id);
+            }
+        //------------add email-------
+        var add_email = $("add_email");
+        var div_e = $("div_email").firstChild;
+        var i=0;
+        add_email.onclick = function(){
+             var el = document.createElement("input");
+             el.setAttribute("class", "form-control col-md-6 mt-1");
+             i = i+1;
+             el.setAttribute("id", "email"+i);            
+             el.setAttribute("type","email");
+             el.setAttribute("placeholder","Enter email");
+             $("div_email").appendChild(el);
+             $("div_email").insertBefore(el, $("div_email").lastChild)
+
+             var al = document.createElement("i");
+             al.setAttribute("class","fas fa-minus-circle remove ")
+             $("div_email").appendChild(al);
+            /*----cach2
+             var dem = 0;
+             var text ="<div id=\"div_email\" class=\" row div_email"+dem+" ml-1 align-items-center\">\n\t<input type=\"email\" class=\"form-control col-md-6 input d-inline\"  id=\"email\" placeholder=\"Enter email\">\n\t<i class=\"fas fa-minus-circle remove\" id=\"remove\"></i>\n</div>";
+             var div_em = document.getElementById('form1');
+             var text_dau = div_em.innerHTML;
+             div_em.innerHTML = text_dau + text;
+             dem = dem + 1;
+            ----cach 3     
+             var el = document.createElement(div_e);
+             $("div_email").appendChild(el);
+            console.log("Da them");*/
+
+        }
+        /* ---------------add phone---------
+        var add_phone = $("add_phone");
+        add_phone.onclick = function(){
+            ar sym 
+        }*/
+
+        //------------remove---------------
+        var rm = document.getElementsByClassName('remove');
+            rm.onclick = function(){                         
+            }
+        
+        //---------boder AND MESSAGE--------
+        function test(){
+             var email = $("email");
+             if(email.value == "")  {            
+                $("error").innerHTML="Pls input value";
+                email.removeAttribute("input");
+                email.setAttribute("class","input1");
+             }
+              else{
+               $("error").innerHTML ="";
+             }  
+            // var email = $("email").value;
+            // var e= $("email");
+            // if(email == ""){
+            //     var message = document.createElement("p");
+            //     var content = document.createTextNode("Pls input");
+            //     message.appendChild(content);
+            // }
+            // else{
+            // }
+
+        }
+        
+    </script>
+</body>
+</html>
