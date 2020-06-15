@@ -3,66 +3,76 @@ function $(id){
 }
 /* add mail*/
 function addmail(){
+    
+    var divemail = document.createElement("div");
+
     var inputemail = document.createElement("input");
     inputemail.setAttribute("placeholder","Enter email");
-    inputemail.setAttribute("class","w-75 mt-2 ml-5")
-    inputemail.id = "email_new";
+    inputemail.setAttribute("class"," form-control col-md-11 mt-2 ml-3")
+
+    var iconremovemail = document.createElement("i");
+    iconremovemail.setAttribute("class"," fa fa-times ml-1");
+    //tao onclick removephone
+    iconremovemail.onclick = removeMP;
+
+    divemail.appendChild(inputemail);
+    divemail.appendChild(iconremovemail);
+    $("mail").appendChild(divemail);
     
-
-    var icon = document.createElement("i");
-    icon.id="icon_mail_new"
-    icon.setAttribute("class"," fa fa-times ml-1");
-
-    $("mail").appendChild(inputemail);
-    $("mail").appendChild(icon);
-    
-
 }
 $("iconaddmail").onclick = addmail;
 
-/* removemail */
-function removemail(){
-    var removeinput = document.getElementById("email_new");
-    removeinput.remove();
-
-    var removeicon = document.getElementById("icon_mail_new");
-    removeicon.remove();
+/* remove mail and phone (removeMP) */
+function removeMP(){
+    // this is objHTML user cliecked
+    var el_i =this;
+    var div_bl = this.parentElement.parentElement;
+    var num_child = div_bl.childElementCount;
+    if (num_child > 1){
+        var el_div_parent = this.parentElement;
+        el_div_parent.remove();
+    }
+    else{
+        alert(" Xin lỗi, Không thể xóa! ")
+    }
 }
-$("iconremovemail").onclick = removemail;
 
 /* add phone */
 function addphone(){
+
+    var divephonenumber = document.createElement("div");
+
+    // input 84
     var inputphone84 = document.createElement("input");
     inputphone84.setAttribute("placeholder","+84");
-    inputphone84.setAttribute("class","mt-3 ml-5")
-    inputphone84.id = "phone_new84";
+    inputphone84.setAttribute("class"," form-control col-md-2 mt-2 mr-1 ml-3")
 
-    var inputphone = document.createElement("input");
-    inputphone.setAttribute("placeholder","0123456789");
-    inputphone.setAttribute("class","mt-2 ml-2")
-    inputphone.id = "phone_new";
-
-    var icon = document.createElement("i");
-    icon.id="icon_phone_new"
-    icon.setAttribute("class"," fa fa-times ml-1");
-
-    $("phonenumber").appendChild(inputphone84);
-    $("phonenumber").appendChild(inputphone);
-    $("phonenumber").appendChild(icon);
+    // span -
+    var addspan0 = document.createElement("span-")
+    addspan0.className=("addspan2")
+    var span2= document.createTextNode("-");
+    addspan0.appendChild(span2);
     
+
+    // input 123456789
+    var inputphone = document.createElement("input");
+    inputphone.setAttribute("placeholder","123456789");
+    inputphone.setAttribute("class","form-control col-md-8 mt-2 ml-1")
+    
+    // input icon remove
+    var iconremovephone = document.createElement("i");
+    iconremovephone.setAttribute("class"," fa fa-times ml-1");
+    //tao onclick removephone
+    iconremovephone.onclick = removeMP;
+
+    divephonenumber.appendChild(inputphone84);
+    divephonenumber.appendChild(span2);
+    divephonenumber.appendChild(inputphone);
+    divephonenumber.appendChild(iconremovephone);
+    $("phonenumber").appendChild(divephonenumber);
+
 
 }
 $("iconaddphone").onclick = addphone;
 /* remove phone */
-function removephone(){
-    var removeinputphone84 = document.getElementById("phone_new84");
-    removeinputphone84.remove();
-
-    var removeinput = document.getElementById("phone_new");
-    removeinput.remove();
-
-    var removeicon = document.getElementById("icon_phone_new");
-    removeicon.remove();
-}
-$("iconremovephone").onclick = removephone;
 
