@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        form{
+            box-sizing: border-box;
+            border: 1px solid black;
+            height: 200px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+    <form action="" class="form control" >
+        <div class="row">
+            <div class="t col-md-6" >
+                <div>
+                <label for="" class="col-md-2">Number:</label>
+                <input type="text" id="ip">
+                <input type="button" id="bt" name="button" value="random" class="btn btn-primary mt-2 ">
+            </div>
+            </div>
+            <div class="col-md-6" id="p" style="border-left:1px solid black;height: 200px; ">
+                <div class="out">
+                Output:
+            </div>
+            </div>
+        </div>
+    </div>
+    </form>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+                    }
+                    function createEl(tag){
+                        return document.createElement(tag);
+                    }
+        // hàm Random
+        var random;
+        var max=prompt("Nhập khoảng random","100");
+        max=parseInt(max);
+        var rdnumber=function(max){
+            if(isNaN(max)){
+                random= Math.floor(Math.random()*max);
+            }
+           return random;
+    }
+    // $("ip").onload=function(){
+    //     if(=""){
+
+    //     }
+    // }
+    // tạo mảng
+  
+     var count;
+    //  while(isNaN(n)||n<0){
+    //      n=
+    //  }
+    /* for(let i=0;i<arr.length;i++){
+         arr[i]=random;
+     }*/
+     // Xử lý nút button 
+     $("bt").onclick=function(){
+         var n=$("ip").value;
+        if(n=="" || isNaN(n)){
+            alert("Input number!!!");
+            $("ip").focus();
+        }
+        else{
+          //  var num =parseInt(n);
+            var arr=new Array(n);
+            for(let i=0;i<arr.length;i++){
+            arr[i]=rdnumber.value;
+     }
+        for(let i=0;i<arr.length;i++){
+            var el=createEl("p");
+            count =document.createTextNode("Số thứ "+i+"là: "+arr[i]);
+            el.appendChild(count);
+            $("out").appendChild(el);
+        }
+        document.writeln("Max: "+ Math.max(...arr)); // phải có ... thì mới gọi đc hàm
+        document.writeln("Min: "+Math.min(...arr));
+        }
+     } // reset form sau đó focus vào input ($("input").focus())
+     // hiển thị ra message hoặc cho phần valid
+    </script>
+</body>
+</html>
