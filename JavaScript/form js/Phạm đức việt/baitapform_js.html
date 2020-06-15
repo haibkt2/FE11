@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.1/css/all.css" />
+</head>
+
+<body>
+    <main>
+        <h1>Join width us</h1>
+        <p>You can eat everything in the world</p>
+        <form action="https://github.com/"  id="form" class="form-group col-6">
+            <label for="">Email</label>
+            <i id="create_email" class="fas fa-sort-up ml-3"></i>
+            <div id="div_email">
+                <div class="form-inline my-2">
+                    <input type="text" id="email" class="form-control form-check-input" placeholder="abc@gmail.com" required   pattern="[a-zA-Z0-9]{3,16}@gmail.com" title="errol" />
+                    <i id="mail"
+                        class="fas fa-sort-down ml-3 "></i>
+                </div>
+            </div>
+
+            <label for="">Số điện thoại</label>
+            <i id="create_tel" class="fas fa-sort-up ml-3"></i>
+            <div id="div_tel">
+                <div class="form-inline my-2">
+                    <span>+</span>
+                    <select class="form-control">
+                        <option value="" selected>84</option>
+                        <option value="">85</option>
+                        <option value="">86</option>
+                        <option value="">87</option>
+                    </select>
+                    <span class="mx-2">-</span>
+                    <input type="tel" id="tel" class="form-control form-check-input" placeholder="123456789" required/>
+                    <i id="remove_tel"
+                        class="fas fa-sort-down mx-3"></i>
+                </div>
+            </div>
+            <button type="button" id="btn" class="btn btn-primary mt-4 ">Submit</button>
+        </form>
+    </main>
+</body>
+<script>
+    function $(id) {
+        return document.getElementById(id);
+    }
+    
+    function create_email() {
+        var div = document.createElement("div");
+
+        var input = document.createElement("input");
+        var icon = document.createElement("i");
+        input.setAttribute("placeholder", "abc@gmail.com");
+        input.setAttribute("type", ".com");
+
+        div.className = "form-inline my-2 remove_email_div";
+        input.setAttribute="required"
+        input.className = "form-control  mt-2";
+        icon.className = "fas fa-sort-down ml-3 remove_email";
+        div.appendChild(input);
+        div.appendChild(icon);
+        $("div_email").appendChild(div);
+    }
+    function create_tel() {
+        var div = document.createElement("div");
+        var span = document.createElement("span");
+        var plus = document.createTextNode("+");
+        var country_code = document.createElement("select");
+
+        var op1 = document.createElement("option");
+        var op2 = document.createElement("option");
+        var op3 = document.createElement("option");
+        
+        var textop1 = document.createTextNode("84");
+        var textop2 = document.createTextNode("85");
+        var textop3 = document.createTextNode("86");
+
+        var span2 = document.createElement("span");
+        var minus = document.createTextNode("-");
+        var number_phone = document.createElement("input");
+        var i = document.createElement("i");
+
+        span.appendChild(plus);
+        span2.appendChild(minus);
+   
+        op1.appendChild(textop1);
+        op2.appendChild(textop2);
+        op3.appendChild(textop3);
+
+        country_code.appendChild(op1);
+         country_code.appendChild(op2);
+        country_code.appendChild(op3);
+      
+        div.appendChild(span);
+        div.appendChild(country_code);
+        div.appendChild(span2);
+        div.appendChild(number_phone);
+        div.appendChild(i);
+
+       
+        country_code.className = "form-control ";
+        op1.setAttribute="selected";
+        span2.className = "mx-2";
+        number_phone.className = "form-control";
+        number_phone.setAttribute("placeholder","123456789");
+        number_phone.setAttribute("type","tel");
+
+        i.className = "fas fa-sort-down mx-3";
+        div.className = "form-inline my-2";
+        
+
+        $("div_tel").appendChild(div);
+    }
+    function remove_emaill(){
+        
+         var myNode=document.getElementById("div_email");
+       
+        if (index.childElementCount>1) {
+            myNode.removeChild(myNode.lastChild);
+        }
+    }
+    function validattion_bt(){
+        var input = $("email").value; // get value input
+                if(input.length>8){ // check input 
+                    
+                    $("form").submit();   // submit form
+
+                }
+                else{
+                    
+                    $("form").reset();// reset lai form
+                    // $("email").focus();// blur dung de xoa focus
+                    $("email").className=" form-control border-danger";
+                    
+                    $("email").setAttribute("title","errol");
+                    $("tel").className=" form-control border-danger";
+                    
+                }
+    }
+  
+    $("create_email").onclick = create_email;
+    $("create_tel").onclick = create_tel;
+   
+    $("email").onclick= function(){
+        remove_emaill();
+    }
+    $("btn").onclick= validattion_bt;
+</script>
+
+</html>
