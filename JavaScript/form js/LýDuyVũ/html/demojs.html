@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,20 +10,24 @@
 
 
 </head>
+
 <body>
-    <main class="container-fixed" class="form-inline">
+    <main class="container-fixed" class="form-inline" id="sm_form">
         <div class="col-6">
-            <img src="https://lh3.googleusercontent.com/proxy/o0lqujYtOB8uoTfoeIaA-dt1EoM_j6Sfqaczp7dGN6EG5IMp1oRzh6ll6JZnjGx5C7mRSDstlW6lM5Lm3qLuFjZw4m50Pwe0yhc--Boynp4GFNlc-nngcAQk8w2xPeLzwavyOpDynEyj4A2bbfsT6OMmRxSy" alt="anh gai xinh">
-            
+            <img src="https://lh3.googleusercontent.com/proxy/o0lqujYtOB8uoTfoeIaA-dt1EoM_j6Sfqaczp7dGN6EG5IMp1oRzh6ll6JZnjGx5C7mRSDstlW6lM5Lm3qLuFjZw4m50Pwe0yhc--Boynp4GFNlc-nngcAQk8w2xPeLzwavyOpDynEyj4A2bbfsT6OMmRxSy"
+                alt="anh gai xinh">
+
         </div>
         <form action="" class="col-6" class="form-group">
             <label for="email">Email</label> <i id="font" class="fas fa-plus-circle ml-1"></i>
-            <div id="email" >
+            <div id="email">
                 <div class="form-inline">
-                    <input type="email" name="email" id="email" class="form-control w-50" placeholder="abc@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="pls enter value"> 
-                    <i class="fas fa-minus-circle ml-1"></i>
+                    <input type="email" name="email" id="div_email" class="form-control w-50"
+                        placeholder="abc@gmail.com" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                        title="pls enter value">
+                    <i id="font_minus" class="fas fa-minus-circle ml-1"></i>
                 </div>
-                
+
             </div>
             <label for="phone">Phone Number</label> <i id="tel" class="fas fa-plus-circle ml-1"></i>
             <div id="tel_plus">
@@ -32,96 +37,137 @@
                         <option value="1">+84</option>
                         <option value="2">+55</option>
                         <option value="3">+20</option>
-                       
+
                     </select>
-                    <span class="mx-2">  -  </span>
-                    <input type="tel" name="tel" id="tel" class="form-control w-50"placeholder="55555555" > 
-                    <i class="fas fa-minus-circle ml-1"></i>
-                    
+                    <span class="mx-2"> - </span>
+                    <input type="tel" name="tel" id="tel" class="form-control w-50" placeholder="55555555">
+                    <i id="tel_minus" class="fas fa-minus-circle ml-1"></i>
+
                 </div>
-              
+
             </div>
-            <label for="submit"></label>
-            <input type="submit" name="sub" id="submit" class="form-control col-3 btn btn-primary mt-3" value="Submit">
-            
-            
+            <label for="button"></label>
+            <input type="button" name="btn" id="button" class="form-control col-3 btn btn-primary mt-3" value="Submit">
+
+
         </form>
 
-       <script>
-            function $(id){
-            return document.getElementById(id);
-        }
-        
-        $("font").onclick=function(){
-            var div=document.createElement("div");
-            var input=document.createElement("input");
-            var font_icon=document.createElement("i");
-            div.className="form-inline my-2";
-            input.setAttribute("placeholder","abc@gmail.com");
-            input.className="form-control w-50";
-            font_icon.className="fas fa-minus-circle ml-1";
-            div.appendChild(input);
-            div.appendChild(font_icon);
-            $("email").appendChild(div);
-           
-        }
-        $("tel").onclick=function(){
-            var div=document.createElement("div");
+        <script>
 
-            var span_tel=document.createElement("span");
-            var span_tel1=document.createElement("span");
-            span_tell=document.createTextNode("+");
-            span_tell1=document.createTextNode("-");
-
-            var select_tel=document.createElement("select");
-
-            var op_select=document.createElement("option");
-            oop_select=document.createTextNode("+84");
-
-            var op_select1=document.createElement("option");
-            oop_select1=document.createTextNode("+53");
-
-           
-            var input_tel=document.createElement("input");
-            var font_icon=document.createElement("i");
-
-            div.className="form-inline my-2";
-            select_tel.className="form-control";
-            span_tel1.className="mx-2";
-            span_tel.className="mx-2";
-            input_tel.className="form-control w-50";
-            font_icon.className="fas fa-minus-circle";
-            input_tel.setAttribute("placeholder","555");
-
-
-            div.appendChild(span_tel);
-            div.appendChild(select_tel);
-            div.appendChild(span_tel1);
-            div.appendChild(input_tel);
-            div.appendChild(font_icon);
-            
-            select_tel.appendChild(op_select);
-            select_tel.appendChild(op_select1);
-            op_select.appendChild(oop_select);
-            op_select1.appendChild(oop_select1);
-
-            span_tel1.appendChild(span_tell1);
-            span_tel.appendChild(span_tell);
-
-            $("tel_plus").appendChild(div);
-        }
-        var processEntries = function(){
-            var isValid = true;
-            var email = $("email").value;
-            var phone=$("tel").value;
-            if(email=""){
-                $("email").nextElementSibling.firstChild.nodeValue="pls enter value";
-                isValid=false;
+            function $(id) {
+                return document.getElementById(id);
             }
-            else{
-                $("email").nextElementSibling.firstChild.nodeValue= "";
+
+            function removeEL() {
+
+                var font_i = this;
+                var parent_tag_i = this.parentElement.parentElement;
+                var num_child = parent_tag_i.childElementCount;
+                if (num_child > 1) {
+                    var font_parent = this.parentElement;
+                    font_parent.remove();
+                }
             }
-        }
-       </script>
+            function createEle(tag) {
+                return document.createElement(tag); //cách gán createEle để dùng nhiều lần bằng cách gọi nó ra. vd: var div=createEle("div");
+            }
+
+            $("font_minus").onclick = removeEL;
+            $("tel_minus").onclick = removeEL;
+            $("font").onclick = function () {
+
+                var div = document.createElement("div");
+                var input = document.createElement("input");
+                var font_icon = document.createElement("i");
+                div.className = "form-inline my-2";
+                input.setAttribute("placeholder", "abc@gmail.com");
+                input.className = "form-control w-50";
+                font_icon.className = "fas fa-minus-circle ml-1";
+                div.appendChild(input);
+                div.appendChild(font_icon);
+                $("email").appendChild(div);
+                font_icon.onclick = removeEL;
+
+
+                //    font_icon.onclick=removeEL(){
+                //        this.parentElement.removeEL();
+
+                //    }
+            }
+            $("tel").onclick = function () {
+                var div = document.createElement("div");
+
+                var span_tel = document.createElement("span");
+                var span_tel1 = document.createElement("span");
+                span_tell = document.createTextNode("+");
+                span_tell1 = document.createTextNode("-");
+
+                var select_tel = document.createElement("select");
+
+                var op_select = document.createElement("option");
+                oop_select = document.createTextNode("+84");
+
+                var op_select1 = document.createElement("option");
+                oop_select1 = document.createTextNode("+53");
+
+
+                var input_tel = document.createElement("input");
+                var font_icon = document.createElement("i");
+
+                div.className = "form-inline my-2";
+                select_tel.className = "form-control";
+                span_tel1.className = "mx-2";
+                span_tel.className = "mx-2";
+                input_tel.className = "form-control w-50";
+                font_icon.className = "fas fa-minus-circle";
+                input_tel.setAttribute("placeholder", "555");
+
+
+                div.appendChild(span_tel);
+                div.appendChild(select_tel);
+                div.appendChild(span_tel1);
+                div.appendChild(input_tel);
+                div.appendChild(font_icon);
+
+                select_tel.appendChild(op_select);
+                select_tel.appendChild(op_select1);
+                op_select.appendChild(oop_select);
+                op_select1.appendChild(oop_select1);
+
+                span_tel1.appendChild(span_tell1);
+                span_tel.appendChild(span_tell);
+
+                $("tel_plus").appendChild(div);
+
+                font_icon.onclick = removeEL;
+
+
+
+
+            }
+
+            $("button").onclick = function () {
+                var arr_el_input = document.getElementsByTagName("input");
+                var tag_p = document.createElement("p");
+                tag_p_input = document.createTextNode("pls enter value")
+                tag_p.appendChild(tag_p_input);
+                //loop get value input
+                for (let i = 0; i < arr_el_input.length; i++) {
+                    //get input value
+                    var el = arr_el_input[i];
+                    if (el.value.trim() == "") {
+                        el.getAttribute("pattern", "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$");
+                       
+                        var num_el=el.parentElement.childElementCount;
+                        if(num_el==3 || num_el==6){
+                            el.parentElement.lastElementChild.remove();
+                        }
+                        el.parentElement.appendChild(tag_p);
+                    }
+                    
+                }
+            }
+        </script>
     </main>
+
 </html>

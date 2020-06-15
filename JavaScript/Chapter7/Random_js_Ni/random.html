@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Random</title>
+    <style>
+        #khoi{
+            border: black solid;
+            min-height: 200px;
+        }
+        .mess{
+            margin-top: 10px;
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row" id="khoi">
+            <div class="col-md-6" style=" border-right: black solid;">
+                <div>
+                <input class="form-control mt-4" id="input" type="text" style="width: 300px;" placeholder="Enter number">
+                <button type="button" pattern="[0,9]" id="submit" class="btn btn-success mt-4">Submit</button>
+                </div>
+                <div id="mes">
+
+                </div>
+            </div>
+            <div class="col-md-6" id="right">
+                <div id="output">
+                    <p style="font-size: large; font-weight: 500; color: green;">Out put:</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        function createEl(tag){
+           return document.createElement(tag);
+        }
+        function createArr(a){
+            var arr = new Array(a);
+                for(let i = 0 ; i < arr.length; i++){
+                    var b = Math.random();
+                    arr[i] = b;
+                }
+        }
+       
+        $("submit").onclick = function(){
+            var ip_value = $("input").value;
+            if(  ip_value == ""){
+                var el = createEl("p");
+                var content = document.createTextNode("Vui lòng nhập giá trị! ! !");
+                el.setAttribute("class", "mess")
+                el.appendChild(content);
+                $("mes").appendChild(el);
+            }
+            else{
+                var num = parseInt(ip_value);
+                var arr = new Array(num);
+                for(let i = 0 ; i < arr.length; i++){
+                    var b = Math.random().toFixed(2);
+                    arr[i] = b;
+                }
+                for(let i = 0 ; i<arr.length;i++){
+                    var al = createEl("p");
+                    var con = document.createTextNode("Gía trị thứ: " + i + " là: " +arr[i]);
+                    al.appendChild(con);
+                    $("output").appendChild(al);
+               }
+                 var p_max = createEl("p");
+                 var con_max = document.createTextNode("Giá trị lớn nhất là: " + Math.max(...arr));
+                 p_max.appendChild(con_max);
+                 $("output").appendChild(p_max);
+
+                 var p_min = createEl("p");
+                 var con_min = document.createTextNode("Giá trị nhỏ nhất là: " + Math.min(...arr));
+                 p_min.appendChild(con_min);
+                 $("output").appendChild(p_min);
+
+
+                
+        }
+        }
+
+        // var rd = Math.random();
+        // var out_put = Math.ceil(rd*100);
+        //     // Math.ceil(0) = 0;
+        //     //Math.ceil(99.8) = 100;
+
+    </script>
+</body>
+</html>

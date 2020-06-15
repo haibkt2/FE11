@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+<body>
+    <form action="" class="form-group">
+        <div id="div_random" class="form-inline">
+            <label for="">Nhập vào 1 số</label>
+            <input type="text" id="text" class="form-control m-3" required pattern="[0-9]">
+        </div>
+       <input type="button" id="btn" class="form-control btn btn-primary col-2" value="Create Random" >
+    </form>
+
+    <script>
+        function $(id) {
+                return document.getElementById(id);
+            }
+        var arr=[];
+        $("btn").onclick=function(){
+            var input=parseInt($("text").value);
+            for(let i=0;i<input;i++){
+                arr[i]=Math.ceil(Math.random()*100);
+                document.write("<br>Số thứ "+(i+1)+"=",arr[i]);
+            }
+            var min=max=arr[0];
+            for(let i=0;i<arr.length;i++){
+                if(max<arr[i])
+                max=parseInt(arr[i]);
+                if(min>arr[i])
+                min=parseInt(arr[i]);
+            }
+            document.write("<br>Số lớn nhất:",max);
+            document.write("<br>Số nhỏ nhất:",min);
+            
+        }
+
+    </script>
+
+</body>
+</html>
