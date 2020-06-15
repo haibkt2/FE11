@@ -23,10 +23,7 @@ function emailAdd(){
     iconAdd.setAttribute("class","fas fa-minus-circle col col-2 mt-2 abc");
     addRowEmail.appendChild(iconAdd);
 
-    var messAdd = document.createElement("span");
-    var textMess=document.createTextNode(" ");
-    messAdd.appendChild(textMess);
-    addRowEmail.appendChild(messAdd);
+    
 
     iconAdd.onclick=function(){
         if (countBtn.length > 1){
@@ -87,6 +84,11 @@ function phoneAdd(){
     iconPhoneAdd.setAttribute("class","fas fa-minus-circle col col-2 mt-2 abc");
     addRowPhone.appendChild(iconPhoneAdd);
 
+    var messAdd1 = document.createElement("span");
+    var textMess1=document.createTextNode(" ");
+    messAdd1.appendChild(textMess1);
+    addRowPhone.appendChild(messAdd1);
+
     iconPhoneAdd.onclick=function(){
         if (countBtnPhone.length > 1){
             $("phoneForm").removeChild(addRowPhone);
@@ -109,25 +111,34 @@ function phoneRemove(){
     }
 }
 var inputEmaila = document.getElementsByTagName("input");
-var abc = document.getElementsByClassName("abc");
 function processSubmit(){
-   for (var i=0;i<inputEmaila.length;i++){
-    if(inputEmaila[i].value ==""){
-        for (var j=0;j<abc.length;j++){
-            var addMss =  abc[j].nextElementSibling;
-            addMss.innerHTML="Please input value !";
-            addMss.setAttribute("class","text-danger");
-            $("inputEmail").setAttribute("class","form-control mx-2 col col-8 mb-2 border border-danger");
-     }
+   for (let i=0;i<inputEmaila.length;i++){
+    if(inputEmaila[i].value.trim() ==""){
+        /* var addMss =  inputEmaila[i].nextElementSibling;
+        addMss.innerHTML="Please input value !";
+        addMss.setAttribute("class","text-danger");
+        inputEmaila[i].style.borderColor="red"; */
+        var messAdd = document.createElement("span");
+        var textMess=document.createTextNode("Please input value !");
+        messAdd.className="text-danger col col-6";
+        messAdd.appendChild(textMess);
+        var num_el= inputEmaila[i].parentElement.childElementCount;
+        if (num_el ==3 || num_el ==6){
+            inputEmaila[i].parentElement.lastElementChild.remove();
+            
+        }
+        inputEmaila[i].parentElement.appendChild(messAdd);
+        inputEmaila[i].style.borderColor="red";
+        
     }
     else{
-        for (var j=0;j<abc.length;j++){
-        var addMss =  abc[j].nextElementSibling;
-        addMss.innerHTML="";
-        $("inputEmail").setAttribute("class","form-control mx-2 col col-8 mb-2");
+        inputEmaila[i].style.borderColor="";
+        if (num_el >2 || num_el >5){
+            inputEmaila[i].parentElement.lastElementChild.remove();
         }
     }
    }
+   
 }
 
 window.onload = function(){
