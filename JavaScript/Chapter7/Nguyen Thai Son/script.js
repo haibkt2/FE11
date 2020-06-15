@@ -4,7 +4,7 @@ var $ = function(id) {
 
 var check = function () {
     var inputNum = $('random');
-    inputNum = $('random').nodeValue;
+    inputNum = $('random').value;
     
     for (let i=1; i <= inputNum; i++) {
         var randomResult = Math.ceil(Math.random()*100);
