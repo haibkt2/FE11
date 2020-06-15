@@ -1,0 +1,22 @@
+.bg{
+   background-image: url(nen.PNG);
+   min-height: 754px;
+}
+div #input{
+   width: 485px;
+   margin-left:10px;
+}
+div #sp{
+   width:17px;
+   text-align: left;
+}
+div #sp{
+   width:17px;
+   text-align: left; 
+}
+div #sp1{
+   width:20px;text-align: center;
+}
+div #ph{
+   width: 413px;
+}
