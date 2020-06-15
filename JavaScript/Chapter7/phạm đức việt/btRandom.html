@@ -17,7 +17,7 @@
                     <label for="">nhập số cần tạo</label>
                     <input type="number" name="" id="input" class="form-control mx-2" placeholder="1234" />
                 </div>
-                <button type="b" id="btn" class="btn btn-primary">
+                <button type="button" id="btn" class="btn btn-primary">
                     Create random
                 </button>
             </div>
@@ -36,7 +36,7 @@
 
             for (let i = 0; i < index; i++) {
                 arr[i] = Math.ceil(Math.random() * 100);
-               $("result").text("<br>No." + (i + 1) + " = ", arr[i]);
+                document.write("<br>No." + (i + 1) + " = ", arr[i]);
             }
         }
         function maxmin() {
@@ -47,7 +47,8 @@
                 if (max < arr[i]) {
                     max = parseInt(arr[i]);
                 }
-                if (min > arr[i]) min = parseInt(arr[i]);
+                if (min > arr[i]) 
+                     min = parseInt(arr[i]);
             }
             document.writeln("<br>số lớn nhất:  " + max);
             document.writeln("<br>số nhỏ nhất:  " + min);
