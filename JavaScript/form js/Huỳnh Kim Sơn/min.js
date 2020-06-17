@@ -8,7 +8,7 @@ function addmail(){
 
     var inputemail = document.createElement("input");
     inputemail.setAttribute("placeholder","Enter email");
-    inputemail.setAttribute("class"," form-control col-md-11 mt-2 ml-3")
+    inputemail.setAttribute("class"," mt-3 ml-4")
 
     var iconremovemail = document.createElement("i");
     iconremovemail.setAttribute("class"," fa fa-times ml-1");
@@ -32,8 +32,10 @@ function removeMP(){
         var el_div_parent = this.parentElement;
         el_div_parent.remove();
     }
+    else{
+        alert("Không thể xóa. Phải có ít nhất 1 trường email");
+    }
 }
-
 /* add phone */
 function addphone(){
 
@@ -47,7 +49,7 @@ function addphone(){
     // input 84
     var inputphone84 = document.createElement("input");
     inputphone84.setAttribute("placeholder","84");
-    inputphone84.setAttribute("class"," form-control col-md-2 mt-2 mr-1 ml-3")
+    inputphone84.setAttribute("class"," col-md-2 mt-3 ml-1 mr-1")
 
     // span -
     var addspan0 = document.createElement("span-")
@@ -59,7 +61,7 @@ function addphone(){
     // input 123456789
     var inputphone = document.createElement("input");
     inputphone.setAttribute("placeholder","123456789");
-    inputphone.setAttribute("class","form-control col-md-8 mt-2 ml-1")
+    inputphone.setAttribute("class"," mt-3 ml-1")
     
     // input icon remove
     var iconremovephone = document.createElement("i");
@@ -77,5 +79,27 @@ function addphone(){
 
 }
 $("iconaddphone").onclick = addphone;
-/* remove phone */
+//
+function checkerror() {
+    // tra ve the arr toan bo the input 
+    var arr_el_input = document.getElementsByTagName("input");
+    // loop get value input
+    for (let i=0; i<= arr_el_input.length; i++) {
+        //get input value
+        var el_input = arr_el_input[i];
+        //
+        if (el_input.value.trim() == "") {
+            var num_el = el_input.parentElement.childElementCount;
+            //
+            if (num_el == 2 || num_el == 5) {
+                var error_p = document.createElement("p");
+                error_p.setAttribute("class"," error")
+                var err = document.createTextNode("Pls, Hãy nhập đầu đủ thông tin.");
+                error_p.appendChild(err);
+                el_input.parentElement.appendChild(error_p);
+            }
+        }
+    }
+}
 
+$("id_bt_submit").onclick = checkerror;
