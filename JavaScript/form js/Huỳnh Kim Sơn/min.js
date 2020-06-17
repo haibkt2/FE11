@@ -32,19 +32,21 @@ function removeMP(){
         var el_div_parent = this.parentElement;
         el_div_parent.remove();
     }
-    else{
-        alert(" Xin lỗi, Không thể xóa! ")
-    }
 }
 
 /* add phone */
 function addphone(){
 
     var divephonenumber = document.createElement("div");
+    //span +
+    var addspan = document.createElement("span")
+    addspan.className=("addspan1")
+    var span1= document.createTextNode("+");
+    addspan.appendChild(span1);
 
     // input 84
     var inputphone84 = document.createElement("input");
-    inputphone84.setAttribute("placeholder","+84");
+    inputphone84.setAttribute("placeholder","84");
     inputphone84.setAttribute("class"," form-control col-md-2 mt-2 mr-1 ml-3")
 
     // span -
@@ -65,6 +67,7 @@ function addphone(){
     //tao onclick removephone
     iconremovephone.onclick = removeMP;
 
+    divephonenumber.appendChild(span1);
     divephonenumber.appendChild(inputphone84);
     divephonenumber.appendChild(span2);
     divephonenumber.appendChild(inputphone);
