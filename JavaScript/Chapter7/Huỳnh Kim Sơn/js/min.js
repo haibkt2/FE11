@@ -47,8 +47,10 @@ $("id_bt_random").onclick=function(){
     var v_input = $("id_input").Value;
     //
     Valid(v_input);
+    //
     var el_arr = document.getElementsByClassName("child_rd");
     if(el_arr.length>0){
         el_arr[0].remove();
     }
+    main(parseInt(v_input));
 }
