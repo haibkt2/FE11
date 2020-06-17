@@ -8,8 +8,9 @@ function createNode(node) {
 	return document.createTextNode(node);
 }
 function main(v) {
-	var min = 0, max = 0;
-	var div_tag;
+	var min = 100, max = 0;
+	var div_tag = createEl("div");
+	div_tag.className = "child_rd";
 	for(let i = 1; i <= v; i++){
 		// get number random
 		var random = Math.ceil(Math.random()*100);
@@ -18,8 +19,6 @@ function main(v) {
 		var node = createNode("Number " + i +" : " + random);
 		p_tag.appendChild(node);
 		// add p tag into div.child_rd
-		div_tag = createEl("div");
-		div_tag.className = "child_rd";
 		div_tag.appendChild(p_tag);
 		// set max value
 		max = (max < random) ? random : max;
