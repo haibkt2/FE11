@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+  <main class='container my-5'>
+    <div class='row border border-info'>
+      <form class='col-6 form-group m-5' id='form-input'>
+        <label for='input-num'>Enter a number</label>
+        <input type='text' id='input-num' class='form-control mb-5' autofocus>
+        <input type='button' value='Create Random' class='btn btn-primary' id='btn'>
+      </form>
+  
+      <div id='result' class='col-6 m-5'>
+  
+      </div>
+    </div>
+  </main>
+
+  <script>
+    var inputNum = $('input-num').value;
+    
+    function $(id) {
+      return document.getElementById(id);
+    }
+    
+    function validate() {
+      if (inputNum = '' || isNaN(inputNum) || inputNum < 0) {
+        alert('You have to enter a positive number!')
+        $('form-input').reset();
+      } else {
+        randomMinMax();
+      }
+    }
+
+    function randomMinMax() {
+      var arr = [];
+
+      for (let i = 0; i < inputNum; i++) {
+        var pEl = document.createElement('p');
+        var pText = document.createTextNode('Số thứ' + (i + 1) + 'là: ' + arr[i]);
+
+        arr[i] = Math.round(Math.random * 100);
+        pEl.appendChild(pText);
+        $('result').appendChild(pEl);
+      }
+      
+    }
+
+    $('btn').onclick = validate;
+  </script>
+</body>
+</html>

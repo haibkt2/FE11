@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   </head>
+   <body>
+      <div class="container mt-5">
+         <div class="row">
+         
+            <div class="col-md-6" style=" border: 1px solid black;min-height: 200px;">
+               <span>No.1 </span>
+               <input type="text" placeholder="Enter n numbers" id="n" class="form-control" style="width: 270px;">
+               <button class="btn btn-primary mt-2" id="bt">Create Random</button>
+            </div>
+            <div class="col-md-6 " style=" border: 1px solid black; min-height: 200px;" id="rul"></div>
+         </div>
+      </div>
+      
+      <script>
+         function $(id){
+   return document.getElementById(id);
+   }
+   function getRandNumber(){
+      return Math.floor(Math.random()*101);
+   }
+   $("bt").onclick = function(){
+      var n = $("n").value;
+      var arr=[];
+      for(var i=0; i<n;i++){
+         arr[i] = getRandNumber();
+         //$("rul").innerHTML="Số thứ "+ i + ": " + arr[i] + "<br>";
+         var el_div = document.createElement("div");
+         el_div.style = "line-height: 40px;"
+         var text = document.createTextNode("Số thứ "+ (i + 1) + ": " + arr[i]);
+         el_div.appendChild(text);
+         $("rul").appendChild(el_div);
+         
+      }
+      var Max = Math.max.apply(Math, arr);
+      var Min = Math.min.apply(Math, arr);
+      //document.write("Max: " + max + "<br>");
+      //document.write("Min: " + min);
+      var el_div_Max = document.createElement("div");
+         el_div_Max.style = "line-height: 40px;"
+         var text_Max = document.createTextNode("Max là: "+ Max);
+         el_div_Max.appendChild(text_Max);
+         $("rul").appendChild(el_div_Max);
+      
+         var el_div_Min = document.createElement("div");
+         el_div_Min.style = "line-height: 40px;"
+         var text_Min = document.createTextNode("Min là: "+ Min);
+         el_div_Min.appendChild(text_Min);
+         $("rul").appendChild(el_div_Min);
+
+   }
+
+  // var rd = Math.random();
+  // var out_put = Math.ceil(rd*100);
+      </script>
+   </body>
+</html>
