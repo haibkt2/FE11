@@ -7,27 +7,29 @@ function $(tag){
 function $(node){
     return document.createTextNode(node);
 }
-
+function vaild(v){
+    var c = (isNaN(v) && v < 0) : true ? false;
+    if(c) alert();
+    return c;
+}
 function main(v){
-    var min=0; var max=0;
+    var min = 100; var max = 0;
     var div_tag;
-    for(let i=0;i<=v;i++){
+    for(let i = 0;i <= v; i++){
         // get number random
-        var random=Math.ceil(Math.random()*100);
+        var random = Math.ceil(Math.random()*100);
         // create element
-        var p_tag=createEl("p");
-        var node=createNode("So thu" + i + ":" + random);
+        var p_tag = createEl("p");
+        var node = createNode("So thu" + i + ":" + random);
         p_tag.appendChild(node);
         //add p tag into div.chlid_rd
         div_tag = createElement("div");
         div_tag.className="child_rd";
         div_tag.appendChild(p_tag);
-        // add div tag into div#out_rd
-        $("out_rd").appendChild(div_tag);
         // set max value
-        max = (max<random) ? random:max;
+        max = (max < random) ? random : max;
         //set min value
-        min = (min<random) ? random:min;
+        min = (min < random) ? random : min;
     }
     // display min max
     // max el
@@ -36,20 +38,22 @@ function main(v){
     div_tag.appendChild(p_max_tag);
     //min el
     var p_min_tag = createEl("p");
-    var min_node = createNode("Max : " + min);
+    var min_node = createNode("Min : " + min);
     div_tag.appendChild(p_min_tag);
-    //
+
+    // display number random
+	// add div tag into div#out_rd
     $("out_rd").appendChild(div_tag);
 
 }
 $("id_bt_random").onclick=function(){
     //vail
-    var v_input = $("id_input").Value;
+    var v_input = $("id_input").value;
     //
-    Valid(v_input);
+    valid(v_input);
     //
     var el_arr = document.getElementsByClassName("child_rd");
-    if(el_arr.length>0){
+    if(el_arr.length > 0){
         el_arr[0].remove();
     }
     main(parseInt(v_input));
