@@ -8,7 +8,7 @@ function createNode(node) {
 	return document.createTextNode(node);
 }
 function main(v) {
-	var min = 0, max = 0;
+	var min = 100, max = 0;
 	var div_tag = createEl("div");
 	div_tag.className = "child_rd";
 	for(let i = 1; i <= v; i++){
