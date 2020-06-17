@@ -8,8 +8,8 @@ function $(node){
     return document.createTextNode(node);
 }
 function vaild(v){
-    var c = (isNaN(v) && v < 0) : true ? false;
-    if(c) alert();
+    var c = (isNaN(v) && v < 0) ? true : false;
+    if(c) alert(error);
     return c;
 }
 function main(v){
