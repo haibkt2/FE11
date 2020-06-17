@@ -13,20 +13,29 @@
 </head>
 <body>
     <main>
-        <div class="container mt-5" style="border: solid;">
-            <div class="row" style="margin: 2em 2em 0;">
-                <div class="col col-md-6 form-control-inline">
-                        <label for="">No.1</label>
-                        <input class="" type="text">
+        <div class="container mt-5" >
+            <div class="row" >
+                <div class="col-md-6" style="border: solid;">
+                    <form action="" class="form-group">
+                        <div class="row" style="margin: 2em 2em 0;">
+                            <label for=""><b>No.1:</b></label>
+                            <input id="id_input" class="ml-2" type="text" autofocus>
+                         </div>
+                    </form>
+                    <button id="id_bt_random" type="button" class="btn btn-primary mt-2" style="margin: 0 2em 2em;" >Create Random</button>
+                </div>  
+                <div id="out_rd" class=" col-md-6" style="border: solid;">
+                    <div class="child_rd" style="margin: 2em 2em 0;">
+                        <label for=""><b>Output:</b></label>
+                            <p></p>
+                            <p>Min:</p>
+                            <p>Max:</p>
                         
+                    </div>
                 </div>
-            </div>  
-            <button id="sub" type="button" class="btn btn-primary mt-2" style="margin: 0 2em 2em;" >Creata Random</button>
-        </div>
-
+             </div>
+         </div>
     </main>
-    <script>
-      
-    </script>
+  <script src="../js/min.js"></script>
 </body>
 </html>
