@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		var a = new Date();
+		var year = a.getFullYear();
+		var month = a.getMonth() +1;
+		var day = a.getDate();
+		var hour = a.getHours();
+		var minutes = a.getMinutes();
+		var getTimes = function(){
+			
+			function addZero(v){
+				return (v<10) ? '0'+v : v;
+			}
+			document.write(year+'-'+addZero(month)+'-'+addZero(day)+' '+
+				addZero(hour)+':'+addZero(minutes));
+			}
+		getTimes();
+	</script>
+</body>
+</html>
