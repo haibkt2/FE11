@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+  <main class="container">
+    <div class="row mt-5">
+      <img src="https://www.athenaspahotel.com/media/cache/jadro_resize/rc/tnxrezCu1579080551/jadroRoot/medias/_a1a8429.jpg" alt="" class="col-6">
+
+      <form action="" class="col-6">
+        <h2>Join with us</h2>
+        <p>You can eat everything in the world</p>
+    
+        <div id="div-email">
+          <label for="email" class="mr-2">Email</label>
+          <i class="fas fa-plus-circle" id="i-add-email"></i>
+
+          <div class="form-inline mb-4">
+            <input type="email" placeholder="Enter email" name="email" required class="form-control mr-3">
+            <i class="fas fa-minus-circle"></i>
+          </div>
+        </div>
+    
+        <div id="div-phone">
+          <label for="phone" class="mr-2">Phone Number</label>
+          <i class="fas fa-plus-circle" id="i-add-phone"></i>
+
+          <div class="form-inline mb-4">
+            <span class="mr-2">+</span>
+            <input type="tel" placeholder="84" id="phone" name="phone" required class="form-control">
+            <span class="mx-2">-</span>
+            <input type="tel" placeholder="123456789" id="phone" name="phone" required class="form-control mr-3">
+            <i class="fas fa-minus-circle"></i>
+          </div>
+        </div>
+    
+        <input type="button" class="btn btn-primary" id="btn" value="Submit">
+      </form>
+    </div>
+  </main>
+  <script>
+    "use strict";
+    function $(id) {
+      return document.getElementById(id);
+    }
+
+    function createEmail() {
+      var div = document.createElement('div');
+      var input = document.createElement('input');
+      var icon = document.createElement('i');
+
+      div.setAttribute('class', 'form-inline mb-4');
+      input.setAttribute('type', 'email');
+      input.setAttribute('placeholder', 'Enter email');
+      input.setAttribute('class', 'form-control mr-3');
+      icon.setAttribute('class', 'fas fa-minus-circle');
+
+      div.appendChild(input);
+      div.appendChild(icon);
+      $('div-email').appendChild(div);
+
+      icon.onclick = removeEl;
+    }
+
+    function createPhone() {
+      var div = document.createElement('div');
+      var spanPlus = document.createElement('span');
+      var spanPlusText = document.createTextNode('+');
+      var inputPhone1 = document.createElement('input');
+      var spanMinus = document.createElement('span');
+      var spanMinusText = document.createTextNode('-');
+      var inputPhone2 = document.createElement('input');
+      var icon = document.createElement('i');
+
+      div.setAttribute('class', 'form-inline mb-4');
+      spanPlus.setAttribute('class', 'mr-2');
+      inputPhone1.setAttribute('type', 'tel');
+      inputPhone1.setAttribute('placeholder', '84');
+      inputPhone1.setAttribute('class', 'form-control');
+      spanMinus.setAttribute('class', 'mx-2');
+      inputPhone2.setAttribute('type', 'tel');
+      inputPhone2.setAttribute('placeholder', '123456789');
+      inputPhone2.setAttribute('class', 'form-control mr-3');
+      icon.setAttribute('class', 'fas fa-minus-circle');
+
+      spanPlus.appendChild(spanPlusText);
+      spanMinus.appendChild(spanMinusText);
+      div.appendChild(spanPlus);
+      div.appendChild(inputPhone1);
+      div.appendChild(spanMinus);
+      div.appendChild(inputPhone2);
+      div.appendChild(icon);
+      $('div-phone').appendChild(div);
+
+      icon.onclick = removeEl;
+    }
+
+    function removeEl() {
+      this.parentElement.remove();
+      // var div_block = this.parentElement.parentElement;  // this is obj (obj HTML) user clicked
+      // var num_child = div_block.childElementCount;
+      // if (num_child > 1) {
+      //   var el_div_parent = this.parentElement;
+      //   el_div_parent.remove();
+      // }
+    }
+
+    function processSubmit() {
+      var arrInput = document.getElementsByTagName('input');
+
+      for (let i = 0; i <= arrInput.length; i++) {
+        var elInput = arrInput[i];
+        
+        if (elInput.value.trim() == '') {
+          var pMess = document.createElement('p');
+          var textMess = document.createTextNode('Please input value!');
+          var numEl = elInput.parentElement.childElementCount;
+
+          pMess.className = 'text-danger';
+          pMess.appendChild(textMess);
+
+          elInput.parentElement.appendChild(pMess);
+          elInput.style.borderColor='red';
+
+          if (numEl == 3 || numEl == 6) {
+            elInput.parentElement.lastElementChild.remove();
+          }
+        } 
+      }
+    }
+
+    $('i-add-email').onclick = createEmail;
+    $('i-add-phone').onclick = createPhone;
+    $('btn').onclick = processSubmit;
+  </script>  
+</body>
+</html>
