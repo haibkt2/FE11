@@ -95,39 +95,45 @@
             //valid(v , Math.max);
             //validate for amount
             //valid(v, 500);
-            if(v_select == 0){
+            if(v_input < 10000){
+                $("Dis_amount").setAttribute("value",value(0));
+                $("Discount").setAttribute("value",value(10));
+            }
+            else{
+                if(v_select == 0){
                 $("Dis_amount").setAttribute("value",value(200));
                 if(v_input < 15000){
-                    $("Discount").setAttribute("value",value(0.1));
+                    $("Discount").setAttribute("value",value(10));
                 }
                 else{
-                    $("Discount").setAttribute("value",value(0.15));
+                    $("Discount").setAttribute("value",value(15));
                 }
-            }
-            else if(v_select == 1){
+                }
+                else if(v_select == 1){
                 $("Dis_amount").setAttribute("value",value(300));
                 if(v_input < 15000){
-                    $("Discount").setAttribute("value",value(0.15));
+                    $("Discount").setAttribute("value",value(15));
                 }
                 else{
-                    $("Discount").setAttribute("value",value(0.2));
+                    $("Discount").setAttribute("value",value(20));
                 }
+                }
+                else if(v_select == 2){
+                $("Discount").setAttribute("value",value(15));
+                }
+
             }
-            else if(v_select == 2){
-                $("Discount").setAttribute("value",value(0.15));
-            }
-                var val = $("Subtotal").value;
+            var val = $("Subtotal").value;
                 var val_sub = parseFloat(val);
                 var dis = $("Discount").value;
                 var val_dis = parseFloat(dis);
                 var amount = $("Dis_amount").value;
                 var val_amout = parseFloat(amount);
 
-                var total = (val_sub * val_dis) - (val_amout);
+                var total = (val_sub * (val_dis / 100)) - (val_amout);
                 var value_total = parseFloat(total);
-                $("Total").setAttribute("value",value_total);
-
-        }
+                $("Total").setAttribute("value",value_total); 
+        } 
         
         
         //Execute
