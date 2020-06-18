@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+    <main class="container">
+        <form action="" class="p-5 mt-5 form-group col-md-12 border border-primary rounded">
+            <h1 class="text-primary col-md-12">Invoice Total Calculator</h1>
+            <p class="col-md-12">Enter the two values that follow and click "Calculate".</p>
+            <div class="form-inline mb-3">
+                <label for="customer_type" class="justify-content-start col-md-3">Customer Type:</label>
+                <select name="customer_type" id="customer_type" class="custom-select col-md-8">
+                    <option value="honor" selected>Horner</option>
+                    <option value="lay">Lay</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-inline mb-3">
+                <label for="subtotal" class="justify-content-start col-md-3">Invoice Subtotal:</label>
+                <input type="number" name="subtotal" id="subtotal" class="form-control col-md-8">
+            </div>
+            <hr/>
+            <div class="form-inline mb-3">
+                <label for="percent" class="justify-content-start col-md-3">Discount Percent:</label>
+                <input type="number" name="percent" id="percent" class="form-control col-md-8" disabled value="0.00"><span class="ml-2">%</span>
+            </div>
+            <div class="form-inline mb-3">
+                <label for="amount" class="justify-content-start col-md-3">Discount  Amount:</label>
+                <input type="number" name="amount" id="amount" class="form-control col-md-8" disabled value="0.00">
+            </div>
+            <div class="form-inline mb-3">
+                <label for="total" class="justify-content-start col-md-3">Invoice Total:</label>
+                <input type="number" name="total" id="total" class="form-control col-md-8" disabled value="0.00">
+            </div>
+            <div class="text-center">
+                <input type="button" id="calculate" class="btn btn-primary" value="Calculate">
+            </div>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
