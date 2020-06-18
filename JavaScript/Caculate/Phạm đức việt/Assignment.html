@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
+
+    <style>
+        div{
+            margin: 10px;
+        }
+        label{
+            margin-right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form  id="form" action="" class="form-group col-4">
+            <h1> Invoice t</h1>
+            <p>Enter the two values that follow and click " Calculate</p>
+            <div id="input_costomer">
+                <label for="">Customer Type</label>
+                <!-- gán sự kiện cho select: el.onchange = fn() -->
+                <select name="" id="select">
+                    <option value="0" >Honer</option>
+                    <option value="1">Lay </option>
+                    <option value="2">Other </option>
+                </select>
+            </div>
+            <div id="">
+                <label for="">Invoice Subtotal </label>
+                <input type="text" id="input_invoice" >
+            </div>
+            <div>
+                <label for="">Discount Percent</label>
+                <input  id="percent" class="reset" type="text" disabled value="0.00">
+                <span>%</span>
+            </div>
+            <div>
+                <label for="">Discount Amount</label>
+                <input id="amount" class="reset" type="text" disabled value="0.00">
+            </div>
+            <div>
+                <label for="total">Invoice Total</label>
+                <input id="total" class="reset" type="text" disabled value="0.00">
+            </div>
+            <button id="btn" class="btn btn-primary" type="button">Calculate</button>
+        </form>
+    </main>
+    <script>
+         function $(id) {
+            return document.getElementById(id);
+        }
+        function valid(value, condition){
+            var checked = (isNaN(value) || value<0 || value>condition) ? true : false;
+            if(checked){
+                alert("Please input again");
+                
+                $("form").reset();
+                $("input_invoice").focus();
+             
+
+            }   
+            return checked;
+        }
+        function calculate(){
+            
+            var input_amount= parseFloat($("amount").value);
+
+            var input = parseFloat($("input_invoice").value);
+            var select = $("select").value;
+            var percent ,amount, total;
+            valid(input, Math.max);
+            
+            
+            if(input<10000){
+                percent=10;
+                amount=0.00;
+                total= input*(1-percent/100);
+               
+               
+            }
+            else{
+                if(select==0){
+                    percent=(input<15000) ? 15 : 20;
+                    amount=300;
+                    total= input*(1-percent/100)- amount;
+                
+                }
+                else if(select==1){
+                    percent = (input<15000) ? 10: 15;
+                    amount=200;
+                    total = input*(1-percent/100)-amount;
+                }
+                else {
+            
+                    percent = 15;
+                    amount = (input_amount<500) ? input_amount : "0.00"; 
+                    
+                    total = input*(1-percent/100)-amount;
+                }
+            
+                $("percent").setAttribute("value", percent);
+                $("amount").setAttribute("value", amount);
+                $("total").setAttribute("value",total);
+                 if(valid(input_amount, 500)){
+                $("percent").setAttribute("value", "0.00");
+                $("total").setAttribute("value","0.00");
+
+                 }
+                 getAmount();
+               
+              
+                
+            }
+           
+           
+
+            }
+        
+     
+        function getAmount(){
+            var input = $("input_invoice").value;
+            var select = $("select").value;
+            if(input>=10000 && select==2){
+                $("amount").disabled = false;
+            }else
+            $("amount").disabled = true;
+           
+        }
+        $("select").onchange=function(){
+            getAmount();
+           
+        };
+        $("btn").onclick=function(){
+            
+            calculate();
+        };
+       
+
+        $("input_invoice").onchange=  getAmount;
+          
+    </script>
+</body>
+</html>
