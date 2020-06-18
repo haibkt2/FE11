@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Invoice</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row d-flex justify-content-center">
+            <div class=" col-md-8 border border-primary">
+                <h1 style="color: blue; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serifb; text-align: center;">Invoice Total Calculator</h1>
+                <h4>Enter the two values that follow and click "Calculator"</h4>
+                <form action="" id="id_form">
+
+                    <div class="form-group row">
+                        <label for="staticEmail"for="Cus_type"  class="col-sm-3 col-form-label">Customer Type:</label>
+                        <div class="col-sm-5">
+                            <select id="Cus_type">
+                                <option value="0">Lay</option>
+                                <option value="1">Honer</option>
+                                <option value="2">Orther</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="staticEmail" for="Subtotal"  class="col-sm-3 col-form-label">Invoice Subtotal:</label>
+                        <div class="col-sm-5">
+                            <input id="Subtotal"  type="number">
+                        </div>
+                    </div>
+                    <span>-----------------------------------------------------------------</span>
+                    <div class="form-group row">
+                        <label for="staticEmail" for="Dis_per"  class="col-sm-3 col-form-label">Discount Percent:</label>
+                        <div class="col-sm-5">
+                            <input id="Discount" type="number" value="40.00" disabled><span>%</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="staticEmail" for="Dis_amount"  class="col-sm-3 col-form-label">Discount Amount:</label>
+                        <div class="col-sm-5">
+                            <input id="Dis_amount" type="number" value="64.00" disabled>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="staticEmail" for="Total"  class="col-sm-3 col-form-label">Invoice Total:</label>
+                        <div class="col-sm-5">
+                            <input id="Total" type="number" readonly="true">
+                        </div>
+                    </div>
+                    <button id="Calculator" type="button" class="btn btn-secondary mt-3 mb-3">Calculator</button>
+            </div>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        function value(a){
+            return parseFloat(a);
+        }
+        //Function Valid 
+        function valid(value, condition){
+            var checked = (isNaN(value)|| value < 0 || value > condition);
+            if (checked){
+                alert("Pls input");
+                $("id_form").reset();
+                $("Subtotal").focus();
+            }
+            return checked;
+        }
+        // Function getAmount
+        function getAmount(){
+            var v_input = $("Subtotal").value;
+            var v_select = $("Cus_type").value;
+            if(v_input>= 10000 && v_select == 2){
+                $("Dis_amount").disabled = false;
+            }
+            else{
+                $("Dis_amount").disabled = true;
+            }
+        }
+        //-------------------------------
+        function calculate(){
+            var v_input = $("Subtotal").value;
+            var v_select = $("Cus_type").value;
+            //validate for Subtotal
+            //valid(v , Math.max);
+            //validate for amount
+            //valid(v, 500);
+            if(v_select == 0){
+                $("Dis_amount").setAttribute("value",value(200));
+                if(v_input < 15000){
+                    $("Discount").setAttribute("value",value(0.1));
+                }
+                else{
+                    $("Discount").setAttribute("value",value(0.15));
+                }
+            }
+            else if(v_select == 1){
+                $("Dis_amount").setAttribute("value",value(300));
+                if(v_input < 15000){
+                    $("Discount").setAttribute("value",value(0.1));
+                }
+                else{
+                    $("Discount").setAttribute("value",value(0.2));
+                }
+            }
+            else if(v_select == 2){
+                $("Discount").setAttribute("value",value(0.15));
+            }
+                var val = $("Subtotal").value;
+                var val_sub = parseFloat(val);
+                var dis = $("Discount").value;
+                var val_dis = parseFloat(dis);
+                var amount = $("Dis_amount").value;
+                var val_amout = parseFloat(amount);
+
+                var total = (val_sub * val_dis) - (val_amout);
+                var value_total = parseFloat(total);
+                $("Total").setAttribute("value",value_total);
+
+        }
+        
+        
+        //Execute
+        $("Calculator").onclick = calculate;
+        $("Cus_type").onchange = getAmount;
+        $("Subtotal").onchange = getAmount;
+
+        
+    </script>
+</body>
+</html>
