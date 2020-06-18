@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+   </head>
+   <body>
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12" style="margin-left: 250px; margin-top: 100px;">
+               <h1 style="color: blue;">Invoince Total Calculator</h1>
+               <h6>Enter the two values that follow and click "Calculate"</h6>
+               
+                  <form action="" id="id_form">
+
+                     <div class="row form-group">
+                        <label class="col-md-2" for="">Customer Type:</label>
+                        <select name="" id="id_sel" class="col-md-3 p-0">
+                           <option value="">Honored Citizen</option>
+                           <option value="1">Lay</option>
+                           <option value="2">Honer</option>
+                           <option value="3">Other</option>
+                        </select>
+                     </div>
+                     
+                     <div class="row form-group">
+                        <label class="col-md-2" for="">Invoice Subtotal:</label>
+                        <input class="col-md-3 p-0" type="text" id="id_sub">
+                     </div>
+
+                     <div class="row form-group">
+                        <label class="col-md-2" for="">Discount Percent:</label>
+                        <input class="col-md-3 p-0" type="text" id="id_per" value="0.00" disabled>
+                     </div>
+
+                     <div class="row form-group" >
+                        <label class="col-md-2" for="">Discount Amount:</label>
+                        <input class="col-md-3 p-0" type="text" value="0.00" disabled id="id_amo">
+                     </div>
+
+                     <div class="row form-group">
+                        <label class="col-md-2" for="">Discount Total:</label>
+                        <input class="col-md-3 p-0" type="text" value="0.00" disabled id="id_tot">
+                     </div>
+
+                     <button class="col-md-3" type="button" id="bt_cal" style="margin:0px;margin-left:175px;"> Calculate</button>
+                  </form>
+               
+            </div>
+         </div>
+      </div>
+      <script src="calculate.js"></script>
+   </body>
+</html>
