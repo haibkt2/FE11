@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Input</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        main{
+           margin-left: auto;
+           margin-right: auto;
+           margin-top: 20px;
+           width: 700px;
+           border: 1px dotted blue;
+           padding-left: 5px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form action="" class="form-group" id="id_form">
+        
+            <div class="hd">
+                <h2>Invoice Total Caculator</h1>
+                <h4>Enter the 2 values that follow and click "Caculate" </h3>
+            </div>
+              
+                <div class="row">
+            <div class="col-md-3">
+                <label for="" > Customer Type:</label> 
+                <label for="">Invoice Subtotal:</label>
+                <hr>
+                <label for="">Discount Percent:</label>
+                <label for="">Discount Amount:</label>
+                <label for="">Invoice Total:</label>
+            </div>
+            <div class="col-md-5">
+                <select name="" id="Cus_type">
+                    <option value="0">Lay</option>
+                    <option value="1">Honer</option>
+                    <option value="2">Other</option>
+                </select>
+                <br>
+                <input type="number" id="InSub" >
+                <hr>
+                <input id="id_per" type="number" value="0.15"disabled><span>%</span>
+                <input id="id_amount" type="number" value="64.00"  disabled >  
+                <input type="number" id="id_total" readonly=true>
+                <button type="button" class="btn btn-primary mt-2" id="btn">Caculate</button>
+            </div>
+        </div>                                                                   
+        </div>
+    </form>   
+    </main>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        //hàm tính toán
+     
+        // hàm valid
+        function valid(value,condition){
+            var checked=(isNaN(value)|| value<0|| value>condition) ?true:false;
+            if(checked){
+                alert("Please input again");
+                $("id_form").reset();
+                $("InSub").focus();
+            }
+            return checked;
+        }
+       
+        // Lấy giá trị
+    
+        function getAmount(){
+            var v_input = $("InSub").value;
+            var v_select = $("Cus_type").value;
+            if(v_input>= 10000 && v_select == 2){
+                $("id_amount").disabled = false;
+            }
+            else{
+                $("id_amount").disabled = true;
+            }
+        }
+       
+        // Tính phần trăm cho từng option
+        
+     
+         // Hàm tính toán và bao gồm set %
+             function invoice(){
+               // set phần trăm cho từng option
+               var v_input = $("InSub").value;
+                var v_select = $("Cus_type").value;
+                if(v_select==0){
+                    $("id_amount").setAttribute("value","200");
+                    if(v_input<15000){
+                        $("id_per").setAttribute("value","0.1");
+                    }else{ $("id_per").setAttribute("value","0.15");}
+                }
+                if(v_select==1){
+                    $("id_amount").setAttribute("value","300");
+                    if(v_input<15000){
+                        $("id_per").setAttribute("value","0.15");
+                    }else $("id_per").setAttribute("value","0.2");
+                }else if(v_select==2) {
+                    $("id_amount").setAttribute("value","0");
+                    if(v_input<10000){
+                        $("id_per").setAttribute("value","0.1");}
+                } 
+               var is= parseFloat($("InSub").value);
+               var am= parseFloat($("id_amount").value);
+               var pc= parseFloat($("id_per").value);
+              
+               var tt;
+               tt=(is*pc)-(am);
+               var sum=parseFloat(tt);
+               $("id_total").value=sum;
+             }
+             
+         $("btn").onclick=invoice;
+         $("Cus_type").onchange=getAmount; // hàm ko có đối số thì ko cần ()
+         $("InSub").onchange=getAmount;
+        // 
+    </script>
+</body>
+</html>
