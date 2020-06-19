@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+</head>
+
+<body>
+    <main>
+        <form action="" id="id_form">
+            <h1 class="col-md-12 text-left">Invoice Total Calculator</h1>
+            <h1 class="col-md-12 text-left">
+                Enter the two value that forlow and click "Calculate"
+            </h1>
+            <div class="row div1">
+                <div class="col-md-6">
+                    <h3>Customer type</h3>
+                    <h3>Invoice Subtotal</h3>
+                </div>
+                <div class="col-md-6">
+                    <select class="form-control" id="id_selection">
+              <option value="0">lay</option>
+              <option value="1">Honor</option>
+              <option value="2">other</option>
+            </select>
+
+                    <input type="text" class="form-control" id="getinputInvoice" />
+                </div>
+            </div>
+            <div class="row div2">
+                <div class="col-md-6">
+                    <h3>Discount Percent</h3>
+                    <h3>Discount Amount</h3>
+                    <h3>Invoice Total</h3>
+                </div>
+                <div class="col-md-6">
+                    <div style="display: flex;">
+                        <input type="text" class="form-control" disabled enable id="getValuePercent" /><span>%</span>
+                    </div>
+                    <input type="text" class="form-control" disabled id="amount" />
+                    <input type="text" class="form-control" disabled id="sum" />
+                    <button type="button" class="" id="btn">Calculate</button>
+                </div>
+
+            </div>
+
+        </form>
+    </main>
+</body>
+<script src="./index.js"></script>
+
+</html>
