@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="../js/js.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <main class="container m-2">
+        <h2 class="text-primary">Invoice Total Caculator</h2>
+        <p>Enter the two values that follow and click "Caculate"</p>
+        <div class="row" style="margin-left: auto; margin-right: auto;">
+            <form action="" id="form">
+                <div class="row" >
+                    <label for="" class="col col-6">Customer type: </label>
+                    <select name="" id="selectCustomer" class="form-control col col-6 mb-2">
+                        <option value="lay">Lay</option>
+                        <option value="honer">Honer</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <label for="" class="col col-6">Invoice subtotal: </label>
+                    <input type="text" name="" id="invoiceSub" class="form-control col col-6 mb-2">
+                </div>
+                <div class="row" style="border-top:dotted 2px">
+                    <label for="" class="col col-6 mt-2">Discount Percent: </label>
+                    <input type="text" name="" id="discountPer" class="form-control col col-6 mb-2 mt-2" disabled>
+                </div>
+                <div class="row">
+                    <label for="" class="col col-6">Discount Amount: </label>
+                    <input type="text" name="" id="discountAmount" class="form-control col col-6 mb-2" disabled>
+                </div>
+                <div class="row">
+                    <label for="" class="col col-6">Invoice Total: </label>
+                    <input type="text" name="" id="invoiceTotal" class="form-control col col-6 mb-2" disabled>
+                </div>
+                <div class="row">
+                    <label for="" class="col col-6"></label>
+                    <button type="button" class="col col-6 btn btn-primary" id="btnCaculate">Caculate</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
+
