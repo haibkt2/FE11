@@ -12,12 +12,14 @@ function valid(value) {
     return check;
 }
 
+
 function calulate() {
     var getValueOption = $("id_selection").value;
     var getinputInvoiceSubtotal = $("getinputInvoice").value;
     var getPercent = $("getValuePercent").value;
     var getAmount = $("amount").value;
     valid(getinputInvoiceSubtotal);
+    valid(getAmount);
     if (getValueOption === "0") {
         $("amount").setAttribute("value", "200");
         if (getinputInvoiceSubtotal > 15000) {
@@ -52,9 +54,9 @@ function getValuePercent() {
         $("getValuePercent").setAttribute("value", "10");
         $("amount").setAttribute("value", "0");
     } else if (getValueOption === "2" && getinputInvoiceSubtotal > 1000) {
-        $("getValuePercent").disabled = false;
+        $("amount").disabled = false;
     } else {
-        $("getValuePercent").disabled = true;
+        $("amount").disabled = true;
     }
 }
 $("btn").onclick = calulate;
