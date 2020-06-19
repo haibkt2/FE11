@@ -51,7 +51,7 @@ function calulate() {
 function getValuePercent() {
     var getValueOption = $("id_selection").value;
     var getinputInvoiceSubtotal = $("getinputInvoice").value;
-    if (getinputInvoiceSubtotal < 1000) {
+    if (getinputInvoiceSubtotal < 10000) {
         $("getValuePercent").setAttribute("value", "10");
         $("amount").setAttribute("value", "0");
     } else if (getValueOption === "2" && getinputInvoiceSubtotal > 1000) {
@@ -63,3 +63,41 @@ function getValuePercent() {
 $("btn").onclick = calulate;
 $("id_selection").onchange = getValuePercent;
 $("getinputInvoice").onchange = getValuePercent;
+// sử dụng swich case : với 3 điều kiện trở lên
+// function caculate() {
+//     var t, s, a, p, c;
+//     var v = $("getinputInvoice").value;
+//     if (!valid(v, Math.max)) {
+//         v = Math.parseFloat(v);
+//         if (v < 10000) {
+//             a = 0;
+//             p = 0.1;
+//         } else {
+//             var v_select = $("id_selection").value;
+//             switch (v_select) {
+//                 case 0:
+//                     a = 200;
+//                     p = (s < 15000) ? 0.1 : 0.15;
+//                     break;
+//                 case 1:
+//                     a = 300;
+//                     p = (s < 15000) ? 0.15 : 0.2;
+//                     break;
+//                 case 3:
+//                     a = $("amount").value;
+//                     if (valid(a, 500)) {
+//                         c = false;
+//                     } else {
+//                         a = parseFloat(a);
+//                         p = 0.15;
+//                     }
+//                     break;
+//                 default:
+//                     displayEror();
+//             }
+//         }
+//         if (c) {
+//             t = s * p - a;
+//         }
+//     }
+// }
