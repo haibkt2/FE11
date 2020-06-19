@@ -41,9 +41,10 @@ function calulate() {
     }
     var tt = 0;
     getinputInvoiceSubtotal = parseInt(getinputInvoiceSubtotal);
-    getPercent = parseInt(getPercent);
-    getAmount = parseInt(getAmount);
+    getPercent = parseFloat(getPercent);
+    getAmount = parseFloat(getAmount);
     tt = getinputInvoiceSubtotal * (getPercent / 100) - getAmount;
+    tt = parseFloat(tt);
     $("sum").value = tt;
 }
 
