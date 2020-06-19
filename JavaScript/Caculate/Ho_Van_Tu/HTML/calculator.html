@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/styles.css">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container ">
+        <div class="border border-primary m-3 p-3 col-7">
+            <div class="pl-3">
+                <h1 class="text-primary">Invoice Total Calculater</h1>
+                <p>Enter a two values that follow and click "Calculater"</p>
+            </div>
+            <form action="" class="form form-group" id="form">
+                <div class="row " style="border-bottom:1px dashed blue">
+                    <div class="col-12">
+                        <label for="" class="col-4">Customer Type</label>
+                        <select name="" id="id_select" class="col-5" >
+                            <option value="1">Lay</option>
+                            <option value="2">Honer</option>
+                            <option value="3">Other</option>
+                        </select>
+                    </div>
+                    <div class="col-12 mb-3" >
+                        <label for="" class="col-4">Invoice Subtotal</label>
+                        <input type="text"  id="in_subtotal" class="col-5">
+                    </div>
+                </div>
+                <div class="row"  >
+                    <div class="col-12 mt-2" >
+                        <label for="" class="col-4">Discount Percent</label>
+                        <input type="text"  id="percent" class="col-5"><span>%</span>
+                    </div>
+                    <div class="col-12 ">
+                        <label for="" class="col-4">Discount Amount</label>
+                        <input type="text"  id="amount" disabled class="col-5">
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="col-4">Invoice Total</label>
+                        <input type="text"  id="in_total" class="col-5">
+                    </div>
+                    <div class="col-6" >
+                        <input type="button" value="Calculater" class="btn btn-primary col-6 ml-3 mt-2" id="bnt">
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </main>
+    <script src="../Js/calculator.js" ></script>
+</body>
+</html>
