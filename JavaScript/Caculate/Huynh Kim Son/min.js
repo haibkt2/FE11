@@ -4,26 +4,26 @@ function $(id){
 
 function calculate(){
      //validate for subtotal
-     var total, amount, precent, c=true;
+     var total, amount, percent, c = true;
      // get value input
-     var subtotal = $("id_subtotal").value;
+     var s = $("id_subtotal").value;
      // validate
-     if(!valid(subtotal,Math.max)){
+     if(!valid(s, Math.max)){
          //caludate
-         subtotal = parseFloat(subtotal);
-         if(subtotal < 10000){
+         s = parseFloat(s);
+         if(s < 10000){
            amount = 0 ;
-           precent = 0.1;
+           percent = 0.1;
         } else {
                var op_select = $("id_select").value;
                switch (op_select){
                     case 0:
                        amount = 200;
-                       precent = ( subtotal < 15000) ? 0.1 : 0.15;
+                       percent = ( s < 15000) ? 0.1 : 0.15;
                        break;
                     case 1:
                         amount = 300;
-                        precent = (subtotal < 15000) ? 0.15 : 0.2;
+                        percent = (s < 15000) ? 0.15 : 0.2;
                         break;
                     case 2:
                         amount = $("id_amount").value;
@@ -31,7 +31,7 @@ function calculate(){
                             c = false;
                         } else{
                             amount = parseFloat(amount);
-                            precent = 0.15;
+                            percent = 0.15;
                         }
                         break;
                     default:
@@ -39,22 +39,23 @@ function calculate(){
                       
                }
            }
-        }
         // calculate
         if(c){
-            total = subtotal * precent - amount;
+            total = s * percent - amount;
             //display values
             displayValue(percent, amount, total);
 
         } else {
-            displayError();
-            
-        } 
+			displayError();
+		}
+	} else {
+		displayError();
+	}
   }
 
 //
 function displayValue(percent, amount, total) {
-	$("id_percent").value = precent;
+	$("id_percent").value = percent;
 	$("id_amount").value = amount;
 	$("id_total").value = total;
 }
@@ -84,6 +85,6 @@ function valid(value, max){
 
 $("bt_calculate").onclick = calculate;
 $("id_select").onchange = getAmount;
-$("id_subtotal").onchange = getAmount;
+$("id_subtotal").onclick = getAmount;
 
 
