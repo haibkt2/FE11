@@ -12,7 +12,7 @@ function displayTask(old_task_arr) {
     var displayTaskArr = getTask(old_task_arr);
     var out_task = '';
     for (i in displayTaskArr) {
-        out_task += '<input type="checkbox" class="checkedValue mr-2">' + '<span>' + displayTaskArr[i] + '</span>' + '</br>';
+        out_task += '<div> <input type="checkbox" class="checkedValue mr-2">' + '<span>' + displayTaskArr[i] + '</span>' + '</div>';
     }
     $('outputDiv').innerHTML = out_task;
 }
@@ -27,7 +27,7 @@ function addTask() {
         new_task = (new_task == null) ? v_input : new_task + ':' + v_input;
         localStorage.setItem('task', new_task);
         var out_put = $('outputDiv').innerHTML;
-        out_put += '<input type="checkbox" class="checkedValue mr-2">' + '<span>' + v_input + '</span>' + '</br>';
+        out_put += '<div> <input type="checkbox" class="checkedValue mr-2">' + '<span>' + v_input + '</span>' + '</div>';
         $('outputDiv').innerHTML = out_put;
         $('taskInput').value = "";
     }
@@ -54,9 +54,8 @@ function checkAll() {
 }
 
 function clearSomeTask() {
-    var task_arr = document.getElementsByClassName('checkedValue mr-2');
-    var task_span = document.getElementsByTagName('span');
-    var task_br = document.getElementsByTagName('br');
+    var task_arr = document.getElementsByClassName('checkedValue');
+    //var task_span = document.getElementsByClassName('span');
     var taskRests = '';
     if (task_arr.length == 0) {
         alert('Task not found, enter a task pls!');
@@ -65,23 +64,21 @@ function clearSomeTask() {
         clearAllTask();
         $('checkAll').checked = false;
     } else {
-        for (let z = 0; z < task_arr.length; z++) {
+        for (let z = 0; z < task_arr.length;) {
             if (task_arr[z].checked == true) {
-                task_arr[z].remove();
-                task_span[z].remove();
-                task_br[z].remove();
+                task_arr[z].parentElement.remove();
             } else {
-                var taskRest = task_span[z].textContent;
+                var taskRest = task_arr[z].nextElementSibling.textContent;
                 taskRests += ((taskRests == '') ? '' : ':') + taskRest;
+                z++;
             }
-            localStorage.setItem('task', taskRests);
         }
+        localStorage.setItem('task', taskRests);
     }
-    displayTask();
 }
 
 function clearAllTask() {
-    var task_arr = document.getElementsByClassName('checkedValue mr-2');
+    var task_arr = document.getElementsByClassName('checkedValue');
     if (task_arr.length == 0) {
         alert('Task not found, enter a task pls!');
         $('taskInput').focus();
