@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+  <main class="container"></main>
+    <form class="w-75 mx-auto my-5 px-5 py-3 border border-primary">
+      <h1>Task manager</h1>
+
+      <div class="row">
+        <div class="col-6">
+          <label for="">Task</label>
+          <input type="text" id="task" class="form-control mb-2">
+          <input type="button" id="add" value="Add task" class="form-control btn btn-primary mb-2">
+          <input type="button" id="clear" value="Clear all task" class="form-control btn btn-primary mb-2">
+        </div>
+  
+        <div class="col-6">
+          <p>Task List</p>
+          <table class="table">
+            <thead class="thead-light">
+              <tr>
+                <th>
+                  <input type="checkbox" id="select-all">
+                </th>
+                <th>Name task</th>
+              </tr>
+            </thead>
+            <tbody id="tbody">
+              
+            </tbody>
+          </table>
+
+          <input type="button" id="delete" value="Clear" class="form-control btn btn-primary mb-2">
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <script>
+    function $(id) {
+      return document.getElementById(id);
+    }
+
+    function getTask() {
+      var tasks = localStorage.getItem('task'); // string
+      var taskArr = (tasks == null) ? [] : tasks.split(':');
+      displayTask(taskArr);
+    }
+    
+    function displayTask(taskArr) {
+      var outTask = '';
+      for (let i in taskArr) {
+        outTask += '<tr>'
+          + '<td>'
+          + '<input type="checkbox" value="checkedValue" class="radioTask">'
+          + '</td>'
+          + '<td>' + taskArr[i] + '</td>'
+          + '</tr>';
+      }
+      $('tbody').innerHTML = outTask;
+    }
+
+    function addTask() {
+      var input = $('task').value.trim();
+      var task = localStorage.getItem('task');
+      task = (task == null) ? input : task + ':' + input;
+      localStorage.setItem('task', task);
+      // add input into block output
+      var output = $('tbody').innerHTML;
+      output += '<tr>'
+          + '<td>'
+          + '<input type="checkbox" value="checkedValue">'
+          + '</td>'
+          + '<td>' + input + '</td>'
+          + '</tr>';
+      $('tbody').innerHTML = output;
+      $('task').value = '';
+      $('task').focus();
+    }
+
+    function clearAllTask() {
+      localStorage.removeItem('task');
+      $('tbody').innerHTML = '';
+    }
+
+    function selectAll() {
+      var arrTask = document.getElementsByClassName('radioTask');
+      var status = $('select-all').checked;
+      for (let i in arrTask) {
+        if (status === false) {
+          arrTask[i].checked = false;   
+        } else {
+          arrTask[i].checked = true;
+        }
+      }
+    }
+
+    function deleteTask() {
+      var arrTask = document.getElementsByClassName('radioTask');
+      var tasks = '';
+      for (let i = 0; i < arrTask.length; i++) {
+        if (arrTask[i].checked) {
+          arrTask[i].parentElement.parentElement.remove();
+        } else {
+          // create task to save local
+          var task = arrTask[i].parentElement.nextElementSibling.textContent;
+          tasks += ':' + task;
+          tasks.substring(1, tasks.length);
+          // tasks += ((tasks == '') ? '' : ':') + task;
+        }
+      }
+      // save local
+      localStorage.setItem('task', tasks);
+    }
+
+    getTask();
+
+    $('add').onclick = addTask;
+    $('clear').onclick = clearAllTask;
+    $('select-all').onchange = selectAll;
+    $('delete').onclick = deleteTask;
+  </script>
+</body>
+</html>
