@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Task Manager</title>
+</head>
+<body>
+    <div  class="container">
+        <div class="row">
+            
+                <div class="col-md-6 border border-success" style="border: brown;">
+                    <h1>Task Manager</h1>
+                    <form>
+                        <div class="form-group">
+                          <label for="Input">NameTask</label>
+                          <input type="text" class="form-control" id="Input" placeholder="Enter value">
+                        </div>
+                        <button type="button" class="btn btn-success mb-3" id="id_add">Add Task</button><br>
+                        <button type="button" class="btn btn-secondary mb-3" id="id_delete">Clear All</button>
+                    </form>
+                </div>
+                <div class="col-md-6 border border-danger " style="border:palevioletred">
+                    <input type="checkbox" value="0" id="check" onchange="select_all()">Name task</p>
+                <table id="tbody">
+                    <tr>
+                    <!-- <td><input type="checkbox" value="0" id="check" onchange="select_all()">Name task</p></td> -->
+                    </tr>
+                </table>
+                <button type="button" id="clear" class="btn btn-danger mt-3">Delete</button>
+                </div>
+
+          
+        </div>
+    </div>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+            function select_all(){
+            var parent = document.getElementsByClassName("selectAll");
+            var a = $("check");
+            if (a.checked == true ){
+                for(var i =0 ; i < parent.length; i++){
+                        parent[i].checked = true;
+                    }
+                }
+            else {
+                for(var i =0 ; i < parent.length; i++){
+                        parent[i].checked = false;
+                    }
+            }
+            }
+         function displayTask(task_arr){
+            var out_task ='';
+            for (i in task_arr){
+                 out_task += '<tr>'
+                    + '<td>'
+                    +    '<input type="checkbox" value="0" id="selectAll">'
+                    + '</td>'
+                    + '<td>' + task_arr[i] + '</td>'
+                    '</tr>';
+            }
+            $("tbody").innerHTML = out_task;
+        }
+        function getTask(){
+            var tasks = localStorage.getItem('task'); // 1 string task;
+            var task_arr = (tasks == null) ? [] : tasks.split(':');
+            displayTask(task_arr);
+        }
+       
+        function addTask(){
+            var v_input = $("Input").value.trim(); //trim: remove 2 đầu space
+            var task = localStorage.getItem('task');
+            task = (task == null) ? task : task + ':' + v_input;
+            localStorage.setItem('task',task);
+            //cách 1:
+             //getTask();
+            //hoặc v_input into block out_put: appenChild
+            var out_put = $("tbody").innerHTML;
+            out_put += '<tr>'
+                    + '<td>'
+                    +    '<input type="checkbox" value="0" class="selectAll">'
+                    + '</td>'
+                    + '<td>' + v_input + '</td>'
+                    '</tr>';
+                $("tbody").innerHTML = out_put;
+                $("Input").value = "";
+                $("Input").focus();
+        }
+        function clearTask(){
+            localStorage.removeItem("task");
+            $("tbody").innerHTML = "";
+
+        }
+
+        function clearItem(){
+            var parent = document.getElementsByClassName("selectAll");
+                for(var i = 0 ; i < parent.length; i++){
+                    if (parent[i].checked == true ){
+                        parent[i].parentElement.parentElement.remove();
+                    }
+                }
+        }
+
+        //Mabe by teacher
+        function deleteTask(){
+            var arr_task = document.getElementsByClassName("selectAll");
+            var task = '';
+            for (let i =0 ; i < arr_task.length;i++ ){
+                if(arr_task[i].checked){
+                    //remove
+                    arr_task[i].parentElement.parentElement.remove();
+                }
+                else{
+                    //create task to save local
+                    var task = arr_task[i].parentElement.nextElementSibling.textContent;
+                    tasks += ((tasks == '') ? '' : ':') + task;
+                }
+            }
+            //save local
+            //localStorage.setItem('task',tasks);
+        }
+        $("id_add").onclick = addTask;
+        $("clear").onclick = clearItem;
+        $("id_delete").onclick= clearTask;
+    </script>
+</body>
+</html>
