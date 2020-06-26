@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Task Manager</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+      <div class="container mt-5 ">
+          <div class="row">
+              <div class="col-md-4 bg-light">
+                    <h3>Task Manager </h3>
+                    <div class="form-group">
+                      
+                      <input type="text" class="form-control" name="" id="task" aria-describedby="helpId" placeholder="">
+                    </div>
+                    <button type="button" class="col-12 mt-1 btn btn-primary" id="add">Add Task</button>
+                    <button type="button" class="col-12 mt-1 btn btn-primary" id="clear">Clear All</button>
+              </div>
+              <div class="col-md-7 bg-light">
+              	<div class="m-2">
+                  <button type="button" class="col-2 mb-2 mr-4 float-right btn btn-primary " id="delTask">Remove</button>
+                  <button type="button" id="selectAll" class="btn btn-primary mr-1">Select all</button>
+                  <button type="button" id="deselectAll" class="btn btn-primary">Deselect all</button>
+              	</div>
+                  <div id="ouput">
+					     <table class="table table-striped"> 
+                     <thead class="bg-success">    
+                        <tr>
+                           <th style="width: 30px">
+                              <input type="checkbox" name="" value="selectAll" disabled>
+                           </th>
+                        <th>Name Tasks</th>
+                        </tr>
+			            </thead>
+			            <tbody id="tbody">
+			            </tbody>
+			           </table>
+                  </div>
+              </div>
+          </div>
+      </div>
+<script src="TaskManager.js"></script>
+  </body>
+</html>
