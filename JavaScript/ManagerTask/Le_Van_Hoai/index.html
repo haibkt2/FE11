@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <main class="container m-2">
+        <h2>Task Manager</h2>
+        <div class="row">
+            <div class="col col-6">
+                <label for="">Task</label>
+                <input type="text" name="" id="taskInput" class="form-control mb-2">
+                <button type="button" id="btnAdd" class="btn btn-primary">Add Task</button>
+                <button type="button" id="btnClearTask" class="btn btn-danger">Clear Tasks</button>
+            </div>
+            <div class="col col-6" id="result">
+                <div class="row">
+                    <label for=""> <input type="checkbox" id="checkAlla"> Task Name</label>
+                    <button type="button" id="btnDeleteItem" class="btn btn-danger ml-4">Delete Item</button>
+                </div>
+                
+            </div>      
+        </div>
+    </main>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        function getTask(){
+            var loads = localStorage.getItem("Task");
+            var arr = (loads==null)?[]:loads.split(":");
+            displayTasks(arr);
+        }
+        function displayTasks(arr){
+            for (let i in arr){
+                var divCreate=document.createElement("div");
+                divCreate.className="row";
+                var checkCreate = document.createElement("input");
+                checkCreate.type="checkbox";
+                checkCreate.name="check";
+                checkCreate.className="check";
+                var labelCreate =document.createElement("label");
+                var textCreate = document.createTextNode(arr[i]);
+                labelCreate.appendChild(checkCreate);
+                labelCreate.appendChild(textCreate);
+                divCreate.appendChild(labelCreate);
+                $("result").appendChild(divCreate);   
+            }     
+        }
+        function addTask(){
+            var inputTask = $("taskInput").value.trim();
+            var loadTask =localStorage.getItem("Task");
+            loadTask =(loadTask==null) ? inputTask :loadTask + ":" + inputTask;
+            localStorage.setItem("Task",loadTask);
+        }
+        function ClearTask(){
+            localStorage.clear();
+        }
+        function checkAll(source) {
+            var getCheck = document.getElementsByClassName("check");
+            for (let i = 0; i < getCheck.length; i++) {
+                getCheck[i].checked= source.checked;
+            }
+        }
+        function deleteItem(){
+            var getCheckItem = document.getElementsByClassName("check");
+            var tasks="";
+            for (let i=0;i<getCheckItem.length;i++){
+                if(getCheckItem[i].checked){
+                    getCheckItem[i].parentElement.parentElement.remove();
+                }
+                else {
+                    var task =getCheckItem[i].parentElement.textContent;
+                    tasks+=((tasks=="")?"":":")+task;
+                    
+                }
+            }
+            localStorage.setItem("Task",tasks);
+            
+        }
+        
+        window.onload=function(){
+            getTask();
+            $("btnAdd").onclick=function(){
+                addTask();
+                location.reload();
+            }
+            $("btnClearTask").onclick=function(){
+                ClearTask()
+                location.reload();
+            }
+            $("checkAlla").onchange=function() {
+                checkAll(this);
+            }
+            $("btnDeleteItem").onclick=function(){
+                deleteItem();
+                location.reload();
+            }
+        }
+    </script>
+</body>
+</html>
