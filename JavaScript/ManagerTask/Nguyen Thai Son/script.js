@@ -88,7 +88,13 @@ function clearAllTask() {
     }
 }
 displayTask();
+var fn_ = function(e){
+	if(e.keyCode == 13) {
+		addTask();
+	}
+}
 $('addTask').onclick = addTask;
 $('clearTask').onclick = clearAllTask;
 $('checkAll').onchange = checkAll;
 $('clearSome').onclick = clearSomeTask;
+$('taskInput').onkeypress = fn_;
