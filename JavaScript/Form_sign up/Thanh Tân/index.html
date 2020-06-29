@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <main>
+        <div class="container">
+            <h3>đăng kí thành viên</h3>
+            <form id="form">
+                <div class="form-group" >
+                    <label for="exampleInputEmail1">Tên đăng nhập (*)</label>
+                    <input type="text" class="form-control" id="exampleInputEmail1" required >
+                    <span class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Mật khẩu(*)</label>
+                    <input type="password" class="form-control" id="exampleInputPassword1" required maxlength="8" >
+                    
+                </div>
+                
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Nhập lại mật khẩu(*)</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2" required maxlength="8">
+                    
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Họ của bạn(*)</label>
+                    <input type="text" class="form-control" id="hovaten" required>
+                    <span class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Tên của bạn(*)</label>
+                    <input type="text" class="form-control" id="tencuaban" required>
+                    <span class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Email(*)</label>
+                    <input type="email" class="form-control" id="emailcuaban" required>
+                    <span class="error"></span>
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Số điện thoại(*)</label>
+                    <input type="text" class="form-control" id="sdt" maxlength="11" required>
+                    <span class="error"></span>
+                </div>
+                <button type="button"id="btn" class="">Đăng kí</button>
+            </form>
+            
+        </div>
+
+    </main>
+</body>
+<script src="./index.js "></script>
+
+</html>
