@@ -9,25 +9,33 @@ function regUser() {
 		registerUser();
 	}
 }
+function removeErro () {
+	// body... 
+	var cl_error = document.getElementsByClassName('error');
+	for(let i = 0 ; i <= cl_error.length;i++){
+		cl_error[i].remove();
+	}
+}
 function validate(){
+	removeErro();
 	var arr_input = document.getElementsByClassName('cl-user');
 	for(let i = 0; i < arr_input.length; i++){
 		var v_input = arr_input[i].value.trim();
 		// check required
 		if(v_input == '') {
-			arr_input[i].parentElement.innerHTML += '<p>error</p>';
+			arr_input[i].parentElement.innerHTML += '<p class ="error">error</p>';
 			return false;
 		}
 		// check pass
 		var attr = arr_input[i].getAttribute('type');
 		if(attr == 'password') {
 			if(v_input.length < 8) {
-				arr_input[i].parentElement.innerHTML += '<p>min 8 c</p>';
+				arr_input[i].parentElement.innerHTML += '<p class ="error">min 8 c</p>';
 				return false;
 			}
 			else {
 				if(v_input != $('re-pass').value)
-					arr_input[i].parentElement.innerHTML += '<p>not same with pass</p>';
+					arr_input[i].parentElement.innerHTML += '<p class ="error">not same with pass</p>';
 					return false;
 				}
 		}
