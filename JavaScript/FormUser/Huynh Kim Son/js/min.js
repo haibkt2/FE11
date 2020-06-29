@@ -3,7 +3,7 @@ function $(id) {
 }
 function regUser() {
 	// validate
-	var c_valid = true;
+	var c_valid = validate();
 	// save info user to local
 	if(c_valid) {
 		registerUser();
@@ -31,9 +31,8 @@ function validate(){
 					return false;
 				}
 		}
-		return true;
 	}	
-	return false;
+	return true;
 }
 var user_obj = function(user_name, pass, full_name, email, phone) {
 	this.user_name = user_name;
@@ -67,4 +66,4 @@ function login() {
 		var pass_reg = info_use.split(':')[1];
 	}
 }
-$('bt_register').onclick = login;
+$('bt_register').onclick = regUser;
