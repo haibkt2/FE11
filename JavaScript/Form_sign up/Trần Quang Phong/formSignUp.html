@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+  <main>
+    <div class="container col-6 my-4">
+      <h2 class="text-primary text-center">
+        Đăng ký thành viên
+      </h2>
+
+      <form action="" class="form-group" id="form">
+        <div>
+          <label for="name">Tên đăng nhập (*)</label>
+          <input type="text" id="name" class="form-control" required> 
+        </div>
+        <div>
+          <label for="pass">Mật khẩu (*)</label>
+          <input type="password" id="pass" class="form-control" required>
+        </div>
+        <div>
+          <label for="pass-again">Nhập lại mật khẩu (*)</label>
+          <input type="password" id="pass-again" class="form-control" required>
+        </div>
+        <div>
+          <label for="debt">Nợ của bạn (*)</label>
+          <input type="text" id="debt" class="form-control" required>
+        </div>
+        <div>
+          <label for="money">Tiền của bạn (*)</label>
+          <input type="text" id="money" class="form-control" required>   
+        </div>
+        <div>
+          <label for="email">Email (*)</label>
+          <input type="email" id="email" class="form-control" required>   
+        </div>
+        <div>
+          <label for="phone">Số điện thoại (*)</label>
+          <input type="tel" id="phone" class="form-control" required> 
+        </div>
+        <div class="d-flex justify-content-center">
+          <button type="button" id="btn" class="btn btn-primary my-3 w-50">Đăng ký</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script>
+    function $(id) {
+      return document.getElementById(id);
+    }
+    
+    function regUser() {
+      var checkValue = validate();
+
+      if (checkValue) {
+        registerUser();
+      }
+    }
+
+    function validate() {
+      var arrInput = document.getElementsByTagName('input');
+      var checked = true;
+
+      for (let i = 0; i < arrInput.length; i++) {
+        var valueInput = arrInput[i].value.trim();
+        var checkPassword = arrInput[i].getAttribute('type');
+
+        if (valueInput == '') {
+          arrInput[i].parentElement.innerHTML += '<p class="text-danger">You must fill out this field!</p>';
+          checked = false;
+        } else if (checkPassword == 'password') { 
+          if (valueInput.length < 8) {
+            arrInput[i].parentElement.innerHTML += '<p class="text-danger">Password must be at least 8 characters!</p>';
+            checked = false;
+          } 
+
+          if (arrInput[i] == $('pass-again')) {
+            var pass = $('pass').value;
+            var passAgain = $('pass-again').value;
+
+            if (passAgain != pass) {
+              $('pass-again').parentElement.innerHTML += '<p class="text-danger">Not match with password!</p>';
+              checked = false;
+            } 
+          }
+        }   
+      }
+
+      return checked;
+    }
+
+    function registerUser() {
+      var user = $('name').value.trim();
+      var password = $('pass').value;
+
+      if (localStorage.getItem(user) == null) {
+        localStorage.setItem(user, password);
+        $('form').reset();
+        alert('Sign up success!')
+      } else {
+        $('name').parentElement.innerHTML += '<p class="text-danger">This user already exist!</p>';
+      }
+    }
+
+    $("btn").onclick = regUser;
+  </script>
+</body>
+</html>
