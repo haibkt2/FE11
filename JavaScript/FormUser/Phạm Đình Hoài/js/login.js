@@ -4,8 +4,8 @@ function $(id) {
 
 function logIn() {
     removeError();
-    var userInput = $('username').value.trim();
-    var passInput = $('pass').value.trim();
+    var userInput = $('username').value;
+    var passInput = $('pass').value;
     if (userInput == '' || passInput == '') {
         $('pass').parentElement.innerHTML +=  '<p class = "text-danger error">Nhập tài khoản và mật khẩu </p> ';
         $('username').focus();
@@ -18,7 +18,6 @@ function logIn() {
         return false;
     } else {
         
-        var passInput = $('pass').value.trim();
         var userReg = infoUser.username;
         var passReg = infoUser.pass;
         if (userInput == userReg && passInput == passReg ) {
