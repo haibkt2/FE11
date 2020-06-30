@@ -12,7 +12,7 @@ function regUser() {
 function removeErro () {
 	// body... 
 	var cl_error = document.getElementsByClassName('error');
-	for(let i = 0 ; i <= cl_error.length;i++){
+	for(let i = 0 ; i < cl_error.length;i++){
 		cl_error[i].remove();
 	}
 }
@@ -23,14 +23,14 @@ function validate(){
 		var v_input = arr_input[i].value.trim();
 		// check required
 		if(v_input == '') {
-			arr_input[i].parentElement.innerHTML += '<p class ="error">error</p>';
+			arr_input[i].parentElement.innerHTML += '<p class ="error">Error</p>';
 			return false;
 		}
 		// check pass
 		var attr = arr_input[i].getAttribute('type');
 		if(attr == 'password') {
 			if(v_input.length < 8) {
-				arr_input[i].parentElement.innerHTML += '<p class ="error">min 8 c</p>';
+				arr_input[i].parentElement.innerHTML += '<p class ="error"> Password > 8</p>';
 				return false;
 			}
 			else {
@@ -58,17 +58,17 @@ function registerUser() {
 		var user = new user_obj(user_name_input, $('pass').value,
 				$('full_name').value, $('email').value, $('phone').value);
 		var info = user.user_name + ':' + user.pass + ':' + user.full_name 
-					+ ':' + user.phone;
+								+ ':' + user.email	+ ':' + user.phone;
 		localStorage.setItem(user_name_input, info);
 	} else {
-		// alert user name exist
+		alert("Error !")
 	}
 }
 function login() {
 	var v_user_name = $('user_name').value;
 	var info_use = localStorage.getItem(v_user_name);
 	if (info_use == null) {
-		// alert error
+		alert("Error !!")
 	} else {
 		var v_pass = $('pass').value;
 		var pass_reg = info_use.split(':')[1];
