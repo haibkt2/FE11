@@ -81,11 +81,14 @@ function registerUser() {
 								$('first_name').value, 
 								$('email').value, 
 								$('phone').value);
-		var info = user.user_name + ':' + user.pass 
-								  + ':' + user.last_name 
-								  + ':' + user.first_name 
-								  + ':' + user.email	
-								  + ':' + user.phone;
+		var info = { user_name: user_name_input,
+						pass: user.pass,
+						name1: user.last_name,
+						name2: user.first_name,
+						email: user.email,
+						phone: user.phone
+					}
+	    info = JSON.stringify(info);
 		localStorage.setItem(user_name_input, info);
 		alert('Đăng ký thành công !')
 		location.replace("../html/Login.html");
@@ -101,27 +104,29 @@ function login() {
 	removeErro();
 	var user_name_input = $('user_name').value;
 	var pass_input = $('pass').value;
-	var info_use = localStorage.getItem(user_name_input);
-	info_use = JSON.parse(info_use);
-	if (user_name_input == '' || info_use  == null) {
-		$('user_name').parentElement.innerHTML += '<p class ="error">Tên đăng nhập không đúng !</p>';
+	if (user_name_input == '' || pass_input == '') {
+		$('pass').parentElement.innerHTML += '<p class ="error">Tên đăng nhập hoặc mật khẩu không đúng !</p>';
 	}
-	if (pass_input == '' || info_use == null) {
-		$('pass').parentElement.innerHTML += '<p class ="error"> Mật khẩu không đúng !</p>';
-		return false;
+	else{
+		var info_use = localStorage.getItem($('user_name').value);
+		info_use = JSON.parse(info_use);
+		if(info_use == null){
+			$('pass').parentElement.innerHTML += '<p class ="error"> không đúng !</p>';
 
-	}
-	var user_login = info_use.user_name;
-	var pass_login = info_use.pass;
-		if (user_login == user_name_input && pass_login == pass_input) {
-			alert(" Chúc mừng bạn đã đăng nhập thành công !");
-
-		}else {
-			alert(" Pls, vui lòng nhập đúng thông tin !");
-			return false;
-			
+		} else{
+			var user_login = info_use.user_name;
+			var pass_login = info_use.pass;
+				if (user_name_input == user_login && pass_input == pass_login  ) {
+					alert(" Chúc mừng bạn đã đăng nhập thành công !");
+				}else{
+					$('pass').parentElement.innerHTML += '<p class ="error">Vui lòng nhập đúng thông tin !</p>';
+					return false ;
+				}
 		}
-	}
+	
+	} 
+}
+$("bt_login").onclick = login;
 
-$('bt_login').onclick = login;
-$('bt_register').onclick = regUser;
+
+
