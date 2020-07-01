@@ -81,15 +81,8 @@ function registerUser() {
 								$('first_name').value, 
 								$('email').value, 
 								$('phone').value);
-		var info = { user_name: user_name_input,
-						pass: user.pass,
-						last_name: user.last_name,
-						first_name: user.first_name,
-						email: user.email,
-						phone: user.phone
-					};
-	    info = JSON.stringify(info);
-		localStorage.setItem(user_name_input, info);
+	    user = JSON.stringify(user);
+		localStorage.setItem(user_name_input, user);
 		alert('Đăng ký thành công !')
 		location.replace("../html/Login.html");
 
