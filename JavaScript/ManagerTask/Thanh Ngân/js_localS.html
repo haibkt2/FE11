@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        main{
+            margin-left: auto;
+            margin-right: auto;
+            border: 3px solid rgb(130, 165, 231);
+            width: 700px;
+            
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <form action="" class="form-group">
+            <h2 style="color: rgb(137, 196, 245);">Task Management</h2>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <p>Task:</p>
+                <input type="text" value="" id="ip_ta" placeholder="Enter task" class="rounded border border-primary col-md-8"> <br>
+                <input type="button" value="Add Task" id="add_ta" class="col-md-6 border border-success rounded">
+                <input type="button" name="" value="Clear Task" id="clear_ta" class="col-md-6 border border-success rounded">
+            </div>
+            <div class="col-md-6">
+                <label for="">Task List:</label><br>
+                <table id="tbody">
+                    <tr>
+               <td> <input type="checkbox" name="" onchange="selectAll()"  id="checkAll" >Name Tasks</td>
+            </tr>
+            </table>
+            <!--<button id="cl_all" class="border border-primary rounded"> Clear</button>-->
+            <button id="ch_all"  class="border border-primary rounded ">Delete</button>
+            </div>
+        </form>
+        </div>
+    </main>
+    <!--Javasript-->
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        function createEl(tag){
+            return document.createElement(tag);
+        }
+      // Hàm getTask
+      function getTask(id){
+          var tasks =localStorage.getItem('task'); //1 string task, task là đang tạo key
+          var task_arr=(tasks==null)? [] : tasks.split(':'); // dấu nháy đơn là string , kiểm tra xem mảng có null ko
+         displayTask(task_arr);
+      }
+      // Hàm hiển thị ra danh sách
+      function displayTask(task_arr){
+        for (i in task_arr) {
+            out_task += '<tr>' 
+                + '<td>'
+                +    '<input type="checkbox" class="check" value="checkedValue" >'
+                + '</td>'
+                + '<td>'+ task_arr[i]+'</td>'
+                 '</tr>'
+          }
+          $("tbody").innerHTML=out_task;
+      }
+      // Hàm xóa task
+      function deleteT(){
+        var checkboxes =document.getElementsByClassName("check");
+        for (var i=0;i<checkboxes.length;i++){
+            if(checkboxes[i].checked==true){
+                checkboxes[i].parentElement.parentElement.remove();
+            }
+        }
+      }
+      // Hàm chọn tất cả
+      function selectAll(){
+            // lấy danh sách 
+            var checkboxes =document.getElementsByClassName("check");
+            var allcheck = $("checkAll");
+            // Lặp và thiết lập  
+            if(allcheck.checked==true){
+                for(var i=0;i<checkboxes.length;i++){
+                 checkboxes[i].checked=true;
+            } 
+            }else {
+                for(var i=0;i<checkboxes.length;i++){
+                 checkboxes[i].checked=false;
+            }
+            }   
+    }
+    // Bài của thầy
+    function deleteTask(){
+        var arr_task=document.getElementsByClassName('check');
+        var tasks='';
+        for(let i=0;i<arr_task.length;i++){
+            if(arr_task[i].checked==true){
+                arr_task[i].checked.parentElement.parentElement.remove();
+            }else {
+                //create task to save local storage
+                var task=arr_task[i].parentElement.nextElementSibling.textContent;
+                //tasks +=':' +task; // sử dungk susstring để thực hiện
+                tasks +=((task=='')?'':':') +task;
+            }
+        }
+        //var t=tasks.substring(1);
+        localStorage.setItem('task',tasks);
+    }
+      // Hàm xóa tất cả
+      function clearAll(){
+      localStorage.removeItem("task");
+      $("tbody").innerHTML=" ";
+    }
+        // thêm vào task
+        function addTask(){
+            var v_input=$("ip_ta").value.trim();
+            var task = localStorage.getItem('task'); // gọi key
+            task=(task==null) ? task : task +':'+ v_input;
+           
+            localStorage.setItem('task',task); // lưu lại 
+           // getTask();  
+           var out_put=$("tbody").innerHTML;
+           out_put += '<tr name="checkbox">' 
+                + '<td>'
+                +    '<input type="checkbox" class="check" value="checkedValue" >'
+                + '</td>'
+                + '<td>'+ v_input+ '</td>'
+                 '</tr>'
+            $("tbody").innerHTML=out_put;
+            $("ip_ta").value=" "; //id input
+            $("ip_ta").focus();
+        }
+      /*  var tasks=[];
+        var add =function(){
+            var ta=$("ip_ta");
+            if(ta.value==""){
+                alert("Please input your tasks");
+                ta.focus();
+            }else {
+                tasks.push(ta.value);
+                localStorage.setItem("ip_ta","value");
+                tasks.getTask("ip_ta");
+            }
+
+
+        }*/
+      
+       
+        // hiển thị ra danh sách
+        $("add_ta").onclick=addTask;
+        $("clear_ta").onclick=clearAll;
+        $("ch_all").onclick=deleteTask;
+    </script>
+</body>
+</html>
