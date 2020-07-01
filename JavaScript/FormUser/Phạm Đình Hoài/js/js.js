@@ -107,7 +107,7 @@ function logIn() {
     var infoUser = localStorage.getItem(userInput);
     infoUser = JSON.parse(infoUser);
     if (infoUser == null ) {
-        $('pass').parentElement.innerHTML +=  '<p class = "text-danger error">Tên đăng nhập hoặc mật khẩu không đúng </p> ';
+        $('pass2').parentElement.innerHTML +=  '<p class = "text-danger error">Tên đăng nhập hoặc mật khẩu không đúng </p> ';
         return false;
     } else {
         
@@ -123,7 +123,7 @@ function logIn() {
             + '<p class = "mt-3">Tên: ' +  infoUser.name2  + '</p> '
             + '<p class = " mt-3">Email: ' +  infoUser.email  + '</p> '
             + '<p class = "mt-3">Phone Number: ' +  infoUser.phone  + '</p> '
-            + '<div class="d-flex justify-content-center">' + '<a href="../html/register.html">Back to register</a>' + '</div>';
+            + '<div class="d-flex justify-content-center">' + '<a href="../html/formUser.html">Back to register</a>' + '</div>';
         
         } else {
             $('pass2').parentElement.innerHTML +=  '<p class = "text-danger error">Tên đăng nhập hoặc mật khẩu không đúng </p> ';
