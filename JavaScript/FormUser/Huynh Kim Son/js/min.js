@@ -104,7 +104,7 @@ function Login() {
 		var info_use = localStorage.getItem($('user_name').value);
 		info_use = JSON.parse(info_use);
 		if(info_use == null){
-			$('pass').parentElement.innerHTML += '<p class ="error"> không đúng !</p>';
+			$('pass').parentElement.innerHTML += '<p class ="error"> Bạn cần phải đăng kí thành viên !</p>';
 
 		} else{
 			var user_login = info_use.user_name;
