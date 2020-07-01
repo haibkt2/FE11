@@ -8,7 +8,6 @@ function logIn() {
     var passInput = $('pass').value;
     if (userInput == '' || passInput == '') {
         $('pass').parentElement.innerHTML +=  '<p class = "text-danger error">Nhập tài khoản và mật khẩu </p> ';
-        $('form').reset();
         $('username').focus();
     }
     else {
@@ -30,7 +29,9 @@ function logIn() {
             + '<p class = "mt-3">Họ: ' +  infoUser.name1  + '</p> '
             + '<p class = "mt-3">Tên: ' +  infoUser.name2  + '</p> '
             + '<p class = " mt-3">Email: ' +  infoUser.email  + '</p> '
-            + '<p class = "mt-3">Phone Number: ' +  infoUser.phone  + '</p> ';
+            + '<p class = "mt-3">Phone Number: ' +  infoUser.phone  + '</p> '
+            + '<div class="d-flex justify-content-center">' + '<a href="../html/register.html">Back to register</a>' + '</div>';
+        
         } else {
             $('pass').parentElement.innerHTML +=  '<p class = "text-danger error">Tên đăng nhập hoặc mật khẩu không đúng </p> ';
             return false;
