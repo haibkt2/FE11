@@ -38,14 +38,13 @@ function validForm(){
                     arr_input[i].parentElement.innerHTML += '<p class = "text-danger error">Password must be more 8 characters</p> ';
                     return false;
                 }
-                    if (arr_input[i] == $("re-pass")){
-                        var pass =  $("pass").value.trim();
-                        if (input !== pass){
-                            arr_input[i].parentElement.innerHTML += '<p class = "text-danger error">Password must be same </p> ';
-                            return false;   
+            if (arr_input[i] == $("re-pass")){
+                var pass =  $("pass").value.trim();
+                    if (input !== pass){
+                        arr_input[i].parentElement.innerHTML += '<p class = "text-danger error">Password must be same </p> ';
+                        return false;   
                     }
-                    }
-                    
+                }
         }
         var reg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                     var inputEmail = arr_input[i].getAttribute('type');
@@ -97,8 +96,12 @@ function registerForm(){
     }
  
 }
-
-
+var fn_ = function(e){
+    if(e.keyCode == 13){
+        registerUser();
+    }
+}
+$("form").onkeypress = fn_;
 $("button").onclick = registerUser;
 
 

@@ -4,7 +4,7 @@ function $(id) {
 
 function logIn() {
     removeError();
-    var userInput = $('username').value;
+    var userInput = $('username').value.toLowerCase();
     var passInput = $('pass').value;
     if (userInput == '' || passInput == '') {
         $('pass').parentElement.innerHTML +=  '<p class = "text-danger error">Nhập tài khoản và mật khẩu </p> ';
@@ -46,6 +46,10 @@ function removeError() {
         error[i].remove();
     }
 }
-
-
+var fn_ = function(e){
+    if(e.keyCode == 13){
+        logIn();
+    }
+}
+$("form").onkeypress = fn_;
 $('button').onclick = logIn;
