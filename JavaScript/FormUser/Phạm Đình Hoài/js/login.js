@@ -8,6 +8,7 @@ function logIn() {
     var passInput = $('pass').value;
     if (userInput == '' || passInput == '') {
         $('pass').parentElement.innerHTML +=  '<p class = "text-danger error">Nhập tài khoản và mật khẩu </p> ';
+        $('form').reset();
         $('username').focus();
     }
     else {
