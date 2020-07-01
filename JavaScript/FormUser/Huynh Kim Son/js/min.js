@@ -83,11 +83,11 @@ function registerUser() {
 								$('phone').value);
 		var info = { user_name: user_name_input,
 						pass: user.pass,
-						name1: user.last_name,
-						name2: user.first_name,
+						last_name: user.last_name,
+						first_name: user.first_name,
 						email: user.email,
 						phone: user.phone
-					}
+					};
 	    info = JSON.stringify(info);
 		localStorage.setItem(user_name_input, info);
 		alert('Đăng ký thành công !')
@@ -100,7 +100,7 @@ function registerUser() {
 }
 
 // js login
-function login() {
+function Login() {
 	removeErro();
 	var user_name_input = $('user_name').value;
 	var pass_input = $('pass').value;
@@ -118,6 +118,34 @@ function login() {
 			var pass_login = info_use.pass;
 				if (user_name_input == user_login && pass_input == pass_login  ) {
 					alert(" Chúc mừng bạn đã đăng nhập thành công !");
+					//$("form_login").reset();
+					$("form_login").parentElement.innerHTML = 
+					'<h3 class =" mt-5" style="color: red; text-align: center;">Thông tin thành viên</h3>'
+					
+					+'<div class="col-md-4 " >'
+					+ ' <p><b>User name:</b> ' + '&nbsp' + '&nbsp' + '&nbsp' +  info_use.user_name   + '</p>'
+					+ '</div>'
+
+					+'<div class="col-md-4">'
+					+ ' <p><b>Password:</b> ' + '&nbsp' + '&nbsp' + '&nbsp' +  info_use.pass   + '</p>'
+					+ '</div>'
+
+					+'<div class="col-md-4">'
+					+ ' <p><b>Họ:</b> ' + '&nbsp' + '&nbsp' + '&nbsp' +  info_use.last_name   + '</p>'
+					+ '</div>'
+
+					+'<div class="col-md-4">'
+					+ ' <p><b>Tên:</b> ' + '&nbsp' + '&nbsp' + '&nbsp' +  info_use.first_name   + '</p>'
+					+ '</div>'
+
+					+'<div class="col-md-4">'
+					+ ' <p><b>Email:</b> ' + '&nbsp' + '&nbsp' + '&nbsp' +  info_use.email   + '</p>'
+					+ '</div>'
+
+					+'<div class="col-md-4">'
+					+ ' <p><b>Phone:</b> ' + '&nbsp' + '&nbsp' + '&nbsp' +  info_use.phone   + '</p>'
+					+ '</div>'
+					
 				}else{
 					$('pass').parentElement.innerHTML += '<p class ="error">Vui lòng nhập đúng thông tin !</p>';
 					return false ;
@@ -126,7 +154,5 @@ function login() {
 	
 	} 
 }
-$("bt_login").onclick = login;
-
 
 
