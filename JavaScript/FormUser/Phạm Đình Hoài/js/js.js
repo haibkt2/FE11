@@ -70,6 +70,7 @@ var user_obj = function(username, pass, name1, name2, email, phone) {
 }
 function registerForm(){
     var userInput = $('username').value.trim();
+    userInput = userInput.toLowerCase();
     var userReg = localStorage.getItem(userInput);
     if ( userReg == null ){
         var user = new user_obj ( userInput, $('pass').value.trim(), $('name1').value,$('name2').value, $('email').value, $('phone').value);
@@ -97,7 +98,8 @@ var fn_ = function(e){
 //-------------------------------LOG IN----------------------------------
 function logIn() {
     removeError();
-    var userInput = $('username2').value.toLowerCase();
+    var userInput = $('username2').value;
+    userInput = userInput.toLowerCase();
     var passInput = $('pass2').value;
     if (userInput == '' || passInput == '') {
         $('pass2').parentElement.innerHTML +=  '<p class = "text-danger error">Nhập tài khoản và mật khẩu </p> ';
