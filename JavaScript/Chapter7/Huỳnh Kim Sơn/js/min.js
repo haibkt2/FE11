@@ -17,7 +17,7 @@ function main(v){
     var div_tag;
     div_tag = createEl("div");
         div_tag.className="child_rd";
-    for(let i = 0;i <= v; i++){
+    for(let i = 1;i <= v; i++){
         // get number random
         var random = Math.ceil(Math.random()*100);
         // create element

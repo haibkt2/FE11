@@ -4,9 +4,10 @@ function $(id){
 
 function calculate(){
      //validate for subtotal
+     var s = $("id_subtotal").value;
      var total, amount, percent, c = true;
      // get value input
-     var s = $("id_subtotal").value;
+    
      // validate
      if(!valid(s, Math.max)){
          //caludate
