@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Register</title>
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2>Đăng kí thành viên</h2>
+        </div>
+        <div class="row">
+                <div class="col-md-8">
+                    <form>
+                        <div class="form-group">
+                            <div>
+                                <label for="user_name">Tên đăng nhập(*)</label>
+                                <input  type="text" class="form-control cl-user" id="user_name">
+                            </div>
+                        <div>
+                            <label for="pass">Mật khẩu(*)</label>
+                            <input  type="password" class="form-control cl-user" id="pass">
+                        </div>
+                        <div>
+                            <label for="re_password">Nhập lại mật khẩu(*)</label>
+                            <input  type="password" class="form-control cl-user" id="re_pass">
+                        </div>
+                        <div>
+                            <label for="first_name">Họ của bạn(*)</label>
+                            <input  type="text" class="form-control cl-user" id="first_name">
+                        </div>
+                        <div>
+                            <label for="last_name">Tên của bạn(*)</label>
+                            <input  type="text" class="form-control cl-user" id="last_name">
+                        </div>
+                        <div>
+                            <label for="email">Email(*)</label>
+                            <input  type="email" class="form-control cl-user" id="email">
+                        </div>
+                        <div>
+                            <label for="phone">Số điện thoại(*)</label>
+                            <input type="tel" class="form-control cl-user" id="phone">
+                        </div>
+                        </div>
+                        <button type="button" onclick="regUser()" class="btn btn-primary" id="register">Đăng kí</button>
+                    </form>
+                </div>
+            </div>   
+    </div>
+    <script src="../js/javascript.js">
+    </script>
+</body>
+</html>

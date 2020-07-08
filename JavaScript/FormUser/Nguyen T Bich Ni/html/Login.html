@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Login</title>
+    <style>
+        .p_info{
+            color: green;
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: medium;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+    <div class="col-md-6">
+        <h1 class="text-success">Login</h1>
+        <form id="login" action="">
+            <div class="form-group">
+                <div>
+                    <label for="user_name" class="text-info">Tên đăng nhập(*)</label>
+                    <input  type="text" class="form-control" id="user_Login">
+                </div>
+                <div>
+                    <label for="pass" class="text-info">Mật khẩu(*)</label>
+                    <input  type="password" class="form-control" id="pass_Login">
+                </div>
+            </div>
+            <button type="button" onclick="login()" class="btn btn-success" id="register">Login</button>
+        </form>
+    </div>
+</div>
+</div>
+<script src="../js/javascript.js"></script>
+</body>
+</html>

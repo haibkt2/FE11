@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form | User</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
@@ -18,7 +21,7 @@
 </style>
 <body>
     <main>
-        <form action="#">
+        <form id="form_registerUser" action="">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 mt-2">
@@ -41,24 +44,27 @@
                     </div>
     
                     <div class="col-md-8">
-                        <p>Họ của bạn (*)</p>
-                        <input type="text" name="" id="full_name" class="form-control cl-user">
+                        <p>Họ của bạn  (*)</p>
+                        <input type="text" name="" id="last_name" class="form-control cl-user">
                     </div>
-    
-                   
+
+                    <div class="col-md-8">
+                        <p>Tên của bạn  (*)</p>
+                        <input type="text" name="" id="first_name" class="form-control cl-user">
+                    </div>
     
                     <div class="col-md-8">
                         <p>Email (*)</p>
-                        <input type="text" name="" id="email" class="form-control cl-user">
+                        <input type="email" name="email" id="email" class="form-control cl-user">
                     </div>
     
                     <div class="col-md-8">
                         <p>Số điện thoại (*)</p>
-                        <input type="text" name="" id="phone" class="form-control cl-user">
+                        <input type="tel" name="phone" id="phone" class="form-control cl-user">
                     </div>
                     
                     <div class="col-md-8">
-                        <button type= "button" class="btn btn-primary mt-2" id ="bt_register">
+                        <button onclick="regUser()"  type= "button" class="btn btn-primary mt-2" id ="bt_register">
                           Đăng Ký 
                     </button>
                     </div>
@@ -66,7 +72,7 @@
                 
             </div>
     
-        </form>
+        </form> 
     </main>
     <script src="../js/min.js"></script>
 </body>

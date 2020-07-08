@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form | Login</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    .col-md-4{
+        margin-left: 23.5em;
+    }
+    .error{
+        color: red;
+    }
+</style>
+<body>
+    <main>
+        <form id="form_login" action="#">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 mt-5">
+                        <h3 style="color: red; text-align: center;">Đăng nhập thành viên</h3>
+                    </div>
+    
+                    <div class="col-md-4">
+                        <p>Tên đăng nhập (*)</p>
+                        <input type="text" name="" id="user_name" class="form-control cl-user">
+                    </div>
+    
+                    <div class="col-md-4">
+                        <p>Mật khẩu (*)</p>
+                        <input type="password" name="" id="pass" class="form-control cl-user">
+                    </div>
+    
+                    <div class="col-md-4 mt-2">
+                        <button onclick="Login()" type="button" id="bt_login" class="btn btn-primary mt-2">
+                         Đăng nhập
+                         
+                    </button>
+                    
+                    </div>
+
+                    <div class="col-md-4 mt-2">
+                        <a href="RegisterUser.html"><u>Back</u></a> 
+                    </div>
+                
+            </div>
+   
+        </form>
+       
+    </main>
+    <script src="../js/min.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+ <html lang="en"> 
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Form User</title>
+        <meta name="description" content="">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        
+        <article id="register">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                    <h2 class="text-danger text-center mt-3">Đăng ký thành viên</h2>
+                    <form action="" class="form-group row" id="form">
+                        <div class="col-12">
+                            <div>
+                                <label for="" class="">Tên đăng nhập (*)</label>
+                                <input type="text" class="form-control user" id="username">
+                            </div>
+                            <div>
+                                <label for="" class="">Mật khẩu (*)</label>
+                                <input type="password"  class="form-control user" id="pass" >
+                            </div>
+                            <div>
+                                <label for="" class="">Nhập lại mật khẩu (*)</label>
+                                <input type="password" class="form-control user"  id="re-pass" >
+                            </div>
+                            <div>
+                                <label for="" class="">Họ của bạn (*)</label>
+                                <input type="text" name="" class="form-control user" id="name1" >
+                            </div>
+                            <div>
+                                <label for="" class="">Tên của bạn (*)</label>
+                                <input type="text" name="" class="form-control user" id="name2" >
+                            </div>
+                            <div>
+                                <label for="" class="">Email (*)</label>
+                                <input type="email" name="" class="form-control user"  id="email">
+                            </div>
+                            <div>
+                                <label for="" class="">Số điện thoại (*)</label>
+                                <input type="number" name="" class="form-control user" id="phone" >
+                            </div>
+                            <div class="d-flex justify-content-center">
+                            <input type="button" class="btn btn-primary mt-3" value="Đăng ký" id="button">
+                            </div>
+                        </div>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article id="login">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-6">
+                    <h2 class="text-danger text-center mt-3" id="">Đăng nhập</h2>
+                    <form action="" class="form-group row" id="form2">
+                        <div class="col-12">
+                            <div>
+                                <label for="" class="">Tên đăng nhập (*)</label>
+                                <input type="text" class="form-control" id="username2" required>
+                            </div>
+                            <div>
+                                <label for="" class="">Mật khẩu (*)</label>
+                                <input type="password" name="" class="form-control"  id="pass2" required>
+                            </div>
+                            <div class="d-flex justify-content-center">
+                                <button type="button" class="btn btn-primary mt-3" id="button2">Đăng nhập</button>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="d-flex justify-content-center">
+                        <a href="../html/formUser.html">Back to register</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <script src="../js/js.js"></script>
+    </body>
+</html>
