@@ -1,0 +1,10 @@
+.whatis{
+    display: flex;
+    align-items: center;
+}
+.blue{
+    color: blue;
+}
+#text{
+    display: none;
+}
