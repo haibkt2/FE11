@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.1/css/all.css" />
+
+    <title>Document</title>
+   <style>
+       .css{
+           color: blue;
+           font-size: 20px;
+       }
+   </style>
+</head>
+<body>
+    <main>
+        <h1>jQuery FAQs</h1>
+        <div >
+           <p>
+                <i class="fas fa-plus"></i>
+                <span>What is jQuery?</span>
+           </p>
+            <ul>
+
+                <li>alo 1</li>
+                <li>alo 2</li>
+                <li>alo 3</li>
+            </ul>
+        </div>
+        <dic >
+          <p>
+                <i class="fas fa-plus"></i>
+                <span>why is jQuery becoming so popular</span>
+          </p>
+            <ul>
+
+                <li>alo 1</li>
+                <li>alo 2</li>
+                <li>alo 3</li>
+            </ul>
+        </dic>
+        <dic >
+            <p>
+                <i class="fas fa-plus"></i>
+                <span>Which is harder ....</span>
+            </p>
+            <ul>
+
+                <li>alo 1</li>
+                <li>alo 2</li>
+                <li>alo 3</li>
+            </ul>
+        </dic>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous">
+    </script>
+    <script>
+       
+        $("p").click(function(){
+            
+
+            $(this).toggleClass("css");
+            if($(this).children("i").hasClass("fas fa-plus")){
+                $(this).children("i").attr("class"," fas fa-minus");
+            }
+            else
+                $(this).children("i").attr("class"," fas fa-plus");
+            $(this).next().toggle();
+            
+           
+       })
+    </script>
+</body>
+</html>
