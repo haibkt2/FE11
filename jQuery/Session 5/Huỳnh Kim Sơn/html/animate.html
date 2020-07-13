@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animate</title>
+    <title>jQuery | Animate</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
     <style>
-        .father{
+        #father{
             border:1px solid #555;
             margin-top:20px;
             margin-left:400px;
@@ -17,7 +17,7 @@
             position:relative;
             background-color: black;
         }
-        .child{
+        #child{
             height:50px;
             width:50px;
             background-color:white;
@@ -30,9 +30,10 @@
     
     <main>
         <button id="id_start" class="btn-primary">Start</button>
+        <button id="id_stop" class="btn-danger">Stop</button>
         <hr>
-        <div class="father">
-            <div class="child">
+        <div id="father">
+            <div id="child">
 
             </div>
         </div>
@@ -41,6 +42,8 @@
     </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="../js/animate.js"></script>
 </body>
 </html>
