@@ -29,7 +29,5 @@ $(document).ready(function(){
         $(".child").animate({top:'225px'},500);
         $(".child").animate({left:'225px'},500);
 
-
-    
     });
 });
