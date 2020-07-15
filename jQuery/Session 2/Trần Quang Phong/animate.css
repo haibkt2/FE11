@@ -1,13 +1,13 @@
 .box {
-  width: 500px;
-  height: 500px;
+  width: 630px;
+  height: 630px;
   background-color: #DDD;
-  margin: 5em auto;
+  margin: 1em auto;
 }
 
 .item {
-  width: 100px;
-  height: 100px;
+  width: 70px;
+  height: 70px;
   background-color: green;
   position: relative;
 }

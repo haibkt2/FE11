@@ -1,16 +1,14 @@
-var coordinates = [
-  { 'top': '0', 'left': '400px' },
-  { 'top': '400px', 'left': '400px' },
-  { 'top': '400px', 'left': '0' },
-  { 'top': '100px', 'left': '0' },
-  { 'top': '100px', 'left': '300px' },
-  { 'top': '300px', 'left': '300px' },
-  { 'top': '300px', 'left': '100px' },
-  { 'top': '200px', 'left': '100px' },
-  { 'top': '200px', 'left': '200px' },
-];
+var widthOfBox = 630;
+var widthOfItem = 70;
+var numOfRounds = (widthOfBox + widthOfItem) / (2 * widthOfItem);
+var k = widthOfBox / widthOfItem;
 
-for (let i in coordinates) {
-  $('.item').animate(coordinates[i], 1000);
+for (let i = 0; i < numOfRounds; i++) {
+  $('.item')
+  .animate({ 'left': (k - i - 1) * widthOfItem, 'backgroundColor': 'red' }, 700)
+  .animate({ 'top': (k - i - 1) * widthOfItem, 'backgroundColor': 'yellow' }, 700)
+  .animate({ 'left': i * widthOfItem, 'backgroundColor': 'green' }, 700)
+  .animate({ 'top': (i + 1) * widthOfItem, 'backgroundColor': 'purple' }, 700);
 }
+
 
