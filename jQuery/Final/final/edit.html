@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+</head>
+
+<body>
+    <main>
+
+        <div class="container">
+            <h2>Edit</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="col-md-5">
+                        <form action="">
+                            <div class="cod-md-6 form-group d-flex">
+                                <label for="" class="col-md-6">Company Name*</label>
+                                <input type="text" class="form-group col-md-6 ">
+                            </div>
+                            <div class="cod-md-6 form-group d-flex">
+                                <label for="" class="col-md-6">Operating Company*</label>
+                                <input type="checkbox" class="form-group">
+                            </div>
+                            <div class="cod-md-6 form-group d-flex">
+                                <label for="" class="col-md-6">Operating Company*</label>
+                                <input type="text" class="form-group col-md-2">
+                            </div>
+                            <div class=" form-group d-flex">
+                                <label for="" class="col-md-6">Zone List*</label>
+                                <select class="col-md-6" multiple="multiple" size="7" name="select" id="id_select">
+                                    <option value="Zone 1">Zone 1</option>
+                                    <option value="Zone 2">Zone 2</option>
+                                    <option value="Zone 3">Zone 3</option>
+                                    <option value="Zone 4">Zone 4</option>
+                                    <option value="Zone 5">Zone 5</option>
+                                    <option value="Zone 6">Zone 6</option>
+                                    <option value="Zone 7">Zone 7</option>
+                                    <option value="Zone 8">Zone 8</option>
+                                    <option value="Zone 9">Zone 9</option>
+                                    <option value="Zone 10">Zone 10</option>
+
+                                </select>
+
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-2 ">
+                        <div style="margin-top: 180px;">
+                            <button type="button" class="btn btn-secondary" style="width: 70px" id="id_setsel"> &#62;
+                                &#62;</button>
+                        </div>
+                        <div style="margin-top: 20px;">
+                            <button type="button" class="btn btn-secondary" style="width: 70px"
+                                id="id_removesel">&#60;&#60;</button>
+                        </div>
+
+                    </div>
+                    <div class="col-md-5">
+                        <form action="">
+                            <div class="cod-md-6 form-group d-flex">
+                                <label for="" class="col-md-6">status</label>
+                                <select name="" id="" class="form-group cod-md-6  ">
+                                    <option>Disable</option>
+                                    <option>Enable</option>
+                                </select>
+                            </div>
+                            <div class="cod-md-6 form-group d-flex">
+                                <label for="" class="col-md-6">Color code*</label>
+                                <input type="color" name="color">
+                            </div>
+                            <div class="cod-md-6 form-group d-flex">
+                                <label for="" class="col-md-6">Whitested Zones</label>
+                                <select class="col-md-6" size="7" multiple="multiple" id="id_setselect"></select>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+<script src="./jquery-3.5.1.min.js"></script>
+<script src="./index.js"></script>
+
+</html>
