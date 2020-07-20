@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>Company Management</title>
+    <style>
+        table, thead{
+            background-color:#33cc33;
+        }
+        table, tbody{
+            background-color:  #ebebe0;
+            min-height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="background-color: #99ffff">
+        <div class="row">
+            <h1>Company Management</h1>
+        </div>
+        <div class="row">
+            <div class="col-md-10">
+                <form style="background-color:white;min-height: 200px; margin: 10px;">
+                    <button type="button" onclick="trans()" class="btn btn-success" id="add">Add</button>
+                    <button type="button" class="btn btn-danger" id="delete" onclick="test()">Delete</button>
+                    <table style="width:100%; margin-top: 10px;" id="table">
+                        <thead>
+                            <tr>
+                                <th>*</th>
+                                <th>Company Name</th>
+                                <th>Color Code</th>
+                                <th>Max working Hours</th>
+                                <th>Whitelisted Zone</th>
+                                <th>Status</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="../JS/Index.js"></script>
+</body>
+</html>
