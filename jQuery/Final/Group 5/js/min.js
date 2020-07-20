@@ -1,5 +1,4 @@
 $().ready(function(){
-
     $("#edit").hide();
     $("#add").click(function(){
         $("#edit").show();
@@ -56,3 +55,20 @@ $().ready(function(){
         }
     })
 });
+
+$("#addZone").click(
+    function addZone(){
+        var v_input = $("#list").val();
+        if (v_input == ""){
+            alert("Pls, tick option. Thanks!");
+        } else {   
+           var out_put = "";
+           out_put +=
+             "<option>"
+             + v_input
+             + "</option>"
+             
+            $("#list2").html(out_put);    
+        }
+    }
+)
