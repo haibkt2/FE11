@@ -71,8 +71,15 @@ $().ready(function(){
             }
         },
         // display
-        submitHandler : function(form){
-            
+        submitHandler : function(form){ 
+            var emailaddress = $("#id_email").val();
+            var password = $("#id_password").val();
+            var verifypassword = $("#id_verify").val();
+            var company = $("#id_company").val();
+            var firstname = $("#id_first").val();
+            var lastname = $("#id_last").val();
+            var phonenumber = $("#id_phone").val();
+
             $("#show_email").html("<b>Email Address:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + emailaddress);
             $("#show_pass").html("<b>Password:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + password);
             $("#show_verify").html("<b>Verify Password:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + verifypassword);
@@ -80,7 +87,6 @@ $().ready(function(){
             $("#show_first").html("<b>First Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + firstname);
             $("#show_last").html("<b>Last Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + lastname);
             $("#show_phone").html("<b>Phone Number:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + phonenumber);
-            
         }
     })
 });
