@@ -55,20 +55,49 @@ $().ready(function(){
         }
     })
 });
-
+// add zone.
 $("#addZone").click(
     function addZone(){
         var v_input = $("#list").val();
         if (v_input == ""){
             alert("Pls, tick option. Thanks!");
-        } else {   
-           var out_put = "";
-           out_put +=
-             "<option>"
-             + v_input
-             + "</option>"
-             
-            $("#list2").html(out_put);    
-        }
+        } else {  
+            for (var i = 0; i < v_input.length; i++){
+                var out_put =
+                    "<option>"
+                    + v_input[i]
+                    + "</option>"  
+                    $("#list2").append(out_put);
+                    $("#list option[value='"+ v_input[i] +"']").remove();
+            } 
+    }
+}
+)
+// remove zone.
+$("#removeZone").click(
+    function removeZone(){
+        var tick_remove = $("#list2").val();
+        if (tick_remove == ""){
+            alert("Pls, tick option remove. Thanks!");
+        } else {  
+            for (var i = 0; i < tick_remove.length; i++){  
+                    $("#list2 option[value='"+ tick_remove[i] +"']").remove();
+            } 
+    }
     }
 )
+
+// function removeZone(selectedZoneValue2, selectedZone2) {
+//     $("#list").append('<option value="' + selectedZoneValue2 + '">' + selectedZone2 + '</option>');
+//     $("#list2 option[value='"+selectedZoneValue2+"']").remove();
+// }
+// $("#removeZone").click(function () {
+//     var selectedZoneValue2 = $('#list2').val();
+//     if( selectedZoneValue2 == "" )
+//     {
+//         return false;
+//     }
+//     var selectedZone2 = $("#list2 option[value='"+selectedZoneValue2+"']").text();
+    
+//     removeZone(selectedZoneValue2, selectedZone2);
+// })

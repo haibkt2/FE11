@@ -81,7 +81,6 @@ $().ready(function(){
             $("#show_last").html("<b>Last Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + lastname);
             $("#show_phone").html("<b>Phone Number:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + phonenumber);
             
-            form.submit();
         }
     })
 });
