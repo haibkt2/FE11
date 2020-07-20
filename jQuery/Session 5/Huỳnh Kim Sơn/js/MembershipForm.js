@@ -99,7 +99,7 @@ $(document).ready(function(){
         $("#show_email").html("<b>Email Address:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + check_email);
         $("#show_pass").html("<b>Password:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + pass);
         $("#show_verify").html("<b>Verify Password:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + verify_pass);
-        $("#show_company").html("<bCompany Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + company_name);
+        $("#show_company").html("<b>Company Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + company_name);
         $("#show_first").html("<b>First Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + first_name);
         $("#show_last").html("<b>Last Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + last_name);
         $("#show_phone").html("<b>Phone Number:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + check_phone);

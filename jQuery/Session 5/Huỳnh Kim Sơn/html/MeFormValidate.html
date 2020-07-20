@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery | Menbership Form Validate</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        h1,h3{color: blue;}
+        .container{background-color: silver;}
+        .form-inline label{color: red;}
+    </style>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="col-md-12">
+                <h1>Membership Form</h1>
+                <form id="id_form" name="form" class="form-group" action="#">
+                    <h3>Registratiton</h3>
+                    <div class="row ml-3">
+                        <div class="col-md-4">
+                            <label for="">Email Address:</label><br>
+                            <label for="">Password:</label><br>
+                            <label for="">Verify Password:</label><br>
+                        </div>
+                        <div class="col-md-4 form-inline">
+                            <input class="mt-1" type="text" name="emailaddress" id="id_email">
+                            <input class="mt-1" type="password" name="password" id="id_password" placeholder="At least 8 characters">
+                            <input class="mt-1" type="password" name="verifypassword" id="id_verify">
+                        </div>
+                        
+                    </div>
+
+                    <h3>Member Information</h3>
+                    <div class="row ml-3">
+                        <div class="col-md-4">
+                            <label for="">Membership Type:</label><br>
+                            <label for="">Company Name:</label><br>
+                            <label for="">First Name:</label><br>
+                            <label for="">Last Name:</label><br>
+                            <label for="">Phone Number:</label><br>
+                        </div>
+                        <div class="col-md-4 form-inline">
+                            <input type="radio" name="MembershipType" id="id_radio1" value="0"> Individual
+                            <input class="ml-2" type="radio" name="MembershipType" id="id_radio2" value="1" checked> Corporate<br>
+                            <input class="mt-1" type="text" name="company" id="id_company" >
+                            <input class="mt-1" type="text" name="firstname" id="id_first">
+                            <input class="mt-1" type="text" name="lastname" id="id_last">
+                            <input class="mt-1" type="text" name="phonenumber" id="id_phone"placeholder="0901-999-999">
+                        </div>
+                    </div>
+
+                    <h3>Submit Your Membership </h3>
+                    <div class="row ml-3">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" name="submit" id="id_submit" class="btn btn-primary ">Submit</button>
+                            <button type="reset" name="reset" id="id_reset" class="btn btn-primary ml-5">Reset</button>
+                        </div>
+                    </div>
+
+                    <h3 style=" margin-top: 2em;">Membership information</h3>
+                    <div class="row ml-3">
+                        <div class="col-md-4">
+
+                        </div>
+                        <div class="col-md-4">
+                            <div id="show_email"></div>
+                            <div id="show_pass"></div>
+                            <div id="show_verify"></div>
+                            <div id="show_company"></div>
+                            <div id="show_first"></div>
+                            <div id="show_last"></div>
+                            <div id="show_phone"></div>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/MeFormValidate.js"></script>
+</body>
+</html>
