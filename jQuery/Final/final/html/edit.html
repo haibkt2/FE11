@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.1/css/all.css" />
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <main>
+        <div id="edit">
+            <h1>Edit Company</h1>
+          
+                <form action="" id="form_edit">
+                    <div id="div_edit_main_left">
+                        <div>
+                            <label for="">Company Name*</label>
+                            <input type="text" id="edtName" name="edtName">
+                        </div>
+                       <div>
+                            <label for="">Operating Company*</label>
+                            <input type="checkbox" id="chkOperating" name="chkOperating">
+                       </div>
+                        <div>
+                            <label for="">Max Working Hours*</label>
+                            <input type="text" id="edtMaxHours" name="edtMaxHours">
+                        </div>
+                       <div>
+                            <label for="">Zone List*</label>
+                            <select name="" id="selList" size="5" multiple >
+                                <option value="Zone 1" >Zone 1</option>
+                                <option value="Zone 2">Zone 2</option>
+                                <option value="Zone 3">Zone 3</option>
+                                <option value="Zone 4">Zone 4</option>
+                                <option value="Zone 5">Zone 5</option>
+                                <option value="Zone 6">Zone 6</option>
+                                <option value="Zone 7">Zone 7</option>
+                            </select>
+                       </div>
+
+                    </div>
+                    <div id="div_edit_main_between">
+                        <button type="button" id="btnRight"><i class="fas fa-angle-double-right"></i></button>
+                        <button type="button" id="btnLeft"><i class="fas fa-angle-double-left"></i></button>
+                    </div>
+                    <div id="div_edit_main_right">
+                        <div>
+                            <label for="">Status*</label>
+                            <select name="" id="selStatus">
+                                <option value="Disable">Disable</option>
+                                <option value="Enable">Enable</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="">Color Code*</label>
+                            <input type="color">
+                        </div>
+                       
+                        <div>
+                            <label for="">Whitelisted Zones</label>
+                            <select name="selWhitelisted" id="selWhitelisted" size="5" multiple>
+                              
+                            </select>
+                        </div>
+                        <div>
+                            <button type="submit" id="btnSave">Save</button>
+                            <button type="button" id="btnCancel">Cancel</button>
+                            <button type="button" id="Manage">Manage</button>
+
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script >
+        //tạo mới validator cho input Max Hours
+        $.validator.addMethod("maxHours", function(maxHours){
+            if(isNaN(maxHours)&&  parseInt(maxHours)>24)
+                return false;
+            else return true;
+
+        })
+        //tạo mới validator cho select Whitelisted
+        $.validator.addMethod("new_selWhitelisted", function(){
+           
+            if($("#selWhitelisted").has("option").length>0)
+                return true;
+            else return false;
+        });
+        // validate cho form
+        $("#form_edit").validate({
+            rules: {
+                edtName: "required",
+                chkOperating: "required", 
+                edtMaxHours:{
+                    required: true,
+                    maxHours: true
+                },
+                selWhitelisted: {
+                    new_selWhitelisted: true
+                }  
+            }, 
+            messages: {
+                edtName: "Vui lòng nhập trường này",
+                chkOperating:  "Vui lòng nhập trường này",
+                edtMaxHours:{
+                    required: "Vui lòng nhập trường này",
+                    maxHours: "Vui lòng nhập nhỏ hơn 24"
+                },
+                selWhitelisted:{
+                    new_selWhitelisted: 'Vui lòng kick chọn mục "Zone List"'
+                }
+            }
+        });
+        // chuyển option được chọn từ List sang Whitelisted
+         function toRight(){
+            var value = $("#selList").val();
+            for(var i = 0; i<value.length; i++){
+               $("#selWhitelisted").append(new Option(value[i], value[i]));
+            }
+         }
+         // xoá bỏ option được chọn bên select Whitelisted
+         function toLeft(){
+            var valBack = $("#selWhitelisted").val();
+            for(var i = 0; i< valBack.length; i++){     
+                $("#selWhitelisted").find('[value="'+valBack[i]+'"]').remove();
+                //hoặc dung    $("#selWhitelisted").children($(this).has("value", valBack[i])).remove();
+
+            }
+         }
+         $("#btnRight").click(toRight);
+         $("#btnLeft").click(toLeft);
+         //quay lai trang management
+         $("#btnCancel").click(function(){
+             location.href = "http://127.0.0.1:5500/Final/html/management.html";
+         })
+         
+    </script>
+</body>
+</html>

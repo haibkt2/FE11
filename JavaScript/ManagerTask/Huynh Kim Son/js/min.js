@@ -25,12 +25,12 @@ function displaytask(task_arr){
     $("div_task").innerHTML = out_task;
     
 }
-
 function addtask(){
-    var v_input = $("task").value.trim();
+    
+    var v_input = $("list").value.trim();
     if (v_input == ""){
         alert("Pls, enter input. Thanks!");
-        $("task").focus();
+        //$("task").focus();
     } else {
         var task = localStorage.getItem("task");
         task = (task == null) ? v_input : task + ":" + v_input; 
@@ -47,12 +47,12 @@ function addtask(){
                 + '</label>'
             + '</td>'    
             '</tr>';
-         $("div_task").innerHTML = out_put;
-         $("task").value = ""; // for tag input
-         $("task").focus(); 
+        $("div_task").innerHTML = out_put;    
+       // $("task").value = ""; // for tag input
+        // $("task").focus(); 
 
     }
-    
+ 
 }
   
 
