@@ -1,0 +1,166 @@
+
+body{
+    margin: 0;
+    padding: 0;  
+   
+}
+main{
+    width: 100%;
+    
+}
+/* xét thuộc tính cho div tổng */
+#div_management{
+   padding:0 15%;
+    width:70%;
+    min-height: 300px;
+    background-color: #b7f7e8;
+}
+/*  xét thuộc tính cho form  */
+#div_management_form{
+   min-height: 100px;
+    margin-top: 20px;
+    background-color: #f8f9fa;
+
+}
+/* button đầu tiên */
+#management_form button:first-child{
+    background-color: #2da94c;
+}
+/* btn thứ 2 */
+#management_form button:nth-child(2){
+    background-color: #db3345;
+}
+#management_form button{
+    border-radius: 10%;
+    height: 28px;
+    margin: 10px 0 0 10px;
+    color: white;
+    border: 1px;
+}
+/* form-header thuộc tính, nằm ngang  */
+#div_management_form_header{
+    background-color: #28a745;
+    height:  30px;
+    margin: 18px 10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+   align-items: center;         
+}
+
+#div_management_form_header   label{
+   padding: 0 40px;
+}
+/* checkbox trong form-header */
+#div_management_form_header input{
+    margin-left: 12px;
+}
+
+
+/* ---------el mới sau khi đươc thêm vào  ------*/
+.style_management_form{
+    background-color: #d6d8db;
+    margin: 0px 10px 0 10px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+   
+   align-items: start;
+}
+.style_management_form :first-child{
+    margin-left: 12px;  
+}
+.style_management_form :not(:first-child){
+    padding: 0 40px;
+}
+.style_management_form :nth-child(5) :first-child{
+    padding: 0 40px;
+    margin: 0;
+}
+.style_management_form :nth-child(7) :last-child{
+    padding: 0 ;
+    margin:  0 10px;
+}
+/* --------------------------------------EDIT ------------------------------------------ */
+#edit{
+    padding:0 15%;
+    width:70%;
+    min-height: 300px;
+    background-color: #b7f7e8;
+    
+}
+
+#form_edit{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#div_edit_main_left  div {
+    width: 360px;
+   display: flex;
+   flex-wrap: wrap;
+   padding: 5px 0;
+}
+#div_edit_main_left  div label{
+   
+   width: 190px;
+ }
+
+#div_edit_main_left div:nth-child(3) input{
+    width: 100px;
+}
+#div_edit_main_right  div {
+    width: 360px;
+    display: flex;
+    padding: 5px 0;
+   flex-wrap: wrap;
+ }
+
+#div_edit_main_right  div label{  
+    width: 190px;
+}
+#div_edit_main_right div:nth-child(3) {
+    padding-top: 21px;
+}
+select{
+    width: 158px;
+}
+#div_edit_main_right div:nth-child(4) {
+    display: flex;
+    justify-content: flex-end;
+}
+#div_edit_main_right div:nth-child(4) button{
+    margin: 0 4px;
+    padding: 0;
+    border-radius: 10%;
+    color: white;
+    border: 1px;
+    padding: 4px;
+    background-color: #646d76;
+}
+#div_edit_main_right div:nth-child(4) button:first-child{
+    background-color: #25a541;
+    
+}
+#div_edit_main_between{
+    height: 190px;
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
+    
+    
+   
+}
+#div_edit_main_between button{
+    width: 70px;
+   height: 26px;
+   margin-bottom: 6px;
+}
+/* ----- label error ------------*/
+label.error{
+    color: red;
+    font-style: italic;
+    margin-left: 193px;
+}

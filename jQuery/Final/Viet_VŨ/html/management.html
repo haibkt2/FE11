@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.1.1/css/all.css" />
+
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+<body>
+    <main>
+        <div id="div_management">
+            <h1>Company management</h1>
+            <div id="div_management_form">
+                <form action="" id="management_form">
+                   <form action="#">
+                    <button type="button" id="btnAdd">Add</button>
+                    <button type="button" id="btnDelete">Delete</button>
+                   </form>
+                    <div id="div_management_form_header" >
+                        <input type="checkbox" id="chkTotal">
+                        <label for="">Company Name</label>
+                        <label for="">Color Code</label>
+                        <label for="">Max working Hours</label>
+                        <label for="">Whitelisted Zone</label>
+                        <label for="">Status</label>
+                        <label for="">Action</label>
+                    </div>
+                    <div id="div_management_form_main" class="style_management_form">
+                       
+                        <input type="checkbox" id="checkbox">
+                        <label for="">Company Name</label>
+                        <label for="">Color Code</label>
+                        <label for="">Max working Hours</label>
+                        <div>
+                            <p>1</p>
+                            <p>2</p>
+                            <p>2</p>
+                        </div>
+                        <label for="">Status</label>
+                        <span>
+                            <i class="fas fa-pencil-alt"></i>
+                            <i class="fas fa-trash"></i>
+                        </span>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+       
+    </main>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" 
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
+    crossorigin="anonymous"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script >
+        // đi đến trang Edit
+        $("#btnAdd").click(function(){
+           location.replace("http://127.0.0.1:5500/Final/html/edit.html");
+        })
+        // chọn tất cả checkbox bằng checkbox tổng
+        function toggle(source) {
+            var checkboxes = $(":checkbox");
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i] != source)
+                    checkboxes[i].checked = source.checked;
+            }
+        }
+        // xoá nhiều el 1 lần
+        function Delete(){
+            var checkboxes = $(":checkbox");
+            for (var i = 1; i < checkboxes.length; i++) {
+                if ($(checkboxes[i]).prop("checked") == true){
+                    checkboxes[i].parentElement.remove();
+                }   
+            }
+        }
+        $("#chkTotal").click(function(){
+            toggle(this);  
+        })
+        $("#btnDelete").click(Delete);
+
+        // xoá ở thẻ i thùng rác - xoá 1 el
+        $(".fa-trash").click(function(){
+            $(this).parents(".style_management_form").remove();
+        })
+    </script>
+</body>
+</html>
