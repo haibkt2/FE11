@@ -71,6 +71,7 @@ $("#addZone").click(
                     + tick_add[i]
                     + "</option>" 
                     $("#list2").append(out_put);
+                    //$("#list option[value='"+ tick_add[i] +"']").remove();
                     $("#list option[value='"+ tick_add[i] +"']").hide();
             } 
     }
@@ -84,13 +85,14 @@ $("#removeZone").click(
             alert("Pls, tick option remove. Thanks!");
         } else {  
             for (var i = 0; i < tick_remove.length; i++){  
-                var out_put =
-                "<option "
-                + "value = '" + tick_remove[i] +"'"
-                + ">"
-                + tick_remove[i]
-                + "</option>"  
+                // var out_put =
+                // "<option "
+                // + "value = '" + tick_remove[i] +"'"
+                // + ">"
+                // + tick_remove[i]
+                // + "</option>"  
                 $("#list option[value='"+ tick_remove[i] +"']").show();
+                // $("#list").append(out_put);
                 $("#list2 option[value='"+ tick_remove[i] +"']").remove();    
             } 
     }

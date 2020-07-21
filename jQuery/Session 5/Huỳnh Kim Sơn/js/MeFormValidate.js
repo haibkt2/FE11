@@ -80,7 +80,7 @@ $().ready(function(){
             var lastname = $("#id_last").val();
             var phone = $("#id_phone").val();
             //
-            $("#show_email").html("<b>Email Address:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + email);
+            $("#show_email").html("<b>Email:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + email);
             $("#show_pass").html("<b>Password:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + password);
             $("#show_verify").html("<b>Verify Password:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + verifypassword);
             $("#show_company").html("<b>Company Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + company);
@@ -88,25 +88,6 @@ $().ready(function(){
             $("#show_last").html("<b>Last Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + lastname);
             $("#show_phone").html("<b>Phone Number:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + phone);
         }
-        //
-        // $.ajax({
-        //     type : "get",
-        //     url : "http://192.168.2.109:8080/DemoFE/demo.jsp?fbclid=IwAR04128mjkIVpqDry2KoXs1EttPOPS_mvqnO2VeQ3zeIxKB59GpECTPmw7Q",
-        //     beforeSend: function() {$("#id_form").html("Loading...");},
-        //     timeout : 10000,
-        //     error : function(xhr, status, error){
-        //         alert("Error : " + xhr.status + "-" + error);
-        //     },
-        //     dataType : "xml",
-        //     success : function(data){
-        //         $("#id_form").html("");
-        //         $(data).find("management").children().each(function(){
-        //             var xmlDoc =  $(this);
-        //             $("#show").html(data);
-        //         })
-        //     }
-
-        // })
     
     })
 });
