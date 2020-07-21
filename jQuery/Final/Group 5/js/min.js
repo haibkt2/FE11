@@ -24,6 +24,7 @@ $().ready(function(){
         }
         return true;
     });
+// Start Check Form !
     $("#form").validate({
         rules: {
             company: { required: true, nameCompany: true},
@@ -34,7 +35,7 @@ $().ready(function(){
         messages: {
             company: "Please enter company name",
             operating: "Please check",
-            max: "Please enter Max Working Hours > 0",
+            max: "Pls enter Max Working Hours > 0",
             list2: { select: "Please select Whitelisted Zone" }
         },
         submitHandler:  function registerForm(){
@@ -53,27 +54,29 @@ $().ready(function(){
                 $("#company").focus();
             }
         }
-    })
+    }) // End Check Form !
 });
-// add zone.
+// Start Add Zone !
 $("#addZone").click(
     function addZone(){
-        var v_input = $("#list").val();
-        if (v_input == ""){
+        var tick_add = $("#list").val();
+        if (tick_add == ""){
             alert("Pls, tick option. Thanks!");
         } else {  
-            for (var i = 0; i < v_input.length; i++){
-                var out_put =
-                    "<option>"
-                    + v_input[i]
-                    + "</option>"  
+            for (var i = 0; i < tick_add.length; i++){
+                var out_put = 
+                    "<option "
+                    + "value = '" + tick_add[i] +"'"
+                    + ">"
+                    + tick_add[i]
+                    + "</option>" 
                     $("#list2").append(out_put);
-                    $("#list option[value='"+ v_input[i] +"']").remove();
+                    $("#list option[value='"+ tick_add[i] +"']").hide();
             } 
     }
 }
-)
-// remove zone.
+) // End Add Zone !
+// Start Remove Zone !
 $("#removeZone").click(
     function removeZone(){
         var tick_remove = $("#list2").val();
@@ -81,23 +84,16 @@ $("#removeZone").click(
             alert("Pls, tick option remove. Thanks!");
         } else {  
             for (var i = 0; i < tick_remove.length; i++){  
-                    $("#list2 option[value='"+ tick_remove[i] +"']").remove();
+                var out_put =
+                "<option "
+                + "value = '" + tick_remove[i] +"'"
+                + ">"
+                + tick_remove[i]
+                + "</option>"  
+                $("#list option[value='"+ tick_remove[i] +"']").show();
+                $("#list2 option[value='"+ tick_remove[i] +"']").remove();    
             } 
     }
     }
-)
+) // End Remove Zone !
 
-// function removeZone(selectedZoneValue2, selectedZone2) {
-//     $("#list").append('<option value="' + selectedZoneValue2 + '">' + selectedZone2 + '</option>');
-//     $("#list2 option[value='"+selectedZoneValue2+"']").remove();
-// }
-// $("#removeZone").click(function () {
-//     var selectedZoneValue2 = $('#list2').val();
-//     if( selectedZoneValue2 == "" )
-//     {
-//         return false;
-//     }
-//     var selectedZone2 = $("#list2 option[value='"+selectedZoneValue2+"']").text();
-    
-//     removeZone(selectedZoneValue2, selectedZone2);
-// })

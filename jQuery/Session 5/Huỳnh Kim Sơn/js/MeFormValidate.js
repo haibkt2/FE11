@@ -15,7 +15,7 @@ $().ready(function(){
     // submit validate()
     $("#id_form").validate({
         rules : {
-            emailaddress: {
+            email : {
                 required : true ,
                 email : true
             },
@@ -36,14 +36,14 @@ $().ready(function(){
             lastname: {
                 required : true 
             },
-            phonenumber: {
+            phone: {
                 required : true ,
                 minlength:10,
                 maxlength:10
             }
         },
         messages : {
-            emailaddress: {
+            email: {
                 required : "Vui lòng mời bạn nhập email." ,
                 email : "Vui lòng mời bạn nhập đúng email."
             },
@@ -64,7 +64,7 @@ $().ready(function(){
             lastname: {
                 required : "Vui lòng mời bạn nhập Last name." ,
             },
-            phonenumber: {
+            phone: {
                 required : "Vui lòng mời bạn nhập Phone number." ,
                 minlength : " Vui lòng mời bạn nhập đúng Phone number không dưới 10 số. ",
                 maxlength : " Vui lòng mời bạn nhập đúng Phone number không quá 10 số. "
@@ -72,21 +72,51 @@ $().ready(function(){
         },
         // display
         submitHandler : function(form){ 
-            var emailaddress = $("#id_email").val();
+            var email = $("#id_email").val();
             var password = $("#id_password").val();
             var verifypassword = $("#id_verify").val();
             var company = $("#id_company").val();
             var firstname = $("#id_first").val();
             var lastname = $("#id_last").val();
-            var phonenumber = $("#id_phone").val();
-
-            $("#show_email").html("<b>Email Address:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + emailaddress);
+            var phone = $("#id_phone").val();
+            //
+            $("#show_email").html("<b>Email Address:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + email);
             $("#show_pass").html("<b>Password:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + password);
             $("#show_verify").html("<b>Verify Password:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + verifypassword);
             $("#show_company").html("<b>Company Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + company);
             $("#show_first").html("<b>First Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + firstname);
             $("#show_last").html("<b>Last Name:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + lastname);
-            $("#show_phone").html("<b>Phone Number:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + phonenumber);
+            $("#show_phone").html("<b>Phone Number:</b>"  + '&nbsp' + '&nbsp' + '&nbsp' + phone);
         }
+        //
+        // $.ajax({
+        //     type : "get",
+        //     url : "http://192.168.2.109:8080/DemoFE/demo.jsp?fbclid=IwAR04128mjkIVpqDry2KoXs1EttPOPS_mvqnO2VeQ3zeIxKB59GpECTPmw7Q",
+        //     beforeSend: function() {$("#id_form").html("Loading...");},
+        //     timeout : 10000,
+        //     error : function(xhr, status, error){
+        //         alert("Error : " + xhr.status + "-" + error);
+        //     },
+        //     dataType : "xml",
+        //     success : function(data){
+        //         $("#id_form").html("");
+        //         $(data).find("management").children().each(function(){
+        //             var xmlDoc =  $(this);
+        //             $("#show").html(data);
+        //         })
+        //     }
+
+        // })
+    
     })
 });
+$("#bt_submit").click(function(){
+    $.ajax({
+        type : "get",
+        url : "http://192.168.2.109:8080/DemoFE/demo.jsp",
+        data : $("#id_form").serialize(),
+        success : function(data){
+            $("#show").html(data); 
+        }
+    })
+})
