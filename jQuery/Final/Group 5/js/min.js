@@ -87,9 +87,9 @@ $("#removeZone").click(
                 var textnode_option = document.createTextNode("Zone " + tick_remove[i]);
                     create_option.appendChild(textnode_option);
                 $("#list").append(create_option);
-                $("#list2 option[value='"+ tick_remove[i] +"']").remove();    
+                $("#list2 option[value='"+ i +"']").remove();    
             } 
     }
-    }
+}
 ) // End Remove Zone !
 
