@@ -64,15 +64,13 @@ $("#addZone").click(
             alert("Pls, tick option. Thanks!");
         } else {  
             for (var i = 0; i < tick_add.length; i++){
-                var out_put = 
-                    "<option "
-                    + "value = '" + tick_add[i] +"'"
-                    + ">"
-                    + tick_add[i]
-                    + "</option>" 
-                    $("#list2").append(out_put);
-                    $("#list option[value='"+ tick_add[i] +"']").remove();
-                            } 
+                var create_option = document.createElement("option");
+                    create_option.setAttribute("value",i);
+                var textnode_option = document.createTextNode("Zone " + tick_add[i]);
+                    create_option.appendChild(textnode_option);
+                $("#list2").append(create_option);
+                $("#list option[value='"+ i +"']").remove();
+            } 
     }
 }
 ) // End Add Zone !
@@ -84,13 +82,11 @@ $("#removeZone").click(
             alert("Pls, tick option remove. Thanks!");
         } else {  
             for (var i = 0; i < tick_remove.length; i++){  
-                var out_put =
-                "<option "
-                + "value = '" + tick_remove[i] +"'"
-                + ">"
-                + tick_remove[i]
-                + "</option>"  
-                $("#list").append(out_put);
+                var create_option = document.createElement("option");
+                    create_option.setAttribute("value",i);
+                var textnode_option = document.createTextNode("Zone " + tick_remove[i]);
+                    create_option.appendChild(textnode_option);
+                $("#list").append(create_option);
                 $("#list2 option[value='"+ tick_remove[i] +"']").remove();    
             } 
     }
