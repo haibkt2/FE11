@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
     <title>Company Management</title>
     <style>
+        body{
+            background-color: #1affc6;
+        }
         table, thead{
             background-color:#33cc33;
+            text-align: center;
         }
         table, tbody{
             background-color:  #ebebe0;
@@ -16,19 +21,19 @@
     </style>
 </head>
 <body>
-    <div class="container" style="background-color: #99ffff">
+    <div class="container">
         <div class="row">
             <h1>Company Management</h1>
         </div>
         <div class="row">
-            <div class="col-md-10">
-                <form style="background-color:white;min-height: 200px; margin: 10px;">
+            <div class="col-md-12">
+                <form style="background-color:white;padding: 5px;">
                     <button type="button" onclick="trans()" class="btn btn-success" id="add">Add</button>
-                    <button type="button" class="btn btn-danger" id="delete" onclick="test()">Delete</button>
+                    <button type="button" class="btn btn-danger" id="delete">Delete</button>
                     <table style="width:100%; margin-top: 10px;" id="table">
                         <thead>
                             <tr>
-                                <th>*</th>
+                                <th><input type="checkbox"></th>
                                 <th>Company Name</th>
                                 <th>Color Code</th>
                                 <th>Max working Hours</th>
@@ -46,6 +51,6 @@
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="../JS/Index.js"></script>
+    <script src="../JS/index1.js"></script>
 </body>
 </html>

@@ -4,11 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
     <title>Edit Company</title>
     <style>
         body{
             background-color: #1affc6;
         }
+        label{
+            font-weight: 450;
+            color: #004d4d;
+        }
+        #myForm label.error {
+		        margin-left: 10px;
+                color: red;
+		        display: inline;
+	        }
     </style>
 </head>
 <body>
@@ -16,13 +26,13 @@
         <div class="row">
             <h1>Edit Company</h1>
         </div>
-    <form action="../HTML/management.html" style="background-color: white; padding: 5px;">
+    <form id="myForm" style="background-color: white; padding: 5px;">
         <div class=" form-group row">
             <div class="col-md-2">
                 <label for="com_name" class="col-form-label">Company Name:*</label>
             </div>
             <div class="col-md-3">
-                <input type="text" class="form-control" id="com_name" name="com_name" placeholder="Company of me">
+                <input type="text" class="form-control" id="com_name" name="com_name" placeholder="Company of me"><span>*</span>
             </div>
             <div class="col-md-2">
 
@@ -32,8 +42,8 @@
             </div>
             <div class="col-md-3">
                 <select class="custom-select col-md-6" id="status">
-                    <option value="yes" selected>Enable</option>
-                    <option value="no">Disable</option>
+                    <option value="Enable" selected>Enable</option>
+                    <option value="Disable">Disable</option>
                   </select>
             </div>
         </div>
@@ -42,7 +52,7 @@
                 <label for="check_opera" class="col-form-label">Operating company:*</label>
             </div>
             <div class="col-md-3">
-                <input type="checkbox" class="col-md-1 form-control" id="check_opera" name="check_opera" checked>
+                <input type="checkbox" class="col-md-1 form-control" id="operating" name="check_opera" checked>
             </div>
             <div class="col-md-2">
 
@@ -59,7 +69,7 @@
                 <label for="working_hour" class="col-form-label">Max. Working Hours:*</label>
             </div>
            <div class="col-md-3">
-            <input type="number" class="col-md-4 form-control" id="working_hour" name="working_hour">
+            <input type="number" class="col-md-4 form-control" id="working_hour" name="working_hour"><span>*</span>
            </div>
         </div>
         <div class="form-group row">
@@ -78,19 +88,19 @@
            </div>
            <div class="col-md-2">
                <div class="row">
-                    <button type="button" class="btn btn-secondary" onclick="display()" id="btn_next">>></button>
+                    <button type="button" class="btn btn-secondary" onclick="display()" id="btn_add"><i class="fas fa-forward"></i></button>
                </div>
                <div class="row mt-4">
-                <button type="button" class="btn btn-secondary" id="btn_pre"><span>>></span></button>
-           </div>
+                    <button type="button" class="btn btn-secondary" onclick="remove()" id="btn_remove"><i class="fas fa-backward"></i></button>
+                </div>
            </div>
            <div class="col-md-2">
-            <label for="white_zone" class="col-form-label">Whitelisted Zones:*</label>
+                <label for="white_zone" class="col-form-label">Whitelisted Zones:*</label>
            </div>
            <div class="col-md-3">
-            <textarea id="result">
+                <select multiple id="result_zone" class="col-md-10 custom-select">
 
-            </textarea>
+                </select>
            </div>
         </div>
         <div class="form-group row">
@@ -98,16 +108,18 @@
             <div class="col-md-3"></div>
             <div class="col-md-2"></div>
             <div class="col-md-3">
-                <button type="button" class="btn btn-success"onclick="add_info()">Save</button>
-                <button type="button" class="btn btn-secondary" onclick="show_info()">Cancel</button>
-                <button type="button" class="btn btn-secondary">Manage</button>
+                <button type="submit" class="btn btn-success">Save</button>
+                <button type="button" class="btn btn-secondary">Cancel</button>
+                <button type="button" class="btn btn-secondary" onclick="show1()">Manage</button>
             </div>
         </div>
-
+        <p></p>
     </form>
     <h2></h2>
     </div>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="../JS/Index.js"></script>
+    <script src="../JS/jquery.validate.min.js"></script>
+    <!-- <script src="../JS/Index.js"></script> -->
+    <script src="../JS/index2.js"></script>
 </body>
 </html>
