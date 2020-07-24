@@ -28,7 +28,7 @@
                         </div>
                        <div>
                             <label for="">Zone List*</label>
-                            <select name="" id="selList" size="5" multiple >
+                            <select name="selList" id="selList" size="5" multiple >
                                 <option value="Zone 1" >Zone 1</option>
                                 <option value="Zone 2">Zone 2</option>
                                 <option value="Zone 3">Zone 3</option>
@@ -41,8 +41,8 @@
 
                     </div>
                     <div id="div_edit_main_between">
-                        <button type="button" id="btnRight"><i class="fas fa-angle-double-right"></i></button>
-                        <button type="button" id="btnLeft"><i class="fas fa-angle-double-left"></i></button>
+                        <button type="button" id="btnRight" name="btnRight"><i class="fas fa-angle-double-right"></i></button>
+                        <button type="button" id="btnLeft" name="btnLeft"><i class="fas fa-angle-double-left"></i></button>
                     </div>
                     <div id="div_edit_main_right">
                         <div>
@@ -54,7 +54,7 @@
                         </div>
                         <div>
                             <label for="">Color Code*</label>
-                            <input type="color">
+                            <input type="color" id="favColor">
                         </div>
                        
                         <div>
@@ -65,8 +65,8 @@
                         </div>
                         <div>
                             <button type="submit" id="btnSave">Save</button>
-                            <button type="button" id="btnCancel">Cancel</button>
-                            <button type="button" id="Manage">Manage</button>
+                            <button type="reset" id="btnCancel">Cancel</button>
+                            <button type="button" id="btnManage">Manage</button>
 
                         </div>
                     </div>
@@ -78,69 +78,8 @@
     integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" 
     crossorigin="anonymous"></script>
     <script src="../js/jquery.validate.min.js"></script>
-    <script >
-        //tạo mới validator cho input Max Hours
-        $.validator.addMethod("maxHours", function(maxHours){
-            if(isNaN(maxHours)&&  parseInt(maxHours)>24)
-                return false;
-            else return true;
-
-        })
-        //tạo mới validator cho select Whitelisted
-        $.validator.addMethod("new_selWhitelisted", function(){
-           
-            if($("#selWhitelisted").has("option").length>0)
-                return true;
-            else return false;
-        });
-        // validate cho form
-        $("#form_edit").validate({
-            rules: {
-                edtName: "required",
-                chkOperating: "required", 
-                edtMaxHours:{
-                    required: true,
-                    maxHours: true
-                },
-                selWhitelisted: {
-                    new_selWhitelisted: true
-                }  
-            }, 
-            messages: {
-                edtName: "Vui lòng nhập trường này",
-                chkOperating:  "Vui lòng nhập trường này",
-                edtMaxHours:{
-                    required: "Vui lòng nhập trường này",
-                    maxHours: "Vui lòng nhập nhỏ hơn 24"
-                },
-                selWhitelisted:{
-                    new_selWhitelisted: 'Vui lòng kick chọn mục "Zone List"'
-                }
-            }
-        });
-        // chuyển option được chọn từ List sang Whitelisted
-         function toRight(){
-            var value = $("#selList").val();
-            for(var i = 0; i<value.length; i++){
-               $("#selWhitelisted").append(new Option(value[i], value[i]));
-            }
-         }
-         // xoá bỏ option được chọn bên select Whitelisted
-         function toLeft(){
-            var valBack = $("#selWhitelisted").val();
-            for(var i = 0; i< valBack.length; i++){     
-                $("#selWhitelisted").find('[value="'+valBack[i]+'"]').remove();
-                //hoặc dung    $("#selWhitelisted").children($(this).has("value", valBack[i])).remove();
-
-            }
-         }
-         $("#btnRight").click(toRight);
-         $("#btnLeft").click(toLeft);
-         //quay lai trang management
-         $("#btnCancel").click(function(){
-             location.href = "http://127.0.0.1:5500/Final/html/management.html";
-         })
-         
+    <script src="../js/main.js">
+       
     </script>
 </body>
 </html>
