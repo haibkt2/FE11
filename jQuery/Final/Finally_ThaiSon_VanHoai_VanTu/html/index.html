@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.js"></script>
+    <script src="../js/script.js"></script>
+    <title>Company Management</title>
+    <style>
+        .colorDis{
+            width: 20px;
+            height: 20px;
+        }
+        .error{
+            color: red;
+        }
+       
+    </style>
+</head>
+<body>
+    <main class="container bg-info pb-3 pt-3">
+        <h2 class="pb-4" >Company Management</h2>
+        <div class="w-90 bg-light m-auto ">
+            <button type="button" class="btn btn-primary m-2" id="btnAdd">Add</button>
+            <button type="button" class="btn btn-danger" id="btnDelete">Delete</button>
+            <table class="table table-hover " >
+                <thead class="bg-primary">
+                    <tr>
+                        <th scope="col"><input type="checkbox" name="checkAll" id="checkAll"></th>
+                        <th scope="col">Company Name</th>
+                        <th scope="col">Color Code</th>
+                        <th scope="col">Max Working Hours</th>
+                        <th scope="col">Whitelisted Zone</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody id="result">
+                </tbody>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
