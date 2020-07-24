@@ -15,9 +15,9 @@ main{
     min-height: 300px;
     background-color: #b7f7e8;
 }
-/*  xét thuộc tính cho form  */
-#div_management_form{
-   min-height: 100px;
+/*  div bao bọc form và table */
+#div_management_children{
+    min-height: 200px;
     margin-top: 20px;
     background-color: #f8f9fa;
 
@@ -30,6 +30,7 @@ main{
 #management_form button:nth-child(2){
     background-color: #db3345;
 }
+/* chung cho 2 button */
 #management_form button{
     border-radius: 10%;
     height: 28px;
@@ -37,49 +38,32 @@ main{
     color: white;
     border: 1px;
 }
-/* form-header thuộc tính, nằm ngang  */
-#div_management_form_header{
+#div_table{
+    margin: 18px 10px 10px 10px;
+}
+
+table { 
+    width: 100%;
+    border-collapse: collapse;
+}
+table thead tr{
     background-color: #28a745;
-    height:  30px;
-    margin: 18px 10px 0 10px;
-    display: flex;
-    justify-content: space-between;
-   align-items: center;         
+    height: 30px;        
 }
-
-#div_management_form_header   label{
-   padding: 0 40px;
-}
-/* checkbox trong form-header */
-#div_management_form_header input{
-    margin-left: 12px;
-}
-
-
-/* ---------el mới sau khi đươc thêm vào  ------*/
-.style_management_form{
+table tbody{
+    padding-top: 10px;
     background-color: #d6d8db;
-    margin: 0px 10px 0 10px;
-    padding-top: 12px;
-    display: flex;
-    justify-content: space-between;
-   
-   align-items: start;
 }
-.style_management_form :first-child{
-    margin-left: 12px;  
+table td{
+    padding-left: 10px;
+    text-align: center;
 }
-.style_management_form :not(:first-child){
-    padding: 0 40px;
-}
-.style_management_form :nth-child(5) :first-child{
-    padding: 0 40px;
-    margin: 0;
-}
-.style_management_form :nth-child(7) :last-child{
+
+/* ---------2 thẻ i  ------*/
+.new_management :nth-child(7) :last-child{
     padding: 0 ;
     margin:  0 10px;
-}
+} 
 /* --------------------------------------EDIT ------------------------------------------ */
 #edit{
     padding:0 15%;
@@ -88,7 +72,10 @@ main{
     background-color: #b7f7e8;
     
 }
-
+#edit h1{
+    padding-top: 25px;
+    font-size: 50px;
+}
 #form_edit{
     width: 100%;
     display: flex;
@@ -148,10 +135,7 @@ select{
     flex-direction: column ;
     justify-content: center;
     align-items: center;
-    margin: 50px 0 0 0;
-    
-    
-   
+    margin: 50px 0 0 0;  
 }
 #div_edit_main_between button{
     width: 70px;
