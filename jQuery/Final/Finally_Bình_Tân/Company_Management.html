@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Company_Management</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="jquery.validate.min.js"></script>
+  </head>
+    <body>
+       <div class="container-fluid" style="min-height: 753px; background-color: rgb(195, 248, 248);" >
+          <div class="container">
+             <div class="row">
+                <div class="col-md-12">
+                   <h1 class="mt-2">Company Management</h1>
+                   <div class="form-group bg-light mt-4">
+                      <div class="p-3">
+                        <div class="mb-3">
+                           <button type="button" class="btn btn-success " id="add">Add</button>
+                           <button type="button" class="btn btn-danger" id="delete_company">Delete</button>
+                        </div>
+                        <div>
+   
+                           <div id="ouput">
+                              <table class="table table-striped">
+                                 <thead class="bg-success">
+                                   <tr>
+                                       <th><input type="checkbox" name="" value="selectAll" id="checkAll"></td>
+                                       <th>Name Tasks</th>
+                                       <th>Color Code</th>
+                                       <th>Max working Hours</th>
+                                       <th>Whitelisted Zone</th>
+                                       <th>Status</th>
+                                       <th>Action</th>
+                                   </tr>
+                                 </thead>
+                                 <tbody id="tbody">
+                                    
+                                 </tbody>
+                               </table>
+                            </div>
+                        </div>
+                      </div>
+                     
+                   </div>
+                </div>
+             </div>
+             <div class="row">
+                <div class="col-md-12" id="content_">
+                </div>
+             </div>
+          </div>
+       </div>
+
+       <script src="Company_Management.js"></script>
+    </body>
+</html>

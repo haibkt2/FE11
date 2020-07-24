@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edit_Company.html</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="jquery.validate.min.js"></script>
+  </head>
+    <body>
+       <style>
+          .error{
+             color: red;
+             font-style: oblique;
+          }
+
+          .color_{
+             color: black;
+             font-weight: bold;
+          }
+
+          #id_setselect-error{
+             margin-left: 200px;
+          }
+       </style>
+       <div class="container-fluid" style="min-height: 753px; background-color: rgb(195, 248, 248);" >
+          <div class="container">
+             <div class="row">
+                <div class="col-md-12">
+                   <h1 class="mt-2">Edit Company</h1>
+                   <div class="form-group bg-light mt-4">
+                      <form action="" id="id_form" class="row p-4">
+                        <div class="col-md-5 pl-0">
+
+                              <div class="row form-group">
+                                 <label for="" class="col-md-6 mt-1 color_" >Company name*</label>
+                                 <div class="col-md-6">
+                                    <input type="text"  name="company" class="user" id="company_name">
+                                 </div>
+                              </div>
+
+                              <div class="row form-group">
+                                 <label for="" class="col-md-6 color_">Operating Company*</label>
+                                 <div class="col-md-6">
+                                    <input type="checkbox" class="mt-2 mr-1" name="operating">
+                                 </div>
+                              </div>
+
+                              <div class="row form-group">
+                                 <label for="" class="col-md-6 mt-1 color_" >Max.Working Hours*</label>
+                                 <div class="col-md-6">
+                                    <input type="text" class="col-md-4 mr-1"  name="maxHours" id="max_hours">
+                                 </div>
+                              </div>
+
+                              <div class="row form-group">
+                                 <label for="" class="col-md-6 color_">Zone List*</label>
+                                 <select class="col-md-6" multiple="multiple" size="7" name="select" id="id_select">
+                                    <option value="Zone 1">Zone 1</option>
+                                    <option value="Zone 2">Zone 2</option>
+                                    <option value="Zone 3">Zone 3</option>
+                                    <option value="Zone 4">Zone 4</option>
+                                    <option value="Zone 5">Zone 5</option>
+                                    <option value="Zone 6">Zone 6</option>
+                                    <option value="Zone 7">Zone 7</option>
+                                    <option value="Zone 8">Zone 8</option>
+                                    <option value="Zone 9">Zone 9</option>
+                                    <option value="Zone 10">Zone 10</option>
+                                 </select>
+                              </div>
+                        </div>
+                        
+                        <div class="col-md-2 pl-5">
+                           <div style="margin-top: 180px;">
+                              <button type="button" class="btn btn-secondary" style="width: 70px" id="id_setsel">	&#62;	&#62;</button>
+                           </div>
+                           <div style="margin-top: 20px;">
+                              <button type="button" class="btn btn-secondary" style="width: 70px" id="id_removesel">&#60;&#60;</button>
+                           </div>
+                        </div>
+
+
+                        <div class="col-md-5 pl-0">
+                          
+                              <div class="row form-group">
+                                 <label for="" class="col-md-5 mt-1 color_">Status*</label>
+                                 <select class="col-4" name="status" id="status">
+                                    <option>Disable</option>
+                                    <option>Enable</option>
+                                    </select>
+                              </div>
+                              <div class="row form-group">
+                                 <label for="" class="col-md-5 color_">Color Code*</label>
+                                 <input type="color" class="mt-1" name="color" id="color_code">
+                              </div>
+                              <div class="row form-group" style="margin-top: 70px;">
+                                 <label for="" class="col-md-5 color_">Whitested Zones</label>
+                                 <select class="col-md-6" size="7" multiple="multiple" id="id_setselect" name="select_">
+                                    
+                                 </select>
+
+                              </div>
+
+                              <div class="row pr-0 mr-0">
+                                 <button type="submit" class="btn btn-success mr-2" style="margin-left:195px;" >Save</button>
+                                 <button type="reset" class="btn btn-secondary mr-2" id="cancel_">Cancel</button>
+                                 <button type="button" class="btn btn-secondary" id="Manage">Manage</button>
+                              </div>
+                           
+                        </div>
+                        
+                     </form>
+                   </div>
+                </div>
+
+                
+             </div>
+          </div>
+       </div>
+
+       <script src="Edit_Company.js"></script>
+    </body>
+
+</html>
