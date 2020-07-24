@@ -81,7 +81,7 @@ $.validator.addMethod("new_selWhitelisted", function () {
 });
 
 // validate cho form
-function validate_(){
+
 
   $("#form_edit").validate({
     rules: {
@@ -105,14 +105,16 @@ function validate_(){
       },
       selWhitelisted: {
         new_selWhitelisted: 'Vui lòng kick chọn mục "Zone List"',
-      },
-      
-    }   
-  });
+      }
+     
+  },
+  submitHandler: function(){
+    saveValue();
+} }  );
 
-}
-// phải gọi ra để khi blur thì check validate luôn
-validate_();
+
+
+
 
 // chuyển option được chọn từ List sang Whitelisted
 function toRight() {
@@ -149,7 +151,7 @@ var valInput_obj = function (name, maxHours, status, color, zoneList) {
 };
 
 function saveValue() {
-  validate_();
+  
   var arr_input = [];
   var a = JSON.parse(localStorage.getItem("FINAL")); //get value trong local rồi add vào arr
 
@@ -176,4 +178,4 @@ function saveValue() {
   localStorage.setItem("FINAL", json_arr);
 }
 
-$("#btnSave").click(saveValue);
+
