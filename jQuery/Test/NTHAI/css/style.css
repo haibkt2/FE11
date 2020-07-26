@@ -1,0 +1,252 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+/*Page login and register*/
+.block_login_register{
+	height: 100%;
+	width: 100%;
+	
+	background-position: center;
+	background-size: cover;
+}
+
+.from-box{
+	width: 380px;
+	height: 575px;
+	position: relative;
+	margin: 2% auto 0;
+	background: #f1f1f1;
+	padding: 5px;
+	overflow: hidden;
+}
+
+.button-box{
+	 width: 220px;
+	 margin: 35px auto;
+	 position: relative;
+	 box-shadow: 0 0 20px 9px #ff61241f;
+	 border-radius: 30px
+}
+
+.toggle-btn{
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+
+#btn{
+	top:0;
+	left: 110px;
+	position: absolute;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border-radius: 30px;
+	transition: .5s;
+}
+
+.social-icons{
+	margin: 30px auto;
+	text-align: center;
+}
+
+.social-icons img{
+	width: 30px;
+	margin: 0 12px;
+	box-shadow: 0 0 20px 0 #7f7f7f3f;
+	cursor: pointer;
+	border-radius: 50%;
+}
+
+.input-group{
+	top: 180px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+}
+
+.input-field{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+
+.submit-btn{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, #ff105f, #ffad06);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+
+.check-box{
+	margin: 30px 10px 30px 0;
+}
+
+.block_login_register span{
+	color: #777;
+	font-size: 12px;
+	bottom: 68px;
+	position: absolute;
+}
+
+label.error{
+	display: block;
+	font-size: 12px;
+    color: red;
+}
+
+#login_form{
+	left: 50px;
+}
+
+#register_form{
+	left: 450px;
+}
+
+/* ======================= Menu ========================== */
+
+ul{
+	list-style: none;
+    display: flex;
+	justify-content: flex-end;
+	margin-top: 30px;
+}
+
+ul li{
+	margin-right: 40px;
+}
+
+a{
+	color: #ff105f;
+	font-weight: 800;
+	text-decoration: none;
+}
+
+a:hover{
+	color: #ff105f;
+	text-decoration: none;
+}
+
+#login_link{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: linear-gradient(to right, #ff105f, #ffad06);
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+/*======================== Block FAQ =====================*/
+
+.container.blockFAQ{
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: "Roboto", sans-serif;
+    color: #333333;
+}
+
+.accordion-item{
+	border: 1px solid #ff105f;
+	border-radius: 10px;
+	margin-bottom: 10px;
+}
+
+.blockFAQ .accordion-item > p{
+    cursor: pointer;
+}
+
+.blockFAQ .hidden{
+    display: none;
+    transition: all .5s;
+}
+
+.blockFAQ .active .hidden{
+    display: block;
+    padding: 10px 28px;
+    font-size: 13px;
+    word-spacing: 2px;
+    line-height: 20px;
+}
+
+.blockFAQ .active .accordion-title{
+    background-color: #0000000d;
+    margin: 0;
+    padding: 6px 10px;
+    color: #ff105f;
+    font-weight: 600;
+}
+
+.active{
+	background-color: #ff105f1c;
+}
+
+.blockFAQ .active i{
+    transform: rotate(-180deg);
+    transition: all .5s;
+}
+
+.blockFAQ i{
+    transform: rotate(0deg);
+	transition: all .5s;
+	margin-left: 10px;
+	margin-right: 5px;
+}
+
+.blockFAQ h2{
+	color: #ff105f;
+	text-align: center;
+	font-weight: bold;
+}
+
+.accordion-title span{
+	color: #ff105f;
+	font-weight: bold;
+}
+
+.accordion-title{
+	padding-top: 10px;
+}
+
+/* ============================= Fotter ===================== */
+
+.footer{
+	background-color: #ff105f;
+}
+
+.icon_block{
+	display: flex;
+	justify-content: flex-end;
+}
+
+.icon_block a{
+	color: white;
+}
+
+.icon_block ul{
+    margin-top: 26px;
+}
+
+.icon_block p{
+	display: inline-block;
+    margin-top: 28px;
+    margin-right: 198px;
+    color: white;
+    font-size: 12px;
+}

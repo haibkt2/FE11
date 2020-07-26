@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>login</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<header>
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Our Story</a></li>
+                <li><a href="#" id="login_link">LOGIN</a></li>
+            </ul>
+        </nav>
+    </header>
+	<div class="block_login_register">
+		<div class="from-box">
+			<div class="button-box">
+				<div id="btn"></div>
+				
+				<button type="button" class="toggle-btn" id="register_page" tabindex="-1">Register</button>
+				<button type="button" class="toggle-btn" id="login_page">Log In</button>
+			</div>
+			<div class="social-icons">
+				<img src="../imgs/fb.png">
+				<img src="../imgs/tw.png">
+				<img src="../imgs/gp.png">
+			</div>
+			<form action="#" method="GET" id="login_form" class="input-group" novalidate="novalidate">
+				<input id="email" name="email" type="email" class="input-field" placeholder="Email">
+				<input id="password" name="password" type="password" class="input-field" placeholder="Enter Password">
+				<input type="checkbox" class="check-box"><span>Remember Password</span>
+				<button type="button" id="login" class="submit-btn">Log in</button>
+			</form>
+			<form id="register_form" class="input-group">
+				<input id="register_email" name="register_email" type="email" class="input-field" placeholder="Email">
+				<input id="confirm_email" name="confirm_email" type="email" class="input-field" placeholder="Confirm Email">
+				<input id="register_password" name="register_password" type="password" class="input-field" placeholder="Passwords">
+				<input id="confirm_password" name="confirm_password" type="password" class="input-field" placeholder="Enter Password">
+				<input type="checkbox" class="check-box"><span>I agree to the terms & conditions</span>
+				 <input type="button" id="register" class="submit-btn" value="Register">
+			</form>
+		</div>
+	</div>
+	<footer class="footer">
+		<div class="icon_block">
+			<ul>
+				<li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+				<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+				<li><a href="#"><i class="fab fa-twitter"></i></a></li>
+			</ul>
+			<p>&copy Copyright 2019 All Iviettech</p>
+		</div>
+	</footer>
+
+	<script src="../js/jquery-3.4.1.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
