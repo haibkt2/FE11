@@ -87,7 +87,7 @@ function registerUser() {
 		location.replace("../html/Login.html");
 
 	} else {
-		alert('Tên đăng nhập đang được sử dụng. Xin vui lòng dùng tên đăng nhập khác !')
+		alert('Tên đăng nhập đang được sử dụng. Xin vui lòng dùng tên đăng nhập khác !');
 
 	}
 }
